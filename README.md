@@ -1,7 +1,3 @@
----
-description: Doesn't seem this can be deleted
----
-
 # Programme Info
 
 ![](.gitbook/assets/frontpage.jpg)
