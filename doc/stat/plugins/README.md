@@ -4,9 +4,7 @@ description: A series of plugins which provide direct access to PDH.stat via its
 
 # Plugins
 
-## Excel
-
-\[Denis to add\]
+## 
 
 ## R
 
