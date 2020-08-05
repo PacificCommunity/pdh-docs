@@ -1,5 +1,5 @@
 ---
-description: Harness the power of data and knowledge for sustainable development
+description: Harnessing the power of data and knowledge for sustainable development
 ---
 
 # Programme Info
