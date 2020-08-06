@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Programme Info](README.md)
+* [Pacific Data Hub](README.md)
 * [Meet the team](meet-the-team.md)
 * [Projects](projects/README.md)
   * [Pacific Skills Portal](projects/pacific-skills-portal.md)

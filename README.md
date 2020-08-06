@@ -2,7 +2,7 @@
 description: Harnessing the power of data and knowledge for sustainable development
 ---
 
-# Programme Info
+# Pacific Data Hub
 
 ## Introduction
 
