@@ -6,6 +6,7 @@
   * [Pacific Skills Portal](projects/pacific-skills-portal.md)
   * [NDC Hub](projects/ndc-hub.md)
 * [Documentation](doc/README.md)
+  * [Geoserver](doc/geoserver.md)
   * [PDH Catalogue](doc/cat/README.md)
     * [User Documentation](doc/cat/help/README.md)
       * [Untitled](doc/cat/help/untitled/README.md)
