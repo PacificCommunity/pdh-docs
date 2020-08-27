@@ -15,7 +15,7 @@
         * [Untitled](doc/cat/help/untitled/untitled/README.md)
           * [Untitled](doc/cat/help/untitled/untitled/untitled.md)
     * [API](doc/cat/api.md)
-  * [Pacific Map](doc/pacific-map/README.md)
+  * [PacificMap](doc/pacific-map/README.md)
     * [User Documentation](doc/pacific-map/user-documentation.md)
     * [API](doc/pacific-map/api.md)
   * [Geoserver](doc/geoserver.md)
