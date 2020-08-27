@@ -8,7 +8,7 @@ Data is also sourced from a number of development partners and other publically 
 
 ![](../../.gitbook/assets/image%20%282%29.png)
 
-
+Use the interactive PacificMap geospatial platform to produce data maps and create compelling impact stories. From remote-sensed geospatial data to statistical time series, the data visualisation tool enables the analysis of public and private geospatial data at global, regional, national and subnational data.
 
  
 
