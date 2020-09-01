@@ -10,7 +10,7 @@
   * [Pacific Skills Portal](projects/pacific-skills-portal.md)
 * [Platform Documentation](doc/README.md)
   * [PDH Catalogue](doc/cat/README.md)
-    * [User Documentation](doc/cat/help/README.md)
+    * [User Guide](doc/cat/help/README.md)
       * [Untitled](doc/cat/help/untitled/README.md)
         * [Untitled](doc/cat/help/untitled/untitled/README.md)
           * [Untitled](doc/cat/help/untitled/untitled/untitled.md)
