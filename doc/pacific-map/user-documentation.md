@@ -1,4 +1,4 @@
-# User Documentation
+# User Guide
 
 ### How to get started with PacificMap
 

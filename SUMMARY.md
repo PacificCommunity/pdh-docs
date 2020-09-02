@@ -13,7 +13,7 @@
     * [User Guide](doc/cat/help.md)
     * [API](doc/cat/api.md)
   * [PacificMap](doc/pacific-map/README.md)
-    * [User Documentation](doc/pacific-map/user-documentation.md)
+    * [User Guide](doc/pacific-map/user-documentation.md)
     * [API](doc/pacific-map/api.md)
   * [Geoserver](doc/geoserver.md)
   * [PDH.stat](doc/stat/README.md)
