@@ -5,9 +5,9 @@
 To launch PacificMap and display some basic data follow these steps.
 
 * Display the PacificMap by using the URL [https://map.pacificdata.org/](https://map.pacificdata.org/).
-* In the left hand panel click the **Add Data** button to launch the Data Catalogue.
+* In the left-hand panel click the **Add Data** button to launch the Data Catalogue.
 * Browse through the Data Catalogue to find a data set of interest. Click on the title of your prefered data set to get a preview of that data, along with a description and other relevent metadata. To view your selected data set on a larger map, click the **Add to the Map** button. The spatial data will be immediately displayed in the map view, and a visual legend for that data will appear in the Data Workbench, located on the left hand side of the page.
-* Note that it may not be immediately obvious where your selected spatial data has loaded on the map if does not cover a large part of Australia. To locate loaded data on the map, go to the Data Workbench \(positioned on the left hand side of the page\), and click the **Zoom to extent** link for your desired data set. From here you can also click **About this data** to get more information about your selected data set.
+* Note that it may not be immediately obvious where your selected spatial data has loaded on the map if it only covers a small area of the Pacific. To locate the loaded data on the map, go to the Data Workbench \(positioned on the left-hand side of the page\), and click the **Zoom to extent** link for your desired data set. From here you can also click **About this data** to get more information about your selected data set.
 * To add additional data sets to the map, simply click **Add Data** again in the left hand panel to relaunch the Data Catalogue.
 * Zoom manually by moving your mouse pointer over the map and using your mouse wheel to zoom in or out further.
 * Click and drag the map to further show the region in which you are interested.
@@ -37,7 +37,7 @@ Other standard spatial data types such as GeoJSON and KML are also supported.
 There are two ways to load your data:
 
 * Drag your data file onto the PacificMap map view. The format of the data file will be auto-detected.
-* Click on the **Add Data** button in the left hand panel. This will launch the Data Catalogue. Select the **My Data** tab at the top of the modal window and follow the provided instructions.
+* Click on the **Add Data** button in the left-hand panel. This will launch the Data Catalogue. Select the **My Data** tab at the top of the modal window and follow the provided instructions.
 
 As for PacificMap data sets, you can click on the regions or points to see the data available for that location. If the file is a CSV file, the data from all columns will be shown in the feature information dialogue when you click.
 
