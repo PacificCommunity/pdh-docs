@@ -11,6 +11,7 @@
 * [Platform Documentation](doc/README.md)
   * [PDH Catalogue](doc/cat/README.md)
     * [User Guide](doc/cat/help.md)
+    * [Metadata](doc/cat/metadata.md)
     * [API](doc/cat/api.md)
   * [PacificMap](doc/pacific-map/README.md)
     * [User Guide](doc/pacific-map/user-documentation.md)
