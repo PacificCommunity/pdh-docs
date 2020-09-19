@@ -1,7 +1,6 @@
 # Table of contents
 
 * [Pacific Data Hub](README.md)
-* [Meet the team](meet-the-team.md)
 * [Projects](projects/README.md)
   * [Climate Change Finance Tracking Tool](projects/climate-change-finance-tracking-tool.md)
   * [Education Policy Bank](projects/education-policy-bank.md)
