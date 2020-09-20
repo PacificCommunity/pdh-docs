@@ -4,9 +4,7 @@ description: A spatial data exploration tool for everyone
 
 # PacificMap
 
- The **PacificMap** is a platform developed by [CSIRO Data61](https://data61.csiro.au) and the [Pacific Data Hub \(PDH\)](https://pacificdata.org) in collaboration with the [Pacific Community \(SPC\)](https://spc.int), as part of the Asia - Pacific for Development Initiative \(D4D\). The PacificMap is a platform for map-based access to spatial data from 22 Pacific Island Countries and Territories. It will lower the barrier and enhance access to timely, relevant and useful data for government and non-government organisations, businesses and communities throughout the Pacific.
-
-The PacificMap platform provides rich spatial data exploration capabilities for the Pacific Data Hub.
+ The **PacificMap** is a platform developed by [CSIRO Data61](https://data61.csiro.au) and the [Pacific Data Hub \(PDH\)](https://pacificdata.org) in collaboration with the [Pacific Community \(SPC\)](https://spc.int), as part of the Asia - Pacific for Development Initiative \(D4D\). The PacificMap is a platform for map-based access to spatial data from 22 Pacific Island Countries and Territories. It aims to lower the barrier and enhance access to timely, relevant and useful data for government and non-government organisations, businesses and communities throughout the Pacific.
 
 The platform brings together geospatial datasets from the Pacific Data Hub catalogue sourced from SPC's technical divisions and its member countries.
 
