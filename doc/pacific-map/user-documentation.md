@@ -1,16 +1,5 @@
 # User Guide
 
-The [**PacificMap** ](https://map.pacificdata.org)is based on [**TeriaJS** ](https://terria.io)and other open source software. When you access data through it, you are typically accessing the data directly from the [**Pacific Data Hub**](https://pacificdata.org/data) catalogue or the ogranisations who are the custodians of that data.
-
-The **PacificMap:**
-
-* provides easy access to authoritative and other spatial data to government, business and the public from the Pacific
-* facilitates the opening of data by international and regional development agencies, research and academic institutions, and local government bodies
-* provides an open framework of geospatial data services that supports commercial and community innovation
-
-To see what data is available on the PacificMap, refer to the Data Catalogue in the PacificMap itself. Click the Add data button and expand a category to browse.  
-
-
 ### How to get started with PacificMap
 
 To launch PacificMap and display some basic data follow these steps.
@@ -70,6 +59,6 @@ There are three ways:
 
 The PacificMap encourages data providers to publish their spatial data using this platform. There are two routes you can take to publishing.
 
-* Any spatial data which is added to [Pacific Data Hub](https://pacificdata.org/) using a protocol or format supported by the PacificMap \(such as WMS\) will automatically appear in the **PacificDataHub** section of the **Data Catalogue** tab for the PacificMap.
+* Any spatial data which is added to [PacificDataHub](https://pacificdata.org/) using a protocol or format supported by the PacificMap \(such as WMS\) will automatically appear in the **PacificDataHub** section of the **Data Catalogue** tab for the PacificMap.
 * If you require your data set to appear under a separate category of the PacificMap Data Catalogue, you will need to contact the support for PacificMap by emailing to [datahub@spc.int](mailto:datahub@spc.int) for more information. You will need to provide an internet accessible service in a standard protocol to access your data set on the internet and appropriate references must be added to the PacificMap configuration.
 
