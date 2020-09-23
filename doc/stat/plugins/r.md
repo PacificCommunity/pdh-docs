@@ -8,7 +8,7 @@ description: >-
 
 ### Overview
 
-The package is an adaptation of the `rsdmx` package developed by Emmanuel Blondel, and contributors Matthieu Stigler and Eric Persson \([https://github.com/opensdmx/rsdmx](https://github.com/opensdmx/rsdmx)\). It has been configured to include Pacific Data Hub's .Stat API as a default service provider. Full credit goes to the original authors, who can be cited at[![DOI](https://zenodo.org/badge/5183/opensdmx/rsdmx.svg)](http://doi.org/10.5281/zenodo.592404)
+The package is an adaptation of the `rsdmx` package developed by Emmanuel Blondel, and contributors Matthieu Stigler and Eric Persson. Learn more about the original package [here](https://github.com/opensdmx/rsdmx). It has been configured to include Pacific Data Hub's .Stat API as a default service provider. Full credit goes to the original authors, who can be cited at[![DOI](https://zenodo.org/badge/5183/opensdmx/rsdmx.svg)](http://doi.org/10.5281/zenodo.592404)
 
 ### Installation
 
@@ -18,11 +18,11 @@ Remove rsdmx if already installed: `remove.packages("rsdmx")`
 
 Install devtools: `install.packages("devtools")`
 
-Install rsdmx from the PDH.stat version of the package on Github: `devtools::install_github("conorg000/rsdmx")`
+Install rsdmx from the PDH.stat version of the package on Github: `devtools::install_github("PacificCommunity/rsdmx")`
 
 ### Basic Usage
 
-This is a quick-start guide. See [here ](https://github.com/conorg000/rsdmx)the full documentation and code.
+This is a quick-start guide. Go [here ](https://github.com/PacificCommunity/rsdmx)for the full documentation and code.
 
 Load package: `library(rsdmx)`
 
