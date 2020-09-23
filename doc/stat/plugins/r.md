@@ -30,7 +30,9 @@ Load package: `library(rsdmx)`
 
 Aside from PDH.stat, the original package offers connectivity with OECD, Eurostat and others. See all available service providers with the `getSDMXServiceProviders()` function.
 
-`as.data.frame(getSDMXServiceProviders())`
+```r
+as.data.frame(getSDMXServiceProviders())
+```
 
 ![](../../../.gitbook/assets/1.png)
 
@@ -38,13 +40,17 @@ Aside from PDH.stat, the original package offers connectivity with OECD, Eurosta
 
 To see the available PDH.stat dataflows \(data sets\), use the `readSDMX()` function, setting the `providerId` parameter to "PDH" and the `resource` parameter to "dataflow":
 
-`as.data.frame(readSDMX(providerId="PDH", resource="dataflow"))`
+```r
+as.data.frame(readSDMX(providerId="PDH", resource="dataflow"))
+```
 
 ![](../../../.gitbook/assets/getdataflows.png)
 
 To return the available data set IDs and their English names, filter the dataframe:
 
-`as.data.frame(readSDMX(providerId="PDH", resource="dataflow"))[c("id", "Name.en")]`
+```r
+as.data.frame(readSDMX(providerId="PDH", resource="dataflow"))[c("id", "Name.en")]
+```
 
 ![](../../../.gitbook/assets/getdataflowsandnames.png)
 
@@ -54,9 +60,10 @@ To retrieve a dataflow, provide the dataflow ID to the `readSDMX()` function in 
 
 For example, to connect to "Inflation Rates" dataflow, the ID is "DF\_CPI" \(as shown when retrieving all the dataflows for PDH.stat\):
 
-`sdmx <- readSDMX(providerId="PDH", resource="data", flowRef="DF_CPI")`
-
-`df <- as.data.frame(sdmx)`
+```r
+sdmx <- readSDMX(providerId="PDH", resource="data", flowRef="DF_CPI")
+df <- as.data.frame(sdmx)
+```
 
 ![](../../../.gitbook/assets/getcpidata.png)
 
@@ -73,7 +80,16 @@ The `key` parameter controls a different number of variables depending on the da
 * For `DF_CPI` "Inflation Rates" dataflow, to get annual data from 2010-2015 for Cook Islands and Fiji:
   * The `key` is `"A.CK+FJ.."`
   * `start` is 2010 and `end` is 2015
-  * The R code:`as.data.frame(readSDMX(providerId = "PDH", resource="data", flowRef="DF_CPI", key="A.CK+FJ..", start=2010, end=2015))`
+  * The R code:
+
+```r
+as.data.frame(readSDMX(providerId = "PDH", 
+                resource="data", 
+                flowRef="DF_CPI", 
+                key="A.CK+FJ..", 
+                start=2010, 
+                end=2015))
+```
 
 Given that the `key` variables can change depending on the dataflow, it can be easier to retrieve all data and then filter manually in R. Alternatively, use the [Data Explorer](https://stats.pacificdata.org/?locale=en) to filter a dataset and then view the relevant API call and key.
 
