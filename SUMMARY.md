@@ -22,5 +22,4 @@
     * [API change history](stat/api/api-history.md)
 * [PDH Microdata Library](ml/README.md)
   * [User Documentation](ml/help.md)
-  * [API](ml/api.md)
 
