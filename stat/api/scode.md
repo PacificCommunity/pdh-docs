@@ -85,7 +85,7 @@ print(dict)
 
 This python script makes a request for CSV-formatted population data over time, for a specified number of countries. It then manipulates the data and plots the results as a time series chart. It is designed to work for any number of countries, over any time period \(within API's constraints\). It could be adapted to handle other time series data.
 
-![](../../../.gitbook/assets/population_time_series.png)
+![](../../.gitbook/assets/population_time_series.png)
 
 ```python
 import requests

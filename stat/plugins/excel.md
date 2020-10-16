@@ -13,7 +13,7 @@ description: >-
 
 2: Right-click the zipped folder, choose "Extract All...", choose where you would like to extract the files \(optional\), then click "Extract".
 
-![](../../../.gitbook/assets/extract.png)
+![](../../.gitbook/assets/extract.png)
 
 3: In the extracted folder, navigate to “Stat-DLM” folder.
 
@@ -21,31 +21,31 @@ description: >-
 
 5: If a warning appears saying "Windows protected your PC", click "More info" and then "Run anyway".
 
-![](../../../.gitbook/assets/warning.png)
+![](../../.gitbook/assets/warning.png)
 
-![](../../../.gitbook/assets/runanyway.png)
+![](../../.gitbook/assets/runanyway.png)
 
 6: Wait while the file opens a "command prompt" window and writes a few lines.
 
-![](../../../.gitbook/assets/terminal.png)
+![](../../.gitbook/assets/terminal.png)
 
 7: When prompted press any key on the keyboard to finish the setup.
 
 8: Now, in the “Stat-DLM” folder, run the “setup” Application File.
 
-![](../../../.gitbook/assets/excel1.png)
+![](../../.gitbook/assets/excel1.png)
 
 9: Another warning will most likely appear. If it is like the previous warning, click "More info", then "Run anyway".
 
 10: Once a prompt like below appears, the installation has started successfully. Click "Install" and wait for the process to complete. **If a prompt like below hasn't appeared, you may need to run "setup" again.**
 
-![](../../../.gitbook/assets/installit.png)
+![](../../.gitbook/assets/installit.png)
 
 11: Open Excel and choose an existing file or make a new one.
 
 12: Find the installed add-in under the "PDH.stat" heading on the Excel Ribbon.
 
-![](../../../.gitbook/assets/excel2.png)
+![](../../.gitbook/assets/excel2.png)
 
 ### Basic Usage
 
@@ -59,15 +59,15 @@ description: >-
 
 5: In “Step 1 – Select data”, under “Datasets and queries”, click the drop-down menu to select a data set.
 
-![](../../../.gitbook/assets/excel3.png)
+![](../../.gitbook/assets/excel3.png)
 
 6: Depending on the selected data set, the “Data filters” will change.
 
-![](../../../.gitbook/assets/excel4.png)
+![](../../.gitbook/assets/excel4.png)
 
 7: Click “EDIT FILTERS” to step through each filter and choose from the available options.
 
-![](../../../.gitbook/assets/excel5.png)
+![](../../.gitbook/assets/excel5.png)
 
 8: Click “APPLY FILTERS” to finish editing filters.
 
@@ -81,7 +81,7 @@ description: >-
 
 13: Adjust “Return” to choose whether to have “Labels” or not, and in which language. Selecting “Labels” will provide the real names for all data, otherwise the data will make use of codes. Select “Exclude Codes” to remove the codes altogether.
 
-![](../../../.gitbook/assets/excel6.png)
+![](../../.gitbook/assets/excel6.png)
 
 14: Click “GET DATA” and wait while the data is retrieved from PDH.stat.
 
@@ -93,7 +93,7 @@ description: >-
 
 With a data set already loaded, the add-in provides extra features.
 
-![](../../../.gitbook/assets/excel7.png)
+![](../../.gitbook/assets/excel7.png)
 
 **Edit the data connection:** Select “Change Selection” to adjust the settings of the current data connection and reload the data in the same location. NOTE: this will remove the existing data in that location.
 
@@ -103,7 +103,7 @@ With a data set already loaded, the add-in provides extra features.
 
 **See the API query:** When adding a connection or changing an existing one, in “Step 2 – Specify output” there is a button showing “SHOW QUERY SYNTAX”. Select this to see how your customised filters are represented in a request to the actual PDH.stat API. The API call is shown in several different formats.
 
-![](../../../.gitbook/assets/excel8.png)
+![](../../.gitbook/assets/excel8.png)
 
 ### Troubleshooting
 
@@ -120,5 +120,5 @@ With a data set already loaded, the add-in provides extra features.
 5. Click on “.Stat DLM” and choose “Uninstall”.
 6. Follow the prompts to uninstall the add-in.
 
-![](../../../.gitbook/assets/excel9.png)
+![](../../.gitbook/assets/excel9.png)
 

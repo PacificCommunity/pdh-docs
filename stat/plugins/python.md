@@ -38,7 +38,7 @@ sdmx.list_sources()
 
 The source abbreviation for PDH.stat is "SPC" \(Pacific Community\), as shown below. 
 
-![](../../../.gitbook/assets/sources.png)
+![](../../.gitbook/assets/sources.png)
 
 To connect to PDH.stat and then view its available data flows:
 
@@ -48,7 +48,7 @@ datasets = sdmx.to_pandas(spc.dataflow().dataflow)
 datasets
 ```
 
-![](../../../.gitbook/assets/df.png)
+![](../../.gitbook/assets/df.png)
 
 To connect to a data flow and convert it into a pandas dataframe or series:
 
@@ -58,5 +58,5 @@ df = sdmx.to_pandas(data)
 df
 ```
 
-![](../../../.gitbook/assets/data.png)
+![](../../.gitbook/assets/data.png)
 

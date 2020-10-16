@@ -34,7 +34,7 @@ Aside from PDH.stat, the original package offers connectivity with OECD, Eurosta
 as.data.frame(getSDMXServiceProviders())
 ```
 
-![](../../../.gitbook/assets/1.png)
+![](../../.gitbook/assets/1.png)
 
 **See available dataflows from PDH.stat**
 
@@ -44,7 +44,7 @@ To see the available PDH.stat dataflows \(data sets\), use the `readSDMX()` func
 as.data.frame(readSDMX(providerId="PDH", resource="dataflow"))
 ```
 
-![](../../../.gitbook/assets/getdataflows.png)
+![](../../.gitbook/assets/getdataflows.png)
 
 To return the available data set IDs and their English names, filter the dataframe:
 
@@ -52,7 +52,7 @@ To return the available data set IDs and their English names, filter the datafra
 as.data.frame(readSDMX(providerId="PDH", resource="dataflow"))[c("id", "Name.en")]
 ```
 
-![](../../../.gitbook/assets/getdataflowsandnames.png)
+![](../../.gitbook/assets/getdataflowsandnames.png)
 
 **Get all data for a dataflow**
 
@@ -65,7 +65,7 @@ sdmx <- readSDMX(providerId="PDH", resource="data", flowRef="DF_CPI")
 df <- as.data.frame(sdmx)
 ```
 
-![](../../../.gitbook/assets/getcpidata.png)
+![](../../.gitbook/assets/getcpidata.png)
 
 **Get more specific data for a dataflow**
 
@@ -93,5 +93,5 @@ as.data.frame(readSDMX(providerId = "PDH",
 
 Given that the `key` variables can change depending on the dataflow, it can be easier to retrieve all data and then filter manually in R. Alternatively, use the [Data Explorer](https://stats.pacificdata.org/?locale=en) to filter a dataset and then view the relevant API call and key.
 
-![](../../../.gitbook/assets/cookfiji.png)
+![](../../.gitbook/assets/cookfiji.png)
 

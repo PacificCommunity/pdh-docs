@@ -28,7 +28,7 @@ and here:
 
 ## Using the API
 
-For more information about the PDH.stat API see the [API reference](../).
+For more information about the PDH.stat API see the [API reference]().
 
 
 
