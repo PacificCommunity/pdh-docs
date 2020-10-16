@@ -2,10 +2,9 @@
 
 * [Pacific Data Hub](README.md)
 * [PDH Catalogue](catalogue/README.md)
-  * [User Guide](catalogue/help.md)
+  * [User Guide](catalogue/user-guide.md)
 * [PacificMap](pacific-map/README.md)
-  * [User Guide](pacific-map/user-documentation.md)
-  * [API](pacific-map/api.md)
+  * [User Guide](pacific-map/user-guide.md)
 * [PDH.stat](stat/README.md)
   * [Data Explorer](stat/help.md)
   * [Plugins](stat/plugins/README.md)
@@ -20,5 +19,6 @@
     * [Sample Code](stat/api/scode.md)
     * [CMS integration](stat/api/web-integration.md)
     * [API change history](stat/api/api-history.md)
-* [PDH Microdata Library](ml.md)
+* [PDH Microdata Library](ml/README.md)
+  * [User Guide](ml/user-guide.md)
 
