@@ -116,31 +116,54 @@ Specifies whether the response should be compressed and how.
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Cake successfully retrieved.
+An example API request for data on Fiji's population projection \(DF\_POP\_PROJ\) from 2015 to 2020 \(returned as XML\): `curl -v -X GET   
+"https://stats-nsi-stable.pacificdata.org/rest/data/SPC,DF_POP_PROJ,3.0/A.FJ._T._T.MIDYEARPOPEST?startPeriod=2015&endPeriod=2020&dimensionAtObservation=AllDimensions"`
 {% endapi-method-response-example-description %}
 
-```
-{    "name": "Cake's name",    "recipe": "Cake's recipe name",    "cake": "Binary cake"}
-```
-{% endapi-method-response-example %}
+```markup
+Date: Fri, 16 Oct 2020 05:36:49 GMT
+Content-Type: application/vnd.sdmx.genericdata+xml; version=2.1; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d5be5dfdd90fc5940bf06bc555017cc891602826609; expires=Sun, 15-Nov-20 05:36:49 GMT; path=/; domain=.pacificdata.org; HttpOnly; SameSite=Lax
+CF-Ray: 5e2f6ca67a10e9b3-BNE
+Accept-Ranges: values
+Cache-Control: no-store,no-cache
+Content-Disposition: attachment; filename= "SPC-DF_POP_PROJ-3.0-A.FJ._T._T.MIDYEARPOPEST.csv"
+Vary: Accept, Accept-Encoding
+CF-Cache-Status: DYNAMIC
+cf-request-id: 05d1823c0b0000e9b3ab23d000000001
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Pragma: no-cache
+Server: cloudflare
 
-{% api-method-response-example httpCode=302 %}
-{% api-method-response-example-description %}
+<?xml version="1.0" encoding="utf-8"?><!--NSI Web Service v7.13.0.0--><message:GenericData xmlns:footer="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message/footer" xmlns:generic="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic" xmlns:message="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xmlns:common="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xml="http://www.w3.org/XML/1998/namespace"><message:Header><message:ID>IREF0919307a49a947be8b3b0ad3ed78de70</message:ID><message:Test>true</message:Test><message:Prepared>2020-10-16T05:36:49</message:Prepared><message:Sender id="Stable - DotStat v8" /><message:Structure structureID="SPC_DF_POP_PROJ_3_0" dimensionAtObservation="AllDimensions"><common:StructureUsage><Ref agencyID="SPC" id="DF_POP_PROJ" version="3.0" /></common:StructureUsage></message:Structure><message:DataSetAction>Information</message:DataSetAction></message:Header><message:DataSet action="Information" structureRef="SPC_DF_POP_PROJ_3_0"><generic:Obs><generic:ObsKey><generic:Value id="TIME_PERIOD" value="2017" /><generic:Value id="FREQ" value="A" /><generic:Value id="GEO_PICT" value="FJ" /><generic:Value id="SEX" value="_T" /><generic:Value id="AGE" value="_T" /><generic:Value id="INDICATOR" value="MIDYEARPOPEST" /></generic:ObsKey><generic:ObsValue value="883270" /><generic:Attributes><generic:Value id="UNIT_MEASURE" value="N" /><generic:Value id="UNIT_MULTIPLIER" value="0" /><generic:Value id="OBS_STATUS" value="E" /><generic:Value id="OBS_COMMENT" value="The difference between this value and the sum of male and female populations is due to rounding errors in lower-level estimates." /></generic:Attributes></generic:Obs><generic:Obs><generic:ObsKey><generic:Value id="TIME_PERIOD" value="2018" /><generic:Value id="FREQ" value="A" /><generic:Value id="GEO_PICT" value="FJ" /><generic:Value id="SEX" value="_T" /><generic:Value id="AGE" value="_T" /><generic:Value id="INDICATOR" value="MIDYEARPOPEST" /></generic:ObsKey><generic:ObsValue value="887394" /><generic:Attributes><generic:Value id="UNIT_MEASURE" value="N" /><generic:Value id="UNIT_MULTIPLIER" value="0" /><generic:Value id="OBS_STATUS" value="E" /><generic:Value id="OBS_COMMENT" value="The difference between this value and the sum of male and female populations is due to rounding errors in lower-level estimates." /></generic:Attributes></generic:Obs><generic:Obs><generic:ObsKey><generic:Value id="TIME_PERIOD" value="2019" /><generic:Value id="FREQ" value="A" /><generic:Value id="GEO_PICT" value="FJ" /><generic:Value id="SEX" value="_T" /><generic:Value id="AGE" value="_T" /><generic:Value id="INDICATOR" value="MIDYEARPOPEST" /></generic:ObsKey><generic:ObsValue value="891296" /><generic:Attributes><generic:Value id="UNIT_MEASURE" value="N" /><generic:Value id="UNIT_MULTIPLIER" value="0" /><generic:Value id="OBS_STATUS" value="F" /></generic:Attributes></generic:Obs><generic:Obs><generic:ObsKey><generic:Value id="TIME_PERIOD" value="2020" /><generic:Value id="FREQ" value="A" /><generic:Value id="GEO_PICT" value="FJ" /><generic:Value id="SEX" value="_T" /><generic:Value id="AGE" value="_T" /><generic:Value id="INDICATOR" value="MIDYEARPOPEST" /></generic:ObsKey><generic:ObsValue value="894961" /><generic:Attributes><generic:Value id="UNIT_MEASURE" value="N" /><generic:Value id="UNIT_MULTIPLIER" value="0" /><generic:Value id="OBS_STATUS" value="F" /><generic:Value id="OBS_COMMENT" value="The difference between this value and the sum of male and female populations is due to rounding errors in lower-level estimates." /></generic:Attributes></generic:Obs></message:DataSet></message:GenericData>* Connection #0 to host stats-nsi-stable.pacificdata.org left intact
 
-{% endapi-method-response-example-description %}
-
-```
 
 ```
 {% endapi-method-response-example %}
 
 {% api-method-response-example httpCode=404 %}
 {% api-method-response-example-description %}
-Could not find a cake matching this query.
+An example response for when the request seeks a dataflow which doesn't exist.
 {% endapi-method-response-example-description %}
 
-```
-{    "message": "Ain't no cake like that."}
+```markup
+Date: Fri, 16 Oct 2020 05:48:01 GMT
+Content-Type: text/plain
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=dca6803be6c4a37ae70765f99c6149ca71602827281; expires=Sun, 15-Nov-20 05:48:01 GMT; path=/; domain=.pacificdata.org; HttpOnly; SameSite=Lax
+CF-Ray: 5e2f7d0b38a5329b-BNE
+Cache-Control: no-cache
+Expires: -1
+CF-Cache-Status: DYNAMIC
+cf-request-id: 05d18c7b050000329b542c0000000001
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Pragma: no-cache
+Server: cloudflare
+
+Could not find Dataflow and/or DSD related with this data request* Connection #0 to host stats-nsi-stable.pacificdata.org left intact
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
