@@ -1,2 +1,0 @@
-# Pacific Skills Portal
-

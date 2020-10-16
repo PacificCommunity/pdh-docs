@@ -1,12 +1,6 @@
 # Table of contents
 
 * [Pacific Data Hub](README.md)
-* [Projects](projects/README.md)
-  * [Climate Change Finance Tracking Tool](projects/climate-change-finance-tracking-tool.md)
-  * [Education Policy Bank](projects/education-policy-bank.md)
-  * [Maritime Boundaries Dashboard](projects/maritime-boundaries-dashboard.md)
-  * [NDC Hub](projects/ndc-hub.md)
-  * [Pacific Skills Portal](projects/pacific-skills-portal.md)
 * [Platform Documentation](doc/README.md)
   * [PDH Catalogue](doc/catalogue/README.md)
     * [User Guide](doc/catalogue/help.md)

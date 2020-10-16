@@ -1,2 +1,0 @@
-# Maritime Boundaries Dashboard
-
