@@ -137,7 +137,56 @@ Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi
 Pragma: no-cache
 Server: cloudflare
 
-<?xml version="1.0" encoding="utf-8"?><!--NSI Web Service v7.13.0.0--><message:GenericData xmlns:footer="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message/footer" xmlns:generic="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic" xmlns:message="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xmlns:common="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xml="http://www.w3.org/XML/1998/namespace"><message:Header><message:ID>IREF0919307a49a947be8b3b0ad3ed78de70</message:ID><message:Test>true</message:Test><message:Prepared>2020-10-16T05:36:49</message:Prepared><message:Sender id="Stable - DotStat v8" /><message:Structure structureID="SPC_DF_POP_PROJ_3_0" dimensionAtObservation="AllDimensions"><common:StructureUsage><Ref agencyID="SPC" id="DF_POP_PROJ" version="3.0" /></common:StructureUsage></message:Structure><message:DataSetAction>Information</message:DataSetAction></message:Header><message:DataSet action="Information" structureRef="SPC_DF_POP_PROJ_3_0"><generic:Obs><generic:ObsKey><generic:Value id="TIME_PERIOD" value="2017" /><generic:Value id="FREQ" value="A" /><generic:Value id="GEO_PICT" value="FJ" /><generic:Value id="SEX" value="_T" /><generic:Value id="AGE" value="_T" /><generic:Value id="INDICATOR" value="MIDYEARPOPEST" /></generic:ObsKey><generic:ObsValue value="883270" /><generic:Attributes><generic:Value id="UNIT_MEASURE" value="N" /><generic:Value id="UNIT_MULTIPLIER" value="0" /><generic:Value id="OBS_STATUS" value="E" /><generic:Value id="OBS_COMMENT" value="The difference between this value and the sum of male and female populations is due to rounding errors in lower-level estimates." /></generic:Attributes></generic:Obs><generic:Obs><generic:ObsKey><generic:Value id="TIME_PERIOD" value="2018" /><generic:Value id="FREQ" value="A" /><generic:Value id="GEO_PICT" value="FJ" /><generic:Value id="SEX" value="_T" /><generic:Value id="AGE" value="_T" /><generic:Value id="INDICATOR" value="MIDYEARPOPEST" /></generic:ObsKey><generic:ObsValue value="887394" /><generic:Attributes><generic:Value id="UNIT_MEASURE" value="N" /><generic:Value id="UNIT_MULTIPLIER" value="0" /><generic:Value id="OBS_STATUS" value="E" /><generic:Value id="OBS_COMMENT" value="The difference between this value and the sum of male and female populations is due to rounding errors in lower-level estimates." /></generic:Attributes></generic:Obs><generic:Obs><generic:ObsKey><generic:Value id="TIME_PERIOD" value="2019" /><generic:Value id="FREQ" value="A" /><generic:Value id="GEO_PICT" value="FJ" /><generic:Value id="SEX" value="_T" /><generic:Value id="AGE" value="_T" /><generic:Value id="INDICATOR" value="MIDYEARPOPEST" /></generic:ObsKey><generic:ObsValue value="891296" /><generic:Attributes><generic:Value id="UNIT_MEASURE" value="N" /><generic:Value id="UNIT_MULTIPLIER" value="0" /><generic:Value id="OBS_STATUS" value="F" /></generic:Attributes></generic:Obs><generic:Obs><generic:ObsKey><generic:Value id="TIME_PERIOD" value="2020" /><generic:Value id="FREQ" value="A" /><generic:Value id="GEO_PICT" value="FJ" /><generic:Value id="SEX" value="_T" /><generic:Value id="AGE" value="_T" /><generic:Value id="INDICATOR" value="MIDYEARPOPEST" /></generic:ObsKey><generic:ObsValue value="894961" /><generic:Attributes><generic:Value id="UNIT_MEASURE" value="N" /><generic:Value id="UNIT_MULTIPLIER" value="0" /><generic:Value id="OBS_STATUS" value="F" /><generic:Value id="OBS_COMMENT" value="The difference between this value and the sum of male and female populations is due to rounding errors in lower-level estimates." /></generic:Attributes></generic:Obs></message:DataSet></message:GenericData>* Connection #0 to host stats-nsi-stable.pacificdata.org left intact
+<?xml version="1.0" encoding="utf-8"?><!--NSI Web Service v7.13.0.0-->
+<message:GenericData xmlns:footer="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message/footer" xmlns:generic="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic" xmlns:message="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xmlns:common="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xml="http://www.w3.org/XML/1998/namespace">
+<message:Header>
+<message:ID>IREF0919307a49a947be8b3b0ad3ed78de70</message:ID>
+<message:Test>true</message:Test>
+<message:Prepared>2020-10-16T05:36:49</message:Prepared>
+<message:Sender id="Stable - DotStat v8" />
+<message:Structure structureID="SPC_DF_POP_PROJ_3_0" dimensionAtObservation="AllDimensions">
+<common:StructureUsage><Ref agencyID="SPC" id="DF_POP_PROJ" version="3.0" />
+</common:StructureUsage>
+</message:Structure>
+<message:DataSetAction>Information</message:DataSetAction>
+</message:Header>
+<message:DataSet action="Information" structureRef="SPC_DF_POP_PROJ_3_0">
+<generic:Obs><generic:ObsKey><generic:Value id="TIME_PERIOD" value="2017" />
+<generic:Value id="FREQ" value="A" />
+<generic:Value id="GEO_PICT" value="FJ" />
+<generic:Value id="SEX" value="_T" />
+<generic:Value id="AGE" value="_T" />
+<generic:Value id="INDICATOR" value="MIDYEARPOPEST" />
+</generic:ObsKey><generic:ObsValue value="883270" />
+<generic:Attributes><generic:Value id="UNIT_MEASURE" value="N" />
+<generic:Value id="UNIT_MULTIPLIER" value="0" />
+<generic:Value id="OBS_STATUS" value="E" />
+<generic:Value id="OBS_COMMENT" value="The difference between this value and the sum of male and female populations is due to rounding errors in lower-level estimates." />
+</generic:Attributes></generic:Obs>
+<generic:Obs>
+<generic:ObsKey>
+<generic:Value id="TIME_PERIOD" value="2018" />
+<generic:Value id="FREQ" value="A" />
+<generic:Value id="GEO_PICT" value="FJ" />
+<generic:Value id="SEX" value="_T" />
+<generic:Value id="AGE" value="_T" />
+<generic:Value id="INDICATOR" value="MIDYEARPOPEST" />
+</generic:ObsKey><generic:ObsValue value="887394" />
+<generic:Attributes><generic:Value id="UNIT_MEASURE" value="N" />
+<generic:Value id="UNIT_MULTIPLIER" value="0" />
+<generic:Value id="OBS_STATUS" value="E" />
+<generic:Value id="OBS_COMMENT" value="The difference between this value and the sum of male and female populations is due to rounding errors in lower-level estimates." />
+</generic:Attributes>
+</generic:Obs>
+<generic:Obs>
+<generic:ObsKey>
+<generic:Value id="TIME_PERIOD" value="2019" />
+<generic:Value id="FREQ" value="A" />
+<generic:Value id="GEO_PICT" value="FJ" />
+<generic:Value id="SEX" value="_T" />
+<generic:Value id="AGE" value="_T" />
+<generic:Value id="INDICATOR" value="MIDYEARPOPEST" />
+</generic:ObsKey><generic:ObsValue value="891296" /><generic:Attributes><generic:Value id="UNIT_MEASURE" value="N" /><generic:Value id="UNIT_MULTIPLIER" value="0" /><generic:Value id="OBS_STATUS" value="F" /></generic:Attributes></generic:Obs><generic:Obs><generic:ObsKey><generic:Value id="TIME_PERIOD" value="2020" /><generic:Value id="FREQ" value="A" /><generic:Value id="GEO_PICT" value="FJ" /><generic:Value id="SEX" value="_T" /><generic:Value id="AGE" value="_T" /><generic:Value id="INDICATOR" value="MIDYEARPOPEST" /></generic:ObsKey><generic:ObsValue value="894961" /><generic:Attributes><generic:Value id="UNIT_MEASURE" value="N" /><generic:Value id="UNIT_MULTIPLIER" value="0" /><generic:Value id="OBS_STATUS" value="F" /><generic:Value id="OBS_COMMENT" value="The difference between this value and the sum of male and female populations is due to rounding errors in lower-level estimates." /></generic:Attributes></generic:Obs></message:DataSet></message:GenericData>* Connection #0 to host stats-nsi-stable.pacificdata.org left intact
 
 
 ```
@@ -653,11 +702,111 @@ Possible values are:
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-
+An example request for the Consumer Price Index dataflow \(DF\_CPI\), specifying `allstubs` as the detail parameter to return a simplified view of the dataflow: `curl -v -X GET "https://stats-nsi-stable.pacificdata.org/rest/dataflow/SPC/DF_CPI/3.0?references=all&detail=allstubs"`
 {% endapi-method-response-example-description %}
 
-```
-
+```markup
+< Date: Fri, 16 Oct 2020 06:35:59 GMT
+< Content-Type: application/vnd.sdmx.structure+xml; version=2.1; charset=utf-8
+< Transfer-Encoding: chunked
+< Connection: keep-alive
+< Set-Cookie: __cfduid=dfd97cf769efd84d0ccd013362e8a84241602830158; expires=Sun, 15-Nov-20 06:35:58 GMT; path=/; domain=.pacificdata.org; HttpOnly; SameSite=Lax
+< CF-Ray: 5e2fc34cde53e9bf-BNE
+< Accept-Ranges: values
+< Cache-Control: no-store,no-cache
+< Vary: Accept, Accept-Encoding
+< CF-Cache-Status: DYNAMIC
+< cf-request-id: 05d1b8640b0000e9bf31346000000001
+< Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< Pragma: no-cache
+< Server: cloudflare
+<
+<?xml version="1.0" encoding="utf-8"?>
+<!--NSI Web Service v7.13.0.0-->
+<message:Structure xmlns:message="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xmlns:structure="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure" xmlns:common="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+  <message:Header>
+    <message:ID>IDREF11282</message:ID>
+    <message:Test>false</message:Test>
+    <message:Prepared>2020-10-16T06:35:59.0586706+00:00</message:Prepared>
+    <message:Sender id="Unknown" />
+    <message:Receiver id="Unknown" />
+  </message:Header>
+  <message:Structures>
+    <structure:Dataflows>
+      <structure:Dataflow id="DF_CPI" agencyID="SPC" version="3.0" isExternalReference="true" isFinal="false" structureURL="http://stats-nsi-stable.pacificdata.org/rest/Dataflow/SPC/DF_CPI/3.0">
+        <common:Annotations>
+          <common:Annotation>
+            <common:AnnotationType>NonProductionDataflow</common:AnnotationType>
+            <common:AnnotationText xml:lang="en">true</common:AnnotationText>
+          </common:Annotation>
+        </common:Annotations>
+        <common:Name xml:lang="en">Inflation rates</common:Name>
+        <common:Name xml:lang="fr">Taux d'inflation</common:Name>
+      </structure:Dataflow>
+    </structure:Dataflows>
+    <structure:CategorySchemes>
+      <structure:CategoryScheme id="CAS_COM_TOPIC" agencyID="SPC" version="1.0" isExternalReference="true" isFinal="false" structureURL="http://stats-nsi-stable.pacificdata.org/rest/CategoryScheme/SPC/CAS_COM_TOPIC/1.0">
+        <common:Name xml:lang="en">Topic</common:Name>
+        <common:Name xml:lang="fr">Thème</common:Name>
+      </structure:CategoryScheme>
+    </structure:CategorySchemes>
+    <structure:Categorisations>
+      <structure:Categorisation id="CAT_CPI" agencyID="SPC" version="3.0" isExternalReference="true" isFinal="false" structureURL="http://need/to/changeit">
+        <common:Name xml:lang="en">Categorisation of dataflow DF_CPI to category ECO of categrory scheme CAS_COM_TOPIC</common:Name>
+      </structure:Categorisation>
+    </structure:Categorisations>
+    <structure:Codelists>
+      <structure:Codelist id="CL_COM_FREQ" agencyID="SPC" version="1.0" isExternalReference="true" isFinal="false" structureURL="http://stats-nsi-stable.pacificdata.org/rest/Codelist/SPC/CL_COM_FREQ/1.0">
+        <common:Name xml:lang="en">Common codelist for data frequencies</common:Name>
+        <common:Name xml:lang="fr">Liste de codes commune pour la fréquence des données</common:Name>
+      </structure:Codelist>
+      <structure:Codelist id="CL_COM_GEO_PICT" agencyID="SPC" version="2.0" isExternalReference="true" isFinal="false" structureURL="http://stats-nsi-stable.pacificdata.org/rest/Codelist/SPC/CL_COM_GEO_PICT/2.0">
+        <common:Name xml:lang="en">Common hierarchical codelist for PICTs</common:Name>
+        <common:Name xml:lang="fr">Liste hiérarchique de codes commune pour les PICTs</common:Name>
+      </structure:Codelist>
+      <structure:Codelist id="CL_COM_OBS_STATUS" agencyID="SPC" version="1.0" isExternalReference="true" isFinal="false" structureURL="http://stats-nsi-stable.pacificdata.org/rest/Codelist/SPC/CL_COM_OBS_STATUS/1.0">
+        <common:Name xml:lang="en">Common codelist for observation statuses</common:Name>
+        <common:Name xml:lang="fr">Liste de codes commune pour le statut des observations</common:Name>
+      </structure:Codelist>
+      <structure:Codelist id="CL_COM_PACCOICOP20" agencyID="SPC" version="1.0" isExternalReference="true" isFinal="false" structureURL="http://stats-nsi-stable.pacificdata.org/rest/Codelist/SPC/CL_COM_PACCOICOP20/1.0">
+        <common:Name xml:lang="en">Common codelist for PACCOICOP 2020</common:Name>
+        <common:Name xml:lang="fr">Liste de codes commune pour PACCOICOP 2020</common:Name>
+      </structure:Codelist>
+      <structure:Codelist id="CL_COM_UNIT_MEASURE" agencyID="SPC" version="1.0" isExternalReference="true" isFinal="false" structureURL="http://stats-nsi-stable.pacificdata.org/rest/Codelist/SPC/CL_COM_UNIT_MEASURE/1.0">
+        <common:Name xml:lang="en">Common codelist for units of measure</common:Name>
+        <common:Name xml:lang="fr">Liste de codes commune pour les unités de mesure</common:Name>
+      </structure:Codelist>
+      <structure:Codelist id="CL_COM_UNIT_MULT" agencyID="SPC" version="1.0" isExternalReference="true" isFinal="false" structureURL="http://stats-nsi-stable.pacificdata.org/rest/Codelist/SPC/CL_COM_UNIT_MULT/1.0">
+        <common:Name xml:lang="en">Common codelist for unit multipliers</common:Name>
+        <common:Name xml:lang="fr">Liste de codes commune pour les mulltiplicateurs d'unité</common:Name>
+      </structure:Codelist>
+      <structure:Codelist id="CL_CPI_INDICATORS" agencyID="SPC" version="3.0" isExternalReference="true" isFinal="false" structureURL="http://stats-nsi-stable.pacificdata.org/rest/Codelist/SPC/CL_CPI_INDICATORS/3.0">
+        <common:Name xml:lang="en">Codelist for consumer prices indicators</common:Name>
+        <common:Name xml:lang="fr">Liste de codes pour les indicateurs des prix à la consommation</common:Name>
+      </structure:Codelist>
+    </structure:Codelists>
+    <structure:Concepts>
+      <structure:ConceptScheme id="CS_COMMON" agencyID="SPC" version="2.0" isExternalReference="true" isFinal="false" structureURL="http://stats-nsi-stable.pacificdata.org/rest/ConceptScheme/SPC/CS_COMMON/2.0">
+        <common:Name xml:lang="en">Common concepts for SPC .Stat data</common:Name>
+        <common:Name xml:lang="fr">Concepts communs pour les données .Stat de la CPS</common:Name>
+      </structure:ConceptScheme>
+    </structure:Concepts>
+    <structure:DataStructures>
+      <structure:DataStructure id="DSD_CPI" agencyID="SPC" version="3.0" isExternalReference="true" isFinal="false" structureURL="http://stats-nsi-stable.pacificdata.org/rest/DataStructure/SPC/DSD_CPI/3.0">
+        <common:Name xml:lang="fr">Définition de la structure des données pour les prix à la consommation</common:Name>
+        <common:Name xml:lang="en">Data structure definition for consummer prices</common:Name>
+      </structure:DataStructure>
+    </structure:DataStructures>
+    <structure:Constraints>
+      <structure:ContentConstraint id="CON_CPI" agencyID="SPC" version="3.0" isExternalReference="true" isFinal="false" structureURL="http://stats-nsi-stable.pacificdata.org/rest/ContentConstraint/SPC/CON_CPI/3.0" type="Actual">
+        <common:Name xml:lang="en">Content constraint for DF_CPI</common:Name>
+      </structure:ContentConstraint>
+      <structure:ContentConstraint id="CR_A_DF_CPI" agencyID="SPC" version="3.0" isExternalReference="true" isFinal="false" structureURL="http://stats-nsi-stable.pacificdata.org/rest/ContentConstraint/SPC/CR_A_DF_CPI/3.0" type="Actual">
+        <common:Name xml:lang="en">Availability (A) for DF_CPI</common:Name>
+      </structure:ContentConstraint>
+    </structure:Constraints>
+  </message:Structures>
+</message:Structure>* Connection #0 to host stats-nsi-stable.pacificdata.org left intact
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
