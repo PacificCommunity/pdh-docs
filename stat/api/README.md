@@ -8,7 +8,7 @@ description: >-
 
 ## Data queries
 
-{% api-method method="get" host="https://stats-nsi-stable.pacificdata.org/rest/data/{flow}/{key}/{provider}\[?startPeriod\]\[&endPeriod\]\[&dimensionAtObservation\]\[&detail\]\[&format\]" path="" %}
+{% api-method method="get" host="https://stats-nsi-stable.pacificdata.org/rest" path="/data/{flow}/{key}/{provider}\[?startPeriod\]\[&endPeriod\]\[&dimensionAtObservation\]\[&detail\]\[&format\]" %}
 {% api-method-summary %}
 Get data
 {% endapi-method-summary %}
@@ -667,7 +667,7 @@ puts response.body
 
 ## Structure queries
 
-{% api-method method="get" host="https://stats-nsi-stable.pacificdata.org/rest/dataflow/{agencyID}/{resourceID}/{version}\[?references\]\[&detail\]" path="" %}
+{% api-method method="get" host="https://stats-nsi-stable.pacificdata.org/rest" path="/dataflow/{agencyID}/{resourceID}/{version}\[?references\]\[&detail\]" %}
 {% api-method-summary %}
 Get dataflow
 {% endapi-method-summary %}
@@ -837,7 +837,7 @@ An example request for the Consumer Price Index dataflow \(DF\_CPI\), specifying
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://stats-nsi-stable.pacificdata.org/rest/agencyscheme/{agencyID}/{resourceID}/{version}\[?references\]\[&detail\]" path="" %}
+{% api-method method="get" host="https://stats-nsi-stable.pacificdata.org/rest" path="/agencyscheme/{agencyID}/{resourceID}/{version}\[?references\]\[&detail\]" %}
 {% api-method-summary %}
 Get agency schemes
 {% endapi-method-summary %}
@@ -905,7 +905,7 @@ Possible values are:
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://stats-nsi-stable.pacificdata.org/rest/categorisation/{agencyID}/{resourceID}/{version}\[?references\]\[&detail\]" path="" %}
+{% api-method method="get" host="https://stats-nsi-stable.pacificdata.org/rest" path="/categorisation/{agencyID}/{resourceID}/{version}\[?references\]\[&detail\]" %}
 {% api-method-summary %}
 Get categorisations
 {% endapi-method-summary %}
@@ -972,7 +972,7 @@ Possible values are:
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://stats-nsi-stable.pacificdata.org/rest/categoryscheme/{agencyID}/{resourceID}/{version}\[?references\]\[&detail\]" path="" %}
+{% api-method method="get" host="https://stats-nsi-stable.pacificdata.org/rest" path="/categoryscheme/{agencyID}/{resourceID}/{version}\[?references\]\[&detail\]" %}
 {% api-method-summary %}
 Get category schemes
 {% endapi-method-summary %}
@@ -1039,7 +1039,7 @@ Possible values are:
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://stats-nsi-stable.pacificdata.org/rest/codelist/{agencyID}/{resourceID}/{version}\[?references\]\[&detail\]" path="" %}
+{% api-method method="get" host="https://stats-nsi-stable.pacificdata.org/rest" path="/codelist/{agencyID}/{resourceID}/{version}\[?references\]\[&detail\]" %}
 {% api-method-summary %}
 Get codelists
 {% endapi-method-summary %}
@@ -1106,7 +1106,7 @@ Possible values are:
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://stats-nsi-stable.pacificdata.org/rest/conceptscheme/{agencyID}/{resourceID}/{version}\[?references\]\[&detail\]" path="" %}
+{% api-method method="get" host="https://stats-nsi-stable.pacificdata.org/rest" path="/conceptscheme/{agencyID}/{resourceID}/{version}\[?references\]\[&detail\]" %}
 {% api-method-summary %}
 Get concept schemes
 {% endapi-method-summary %}
@@ -1175,7 +1175,7 @@ Possible values are:
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://stats-nsi-stable.pacificdata.org/rest/contentconstraint/{agencyID}/{resourceID}/{version}\[?references\]\[&detail\]" path="" %}
+{% api-method method="get" host="https://stats-nsi-stable.pacificdata.org/rest" path="/contentconstraint/{agencyID}/{resourceID}/{version}\[?references\]\[&detail\]" %}
 {% api-method-summary %}
 Get content constraints
 {% endapi-method-summary %}
@@ -1243,13 +1243,13 @@ Possible values are:
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://stats-nsi-stable.pacificdata.org/rest/datastructure/{agencyID}/{resourceID}/{version}\[?references\]\[&detail\]" path="" %}
+{% api-method method="get" host="https://stats-nsi-stable.pacificdata.org/rest" path="/datastructure/{agencyID}/{resourceID}/{version}\[?references\]\[&detail\]" %}
 {% api-method-summary %}
 Get data structures
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This method retrieves a specified data structure definition.
+This method retrieves a data structure definition.
 {% endapi-method-description %}
 
 {% api-method-spec %}
