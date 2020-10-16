@@ -4,8 +4,6 @@ description: 'How to use PDH.stat to view, download and share indicators.'
 
 # Data Explorer
 
-\[Denis to complete\]
-
 {% embed url="https://youtu.be/65-ETNfFMBk" %}
 
 
