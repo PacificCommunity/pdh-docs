@@ -8,7 +8,6 @@
 * [PacificMap](pacific-map/README.md)
   * [User Guide](pacific-map/user-documentation.md)
   * [API](pacific-map/api.md)
-* [Geoserver](geoserver.md)
 * [PDH.stat](stat/README.md)
   * [Dataflows](stat/dataflows.md)
   * [User Guide](stat/help.md)
