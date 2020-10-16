@@ -2,7 +2,7 @@
 description: 'How to use PDH.stat to view, download and share indicators.'
 ---
 
-# User Guide
+# Data Explorer
 
 \[Denis to complete\]
 
