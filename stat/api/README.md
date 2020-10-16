@@ -996,7 +996,7 @@ Possible values are:
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-An example API request for the Currencies category \(CAT\_CURRENCIES\) used by dataflows \(returned as XML\): `curl -v -X GET "https://stats-nsi-stable.pacificdata.org/rest/categorisation/SPC/CAT_CURRENCIES"`
+An example API request for the currencies category \(CAT\_CURRENCIES\) used by dataflows \(returned as XML\): `curl -v -X GET "https://stats-nsi-stable.pacificdata.org/rest/categorisation/SPC/CAT_CURRENCIES"`
 {% endapi-method-response-example-description %}
 
 ```markup
@@ -1653,7 +1653,7 @@ Possible values are:
 An example API request for common SPC concepts \(CS\_COMMON\) \(returned as XML\): `curl -v -X GET "https://stats-nsi-stable.pacificdata.org/rest/conceptscheme/SPC/CS_COMMON"`
 {% endapi-method-response-example-description %}
 
-```
+```markup
 Date: Fri, 16 Oct 2020 10:50:17 GMT
 Content-Type: application/vnd.sdmx.structure+xml; version=2.1; charset=utf-8
 Transfer-Encoding: chunked
@@ -1871,11 +1871,277 @@ Possible values are:
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-
+An example API request for the list of constraints for the NMDI dataflow \(CON\_NMDI\) \(returned as XML\): `curl -v -X GET "https://stats-nsi-stable.pacificdata.org/rest/contentconstraint/SPC/CON_NMDI"`
 {% endapi-method-response-example-description %}
 
-```
+```markup
+Date: Fri, 16 Oct 2020 10:54:45 GMT
+Content-Type: application/vnd.sdmx.structure+xml; version=2.1; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d5897a1c29f59bca34e2c0f1fff906f991602845685; expires=Sun, 15-Nov-20 10:54:45 GMT; path=/; domain=.pacificdata.org; HttpOnly; SameSite=Lax
+CF-Ray: 5e313e5dfbfd32a5-BNE
+Accept-Ranges: values
+Cache-Control: no-store,no-cache
+Vary: Accept, Accept-Encoding
+CF-Cache-Status: DYNAMIC
+cf-request-id: 05d2a54ebf000032a5ce1e2000000001
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Pragma: no-cache
+Server: cloudflare
 
+<?xml version="1.0" encoding="utf-8"?>
+<!--NSI Web Service v7.13.0.0-->
+<message:Structure xmlns:message="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xmlns:structure="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure" xmlns:common="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+  <message:Header>
+    <message:ID>IDREF11318</message:ID>
+    <message:Test>false</message:Test>
+    <message:Prepared>2020-10-16T10:54:45.5537897+00:00</message:Prepared>
+    <message:Sender id="Unknown" />
+    <message:Receiver id="Unknown" />
+  </message:Header>
+  <message:Structures>
+    <structure:Constraints>
+      <structure:ContentConstraint id="CON_NMDI" agencyID="SPC" version="1.0" isFinal="false" type="Allowed">
+        <common:Name xml:lang="en">Consraint in list of indicators for NMDI</common:Name>
+        <structure:ConstraintAttachment>
+          <structure:Dataflow>
+            <Ref id="DF_NMDI" version="1.0" agencyID="SPC" package="datastructure" class="Dataflow" />
+          </structure:Dataflow>
+        </structure:ConstraintAttachment>
+        <structure:CubeRegion include="true">
+          <common:KeyValue id="GEO_PICT">
+            <common:Value>AS</common:Value>
+            <common:Value>CK</common:Value>
+            <common:Value>FJ</common:Value>
+            <common:Value>FM</common:Value>
+            <common:Value>GU</common:Value>
+            <common:Value>KI</common:Value>
+            <common:Value>MH</common:Value>
+            <common:Value>MP</common:Value>
+            <common:Value>NC</common:Value>
+            <common:Value>NR</common:Value>
+            <common:Value>NU</common:Value>
+            <common:Value>PF</common:Value>
+            <common:Value>PG</common:Value>
+            <common:Value>PN</common:Value>
+            <common:Value>PW</common:Value>
+            <common:Value>SB</common:Value>
+            <common:Value>TK</common:Value>
+            <common:Value>TO</common:Value>
+            <common:Value>TV</common:Value>
+            <common:Value>VU</common:Value>
+            <common:Value>WF</common:Value>
+            <common:Value>WS</common:Value>
+          </common:KeyValue>
+          <common:KeyValue id="INDICATOR">
+            <common:Value>AG_LND_FRST</common:Value>
+            <common:Value>AG_PRD_ORTIND</common:Value>
+            <common:Value>BX_TRF_PWKR</common:Value>
+            <common:Value>DC_FTA_TOTAL</common:Value>
+            <common:Value>DC_ODA_LDCG</common:Value>
+            <common:Value>DC_TOF_INFRAL</common:Value>
+            <common:Value>DC_TOF_TRDCMDL</common:Value>
+            <common:Value>DC_TRF_TOTDL</common:Value>
+            <common:Value>DEV</common:Value>
+            <common:Value>DT_TDS_DECT</common:Value>
+            <common:Value>EDU</common:Value>
+            <common:Value>EG_ACS_ELEC</common:Value>
+            <common:Value>EG_FEC_RNEW</common:Value>
+            <common:Value>EN_LND_SLUM</common:Value>
+            <common:Value>EN_REF_COLDIS</common:Value>
+            <common:Value>ER_CBD_ABSCLRHS</common:Value>
+            <common:Value>ER_GRF_ANIMKPT</common:Value>
+            <common:Value>ER_H2O_FISHFEXP</common:Value>
+            <common:Value>ER_MRN_MARIN</common:Value>
+            <common:Value>ER_PTD_FRHWTR</common:Value>
+            <common:Value>ER_PTD_TERR</common:Value>
+            <common:Value>ER_PTD_TOT</common:Value>
+            <common:Value>ER_RSK_LST</common:Value>
+            <common:Value>FB_BNK_ACCSS</common:Value>
+            <common:Value>FIS</common:Value>
+            <common:Value>HEA</common:Value>
+            <common:Value>IC_GEN_MGTL</common:Value>
+            <common:Value>INF</common:Value>
+            <common:Value>IT_MOB_2GNTWK</common:Value>
+            <common:Value>IT_MOB_OWN</common:Value>
+            <common:Value>IT_NET_BBND</common:Value>
+            <common:Value>IT_USE_ii99</common:Value>
+            <common:Value>NMDI0001</common:Value>
+            <common:Value>NMDI0002</common:Value>
+            <common:Value>NMDI0003</common:Value>
+            <common:Value>NMDI0004</common:Value>
+            <common:Value>NMDI0011</common:Value>
+            <common:Value>NMDI0013</common:Value>
+            <common:Value>NMDI0014</common:Value>
+            <common:Value>NMDI0016</common:Value>
+            <common:Value>NMDI0018</common:Value>
+            <common:Value>NMDI0019</common:Value>
+            <common:Value>NMDI0020</common:Value>
+            <common:Value>NMDI0021</common:Value>
+            <common:Value>NMDI0022</common:Value>
+            <common:Value>NMDI0033</common:Value>
+            <common:Value>NMDI0034</common:Value>
+            <common:Value>NMDI0035</common:Value>
+            <common:Value>NMDI0036</common:Value>
+            <common:Value>NMDI0038</common:Value>
+            <common:Value>NMDI0047</common:Value>
+            <common:Value>NMDI0051</common:Value>
+            <common:Value>NMDI0052</common:Value>
+            <common:Value>NMDI0054</common:Value>
+            <common:Value>NMDI0057</common:Value>
+            <common:Value>NMDI0059</common:Value>
+            <common:Value>NMDI0081</common:Value>
+            <common:Value>NMDI0087</common:Value>
+            <common:Value>NMDI0088</common:Value>
+            <common:Value>NMDI0091</common:Value>
+            <common:Value>NMDI0099</common:Value>
+            <common:Value>NMDI0100</common:Value>
+            <common:Value>NMDI0102</common:Value>
+            <common:Value>NMDI0103</common:Value>
+            <common:Value>NMDI0116</common:Value>
+            <common:Value>NMDI0118</common:Value>
+            <common:Value>NMDI0129</common:Value>
+            <common:Value>NMDI0131</common:Value>
+            <common:Value>NMDI0132</common:Value>
+            <common:Value>NMDI0133</common:Value>
+            <common:Value>NMDI0134</common:Value>
+            <common:Value>NMDI0137</common:Value>
+            <common:Value>NMDI0138</common:Value>
+            <common:Value>NMDI0139</common:Value>
+            <common:Value>NMDI0145</common:Value>
+            <common:Value>NMDI0146</common:Value>
+            <common:Value>NMDI0149</common:Value>
+            <common:Value>NMDI0165</common:Value>
+            <common:Value>NMDI0167</common:Value>
+            <common:Value>NMDI0193</common:Value>
+            <common:Value>NMDI0225</common:Value>
+            <common:Value>NMDI0226</common:Value>
+            <common:Value>NMDI0264</common:Value>
+            <common:Value>NMDI0265</common:Value>
+            <common:Value>NMDI0293</common:Value>
+            <common:Value>NMDI0294</common:Value>
+            <common:Value>NMDI0295</common:Value>
+            <common:Value>NMDI0296</common:Value>
+            <common:Value>NMDI0303</common:Value>
+            <common:Value>NMDI0419</common:Value>
+            <common:Value>NMDI0420</common:Value>
+            <common:Value>NMDI0421</common:Value>
+            <common:Value>NMDI0426</common:Value>
+            <common:Value>NMDI0428</common:Value>
+            <common:Value>NMDI0429</common:Value>
+            <common:Value>NMDI0431</common:Value>
+            <common:Value>NY_GDP_PCAP</common:Value>
+            <common:Value>OTH</common:Value>
+            <common:Value>POP</common:Value>
+            <common:Value>SE_ACS_ELECT</common:Value>
+            <common:Value>SE_ADT_EDUCTRN</common:Value>
+            <common:Value>SE_GC_TCAQ</common:Value>
+            <common:Value>SE_PRE_PARTN</common:Value>
+            <common:Value>SE_TOT_GPI</common:Value>
+            <common:Value>SE_TOT_PRFL</common:Value>
+            <common:Value>SG_DSR_LEGREG</common:Value>
+            <common:Value>SG_GEN_PARL</common:Value>
+            <common:Value>SG_HAZ_CMRBASEL</common:Value>
+            <common:Value>SG_INF_ACCSS</common:Value>
+            <common:Value>SG_INT_MBR</common:Value>
+            <common:Value>SG_PLN_MSTKSDG</common:Value>
+            <common:Value>SG_PLN_PRVNDI</common:Value>
+            <common:Value>SG_REG_BRTH</common:Value>
+            <common:Value>SG_REG_BRTH90</common:Value>
+            <common:Value>SG_STT_CAPTY</common:Value>
+            <common:Value>SG_STT_FPOS</common:Value>
+            <common:Value>SG_STT_NSDSFDDNR</common:Value>
+            <common:Value>SH_ALC_CONSPT</common:Value>
+            <common:Value>SH_DTH_NCD</common:Value>
+            <common:Value>SH_DYN_IMRT</common:Value>
+            <common:Value>SH_DYN_NMRT</common:Value>
+            <common:Value>SH_FPL_INFM</common:Value>
+            <common:Value>SH_FPL_MTMM</common:Value>
+            <common:Value>SH_H2O_SAFE</common:Value>
+            <common:Value>SH_IHR_CAPPRD</common:Value>
+            <common:Value>SH_MED_DEN</common:Value>
+            <common:Value>SH_PRV_SMOK</common:Value>
+            <common:Value>SH_SAN_DEFECT</common:Value>
+            <common:Value>SH_STA_BRTC</common:Value>
+            <common:Value>SH_STA_MALR</common:Value>
+            <common:Value>SH_STA_MORT</common:Value>
+            <common:Value>SH_STA_STNT</common:Value>
+            <common:Value>SH_STA_WASH</common:Value>
+            <common:Value>SH_STA_WAST</common:Value>
+            <common:Value>SH_TBS_INCD</common:Value>
+            <common:Value>SH_TRP_INTVN</common:Value>
+            <common:Value>SI_COV_BENFTS</common:Value>
+            <common:Value>SI_HEI_TOTL</common:Value>
+            <common:Value>SI_POV_DAY1</common:Value>
+            <common:Value>SI_POV_NAHC</common:Value>
+            <common:Value>SI_RMT_COST</common:Value>
+            <common:Value>SL_DOM_TSPD</common:Value>
+            <common:Value>SL_EMP_EARN</common:Value>
+            <common:Value>SL_EMP_GTOTL</common:Value>
+            <common:Value>SL_ISV_IFRM</common:Value>
+            <common:Value>SL_TLF_MANF</common:Value>
+            <common:Value>SL_TLF_NEET</common:Value>
+            <common:Value>SL_TLF_UEM</common:Value>
+            <common:Value>SN_ITK_DEFC</common:Value>
+            <common:Value>SP_DYN_ADKL</common:Value>
+            <common:Value>SP_DYN_MRBF</common:Value>
+            <common:Value>SPC_1_2_2</common:Value>
+            <common:Value>SPC_1_4_1</common:Value>
+            <common:Value>SPC_10_2_1</common:Value>
+            <common:Value>SPC_10_7_2</common:Value>
+            <common:Value>SPC_11_b_2</common:Value>
+            <common:Value>SPC_12_4_2</common:Value>
+            <common:Value>SPC_12_5_1</common:Value>
+            <common:Value>SPC_12_b_1</common:Value>
+            <common:Value>SPC_13_2_1</common:Value>
+            <common:Value>SPC_13_3_1</common:Value>
+            <common:Value>SPC_13_a_1</common:Value>
+            <common:Value>SPC_13_b_1</common:Value>
+            <common:Value>SPC_14_1_1</common:Value>
+            <common:Value>SPC_14_2_1</common:Value>
+            <common:Value>SPC_14_3_1</common:Value>
+            <common:Value>SPC_14_6_1</common:Value>
+            <common:Value>SPC_14_7_1</common:Value>
+            <common:Value>SPC_14_a_1</common:Value>
+            <common:Value>SPC_14_b_1</common:Value>
+            <common:Value>SPC_15_7_1</common:Value>
+            <common:Value>SPC_15_8_1</common:Value>
+            <common:Value>SPC_16_1_3</common:Value>
+            <common:Value>SPC_16_3_1</common:Value>
+            <common:Value>SPC_16_6_1</common:Value>
+            <common:Value>SPC_16_7_1</common:Value>
+            <common:Value>SPC_16_7_2</common:Value>
+            <common:Value>SPC_17_1_1</common:Value>
+            <common:Value>SPC_17_1_2</common:Value>
+            <common:Value>SPC_17_14_1</common:Value>
+            <common:Value>SPC_17_17_1</common:Value>
+            <common:Value>SPC_17_3_1</common:Value>
+            <common:Value>SPC_17_7_1</common:Value>
+            <common:Value>SPC_2_3_2</common:Value>
+            <common:Value>SPC_2_4_1</common:Value>
+            <common:Value>SPC_3_8_1</common:Value>
+            <common:Value>SPC_4_6_1</common:Value>
+            <common:Value>SPC_4_7_1</common:Value>
+            <common:Value>SPC_5_1_1</common:Value>
+            <common:Value>SPC_5_2_2</common:Value>
+            <common:Value>SPC_5_a_2</common:Value>
+            <common:Value>SPC_5_c_1</common:Value>
+            <common:Value>SPC_6_3_1</common:Value>
+            <common:Value>SPC_7_a_1</common:Value>
+            <common:Value>SPC_8_9_1</common:Value>
+            <common:Value>SPC_8_9_2</common:Value>
+            <common:Value>VC_DSR_AALG</common:Value>
+            <common:Value>VC_DSR_AFFCT</common:Value>
+            <common:Value>VC_DSR_MISS</common:Value>
+            <common:Value>VC_DSR_MORT</common:Value>
+            <common:Value>VC_VAW_MARR</common:Value>
+          </common:KeyValue>
+        </structure:CubeRegion>
+      </structure:ContentConstraint>
+    </structure:Constraints>
+  </message:Structures>
+</message:Structure>* Connection #0 to host stats-nsi-stable.pacificdata.org left intact
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -1940,11 +2206,144 @@ Possible values are:
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-
+An example API request for the data structure definition of Commodity Prices \(DSD\_COMMODITY\_PRICES\) \(returned as XML\): `curl -v -X GET "https://stats-nsi-stable.pacificdata.org/rest/datastructure/SPC/DSD_COMMODITY_PRICES"`
 {% endapi-method-response-example-description %}
 
-```
+```markup
+Date: Fri, 16 Oct 2020 11:01:34 GMT
+Content-Type: application/vnd.sdmx.structure+xml; version=2.1; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d59a104a71be634615a1cf4fac9207a8a1602846094; expires=Sun, 15-Nov-20 11:01:34 GMT; path=/; domain=.pacificdata.org; HttpOnly; SameSite=Lax
+CF-Ray: 5e31485aea5432a1-BNE
+Accept-Ranges: values
+Cache-Control: no-store,no-cache
+Vary: Accept, Accept-Encoding
+CF-Cache-Status: DYNAMIC
+cf-request-id: 05d2ab8cd1000032a1a2306000000001
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Pragma: no-cache
+Server: cloudflare
 
+<?xml version="1.0" encoding="utf-8"?>
+<!--NSI Web Service v7.13.0.0-->
+<message:Structure xmlns:message="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xmlns:structure="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure" xmlns:common="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+  <message:Header>
+    <message:ID>IDREF11321</message:ID>
+    <message:Test>false</message:Test>
+    <message:Prepared>2020-10-16T11:01:34.6619601+00:00</message:Prepared>
+    <message:Sender id="Unknown" />
+    <message:Receiver id="Unknown" />
+  </message:Header>
+  <message:Structures>
+    <structure:DataStructures>
+      <structure:DataStructure id="DSD_COMMODITY_PRICES" agencyID="SPC" version="1.0" isFinal="false">
+        <common:Name xml:lang="en">DSD for commodity prices</common:Name>
+        <structure:DataStructureComponents>
+          <structure:DimensionList id="DimensionDescriptor">
+            <structure:Dimension id="FREQ" position="1">
+              <structure:ConceptIdentity>
+                <Ref id="FREQ" maintainableParentID="CS_COMMON" maintainableParentVersion="2.0" agencyID="SPC" package="conceptscheme" class="Concept" />
+              </structure:ConceptIdentity>
+              <structure:LocalRepresentation>
+                <structure:Enumeration>
+                  <Ref id="CL_COM_FREQ" version="1.0" agencyID="SPC" package="codelist" class="Codelist" />
+                </structure:Enumeration>
+              </structure:LocalRepresentation>
+            </structure:Dimension>
+            <structure:Dimension id="COMMODITY" position="2">
+              <structure:ConceptIdentity>
+                <Ref id="COMMODITY" maintainableParentID="CS_COMMON" maintainableParentVersion="2.0" agencyID="SPC" package="conceptscheme" class="Concept" />
+              </structure:ConceptIdentity>
+              <structure:LocalRepresentation>
+                <structure:Enumeration>
+                  <Ref id="CL_COMMODITY_PRICES" version="1.0" agencyID="SPC" package="codelist" class="Codelist" />
+                </structure:Enumeration>
+              </structure:LocalRepresentation>
+            </structure:Dimension>
+            <structure:Dimension id="INDICATOR" position="3">
+              <structure:ConceptIdentity>
+                <Ref id="INDICATOR" maintainableParentID="CS_COMMON" maintainableParentVersion="2.0" agencyID="SPC" package="conceptscheme" class="Concept" />
+              </structure:ConceptIdentity>
+              <structure:LocalRepresentation>
+                <structure:Enumeration>
+                  <Ref id="CL_COMMODITY_PRICES_INDICATORS" version="1.0" agencyID="SPC" package="codelist" class="Codelist" />
+                </structure:Enumeration>
+              </structure:LocalRepresentation>
+            </structure:Dimension>
+            <structure:TimeDimension id="TIME_PERIOD" position="4">
+              <structure:ConceptIdentity>
+                <Ref id="TIME_PERIOD" maintainableParentID="CS_COMMON" maintainableParentVersion="2.0" agencyID="SPC" package="conceptscheme" class="Concept" />
+              </structure:ConceptIdentity>
+              <structure:LocalRepresentation>
+                <structure:TextFormat textType="ObservationalTimePeriod" />
+              </structure:LocalRepresentation>
+            </structure:TimeDimension>
+          </structure:DimensionList>
+          <structure:AttributeList id="AttributeDescriptor">
+            <structure:Attribute id="DATA_SOURCE" assignmentStatus="Conditional">
+              <structure:ConceptIdentity>
+                <Ref id="DATA_SOURCE" maintainableParentID="CS_COMMON" maintainableParentVersion="2.0" agencyID="SPC" package="conceptscheme" class="Concept" />
+              </structure:ConceptIdentity>
+              <structure:LocalRepresentation>
+                <structure:TextFormat textType="String" />
+              </structure:LocalRepresentation>
+              <structure:AttributeRelationship>
+                <structure:Dimension>
+                  <Ref id="FREQ" />
+                </structure:Dimension>
+                <structure:Dimension>
+                  <Ref id="COMMODITY" />
+                </structure:Dimension>
+                <structure:Dimension>
+                  <Ref id="INDICATOR" />
+                </structure:Dimension>
+              </structure:AttributeRelationship>
+            </structure:Attribute>
+            <structure:Attribute id="UNIT_MEASURE" assignmentStatus="Conditional">
+              <structure:ConceptIdentity>
+                <Ref id="UNIT_MEASURE" maintainableParentID="CS_COMMON" maintainableParentVersion="2.0" agencyID="SPC" package="conceptscheme" class="Concept" />
+              </structure:ConceptIdentity>
+              <structure:LocalRepresentation>
+                <structure:Enumeration>
+                  <Ref id="CL_COM_UNIT_MEASURE" version="1.0" agencyID="SPC" package="codelist" class="Codelist" />
+                </structure:Enumeration>
+              </structure:LocalRepresentation>
+              <structure:AttributeRelationship>
+                <structure:Dimension>
+                  <Ref id="COMMODITY" />
+                </structure:Dimension>
+                <structure:Dimension>
+                  <Ref id="INDICATOR" />
+                </structure:Dimension>
+              </structure:AttributeRelationship>
+            </structure:Attribute>
+            <structure:Attribute id="OBS_COMMENT" assignmentStatus="Conditional">
+              <structure:ConceptIdentity>
+                <Ref id="COMMENT" maintainableParentID="CS_COMMON" maintainableParentVersion="2.0" agencyID="SPC" package="conceptscheme" class="Concept" />
+              </structure:ConceptIdentity>
+              <structure:LocalRepresentation>
+                <structure:TextFormat textType="String" />
+              </structure:LocalRepresentation>
+              <structure:AttributeRelationship>
+                <structure:PrimaryMeasure>
+                  <Ref id="OBS_VALUE" />
+                </structure:PrimaryMeasure>
+              </structure:AttributeRelationship>
+            </structure:Attribute>
+          </structure:AttributeList>
+          <structure:MeasureList id="MeasureDescriptor">
+            <structure:PrimaryMeasure id="OBS_VALUE">
+              <structure:ConceptIdentity>
+                <Ref id="OBS_VALUE" maintainableParentID="CS_COMMON" maintainableParentVersion="2.0" agencyID="SPC" package="conceptscheme" class="Concept" />
+              </structure:ConceptIdentity>
+            </structure:PrimaryMeasure>
+          </structure:MeasureList>
+        </structure:DataStructureComponents>
+      </structure:DataStructure>
+    </structure:DataStructures>
+  </message:Structures>
+</message:Structure>* Connection #0 to host stats-nsi-stable.pacificdata.org left intact
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
