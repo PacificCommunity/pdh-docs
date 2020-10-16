@@ -20,6 +20,5 @@
     * [Sample Code](stat/api/scode.md)
     * [CMS integration](stat/api/web-integration.md)
     * [API change history](stat/api/api-history.md)
-* [PDH Microdata Library](ml/README.md)
-  * [User Documentation](ml/help.md)
+* [PDH Microdata Library](ml.md)
 
