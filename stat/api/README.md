@@ -186,7 +186,31 @@ Server: cloudflare
 <generic:Value id="SEX" value="_T" />
 <generic:Value id="AGE" value="_T" />
 <generic:Value id="INDICATOR" value="MIDYEARPOPEST" />
-</generic:ObsKey><generic:ObsValue value="891296" /><generic:Attributes><generic:Value id="UNIT_MEASURE" value="N" /><generic:Value id="UNIT_MULTIPLIER" value="0" /><generic:Value id="OBS_STATUS" value="F" /></generic:Attributes></generic:Obs><generic:Obs><generic:ObsKey><generic:Value id="TIME_PERIOD" value="2020" /><generic:Value id="FREQ" value="A" /><generic:Value id="GEO_PICT" value="FJ" /><generic:Value id="SEX" value="_T" /><generic:Value id="AGE" value="_T" /><generic:Value id="INDICATOR" value="MIDYEARPOPEST" /></generic:ObsKey><generic:ObsValue value="894961" /><generic:Attributes><generic:Value id="UNIT_MEASURE" value="N" /><generic:Value id="UNIT_MULTIPLIER" value="0" /><generic:Value id="OBS_STATUS" value="F" /><generic:Value id="OBS_COMMENT" value="The difference between this value and the sum of male and female populations is due to rounding errors in lower-level estimates." /></generic:Attributes></generic:Obs></message:DataSet></message:GenericData>* Connection #0 to host stats-nsi-stable.pacificdata.org left intact
+</generic:ObsKey>
+<generic:ObsValue value="891296" />
+<generic:Attributes>
+<generic:Value id="UNIT_MEASURE" value="N" />
+<generic:Value id="UNIT_MULTIPLIER" value="0" />
+<generic:Value id="OBS_STATUS" value="F" />
+</generic:Attributes>
+</generic:Obs>
+<generic:Obs>
+<generic:ObsKey>
+<generic:Value id="TIME_PERIOD" value="2020" />
+<generic:Value id="FREQ" value="A" />
+<generic:Value id="GEO_PICT" value="FJ" />
+<generic:Value id="SEX" value="_T" />
+<generic:Value id="AGE" value="_T" />
+<generic:Value id="INDICATOR" value="MIDYEARPOPEST" />
+</generic:ObsKey><generic:ObsValue value="894961" />
+<generic:Attributes><generic:Value id="UNIT_MEASURE" value="N" />
+<generic:Value id="UNIT_MULTIPLIER" value="0" />
+<generic:Value id="OBS_STATUS" value="F" />
+<generic:Value id="OBS_COMMENT" value="The difference between this value and the sum of male and female populations is due to rounding errors in lower-level estimates." />
+</generic:Attributes>
+</generic:Obs>
+</message:DataSet>
+</message:GenericData>* Connection #0 to host stats-nsi-stable.pacificdata.org left intact
 
 
 ```
