@@ -211,8 +211,6 @@ Server: cloudflare
 </generic:Obs>
 </message:DataSet>
 </message:GenericData>* Connection #0 to host stats-nsi-stable.pacificdata.org left intact
-
-
 ```
 {% endapi-method-response-example %}
 
