@@ -8,44 +8,109 @@ description: >-
 
 ## Data queries
 
-{% api-method method="get" host="https://sdd-dotstat-api-gateway.azure-api.net/data/{flow}/{key}/{provider}\[?startPeriod\]\[&endPeriod\]\[&dimensionAtObservation\]\[&detail\]\[&format\]" path="" %}
+{% api-method method="get" host="https://stats-nsi-stable.pacificdata.org/rest/data/{flow}/{key}/{provider}\[?startPeriod\]\[&endPeriod\]\[&dimensionAtObservation\]\[&detail\]\[&format\]" path="" %}
 {% api-method-summary %}
 Get Data
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Explain what method does
+This method retrieves the data observations for a dataflow, based on various filters.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="flow" type="string" %}
-The **statistical domain** \(aka dataflow\) of the data to be returned.   
+{% api-method-parameter name="flow" type="string" required=true %}
+The **statistical domain** \(dataflow\) of the data to be returned.  
 Examples:  
 `DF_SDG`: The ID for Sustainable Development Goals dataflow  
- `DF_CPI`: The ID for Consumer Price Index dataflow  
- `DF_POCKET`: The ID for Pocket Summary dataflow  
- `DF_POP_SUM`: The ID for Population dataflow  
- `DF_IMTS`: The ID for International Merchandise Trade Statistics dataflow
+`DF_CPI`: The ID for Consumer Price Index dataflow  
+`DF_POCKET`: The ID for Pocket Summary dataflow  
+`DF_POP_SUM`: The ID for Population dataflow  
+`DF_IMTS`: The ID for International Merchandise Trade Statistics dataflow
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="key" type="string" required=true %}
+The \(possibly partial\) **key identifying the data to be returned**.  
+The keyword `all` can be used to indicate that all data belonging to the specified dataflow and provided by the specified provider must be returned. The allowable values for key will change depending on the selected dataflow. In general, it is a series of parameters separated by the `.` sign. Where there are 2 points in a row, it indicates a "wildcard" for that parameter. To select several values as a parameter, separate them with a `+` sign.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="provider" type="string" required=true %}
+The agency maintaining the artefact to be returned \(i.e. `SPC`\).   
+It is possible to set more than one agency, using `+` as separator \(e.g. `SPC+ECB`\).  
+The keyword `all` can be used to indicate that artefacts maintained by any maintenance agency should be returned.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="startPeriod" type="string" required=false %}
+The start of the period for which results should be supplied \(inclusive\). Can be expressed using 8601 dates or SDMX reporting periods.  
+Examples:  
+`2000`: Year \(ISO 8601\)  
+`2000-01`: Month \(ISO 8601\)  
+`2000-01-01`: Date \(ISO 8601\)  
+`2000-Q1`: Quarter \(SDMX\)  
+`2000-W01`: Week\(SDMX\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="endPeriod" type="string" required=false %}
+The end of the period for which results should be supplied \(inclusive\). Can be expressed using 8601 dates or SDMX reporting periods.  
+Examples:  
+`2000`: Year \(ISO 8601\)  
+`2000-01`: Month \(ISO 8601\)  
+`2000-01-01`: Date \(ISO 8601\)  
+`2000-Q1`: Quarter \(SDMX\)  
+`2000-W001`: Week \(SDMX\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="dimensionAtObservation" type="string" required=false %}
+Indicates **how the data should be packaged**.  
+The options are:  
+`TIME_PERIOD`: A timeseries view  
+The ID of any other dimension: A cross-sectional view of the data  
+`AllDimensions`: A flat view of the data
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="detail" type="string" required=false %}
+The **amount of information** to be returned.  
+Possible options are:  
+`full`: All data and documentation  
+`dataonly`: Everything except attributes  
+`serieskeysonly`: The series keys. This is useful to return the series that match a certain query, without returning the actual data \(e.g. overview page\)  
+`nodata`: The series, including attributes and annotations, without observations
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="format" type="string" required=false %}
+The **data format** to be returned.  
+Possible options are:  
+`jsondata`  
+`csv`  
+`genericdata`  
+`structure`  
+`structurespecificdata`
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
 {% api-method-headers %}
-{% api-method-parameter name="Authentication" type="string" required=true %}
-Authentication token to track down who is emptying our stocks.
+{% api-method-parameter name="Accept-Language" type="string" required=false %}
+Specifies the client's preferred language.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="If-Modified-Since" type="string" required=false %}
+Takes a date-time \(RFC3339 format\) as input and returns the content matching the query only if it has changed since the supplied timestamp.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Accept" type="string" required=false %}
+Specifies the format of the API response.  
+Possible options are:  
+`application/vnd.sdmx.genericdata+xml;version=2.1`: returns SDMX-XML format  
+`application/vnd.sdmx.data+json;version=2.1`: returns SDMX-JSON format  
+`application/vnd.sdmx.data+csv;version=2.1`: returns SDMX-CSV format
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Accept-Encoding" type="string" required=false %}
+Specifies whether the response should be compressed and how.  
+`identity` \(the default\) indicates that no compression will be performed.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
-
-{% api-method-query-parameters %}
-{% api-method-parameter name="recipe" type="string" %}
-The API will do its best to find a cake matching the provided recipe.
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="gluten" type="boolean" %}
-Whether the cake should be gluten-free or not.
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -59,6 +124,16 @@ Cake successfully retrieved.
 ```
 {% endapi-method-response-example %}
 
+{% api-method-response-example httpCode=302 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+
 {% api-method-response-example httpCode=404 %}
 {% api-method-response-example-description %}
 Could not find a cake matching this query.
@@ -66,6 +141,210 @@ Could not find a cake matching this query.
 
 ```
 {    "message": "Ain't no cake like that."}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://stats-nsi-stable.pacificdata.org/rest/data/{flow}/{key}/{provider}\[?startPeriod\]\[&endPeriod\]\[&dimensionAtObservation\]\[&detail\]\[&format\]" path="" %}
+{% api-method-summary %}
+
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="Accept" type="string" required=false %}
+application/vnd.sdmx.genericdata+xml;version=2.1
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://stats-nsi-stable.pacificdata.org/rest/data/{flow}/{key}/{provider}\[?startPeriod\]\[&endPeriod\]\[&dimensionAtObservation\]\[&detail\]\[&format\]" path="" %}
+{% api-method-summary %}
+
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="endPeriod" type="string" required=false %}
+The end of the period for which results should be supplied \(inclusive\). Can be expressed using 8601 dates or SDMX reporting periods.
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://stats-nsi-stable.pacificdata.org/rest/data/{flow}/{key}/{provider}\[?startPeriod\]\[&endPeriod\]\[&dimensionAtObservation\]\[&detail\]\[&format\]" path="" %}
+{% api-method-summary %}
+
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="endPeriod" type="string" required=false %}
+The end of the period for which results should be supplied \(inclusive\). Can be expressed using 8601 dates or SDMX reporting periods.
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://stats-nsi-stable.pacificdata.org/rest/data/{flow}/{key}/{provider}\[?startPeriod\]\[&endPeriod\]\[&dimensionAtObservation\]\[&detail\]\[&format\]" path="" %}
+{% api-method-summary %}
+
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="endPeriod" type="string" required=false %}
+The end of the period for which results should be supplied \(inclusive\). Can be expressed using 8601 dates or SDMX reporting periods.  
+Examples:  
+`2000`: Year \(ISO 8601\)  
+`2000-01`: Month \(ISO 8601\)  
+`2000-01-01`: Date \(ISO 8601\)  
+`2000-S1`: Semester \(SDMX\)  
+`2000-D001`: Day \(SDMX\)
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://stats-nsi-stable.pacificdata.org/rest/data/{flow}/{key}/{provider}\[?startPeriod\]\[&endPeriod\]\[&dimensionAtObservation\]\[&detail\]\[&format\]" path="" %}
+{% api-method-summary %}
+
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="endPeriod" type="string" required=false %}
+The end of the period for which results should be supplied \(inclusive\). Can be expressed using 8601 dates or SDMX reporting periods.  
+Examples:  
+`2000`: Year \(ISO 8601\)  
+`2000-01`: Month \(ISO 8601\)  
+`2000-01-01`: Date \(ISO 8601\)  
+`2000-S1`: Semester \(SDMX\)  
+`2000-D001`: Day \(SDMX\)
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://stats-nsi-stable.pacificdata.org/rest/data/{flow}/{key}/{provider}\[?startPeriod\]\[&endPeriod\]\[&dimensionAtObservation\]\[&detail\]\[&format\]" path="" %}
+{% api-method-summary %}
+
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="key" type="string" required=false %}
+indicate
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+indicate
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
