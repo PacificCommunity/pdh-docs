@@ -3,7 +3,6 @@
 * [Pacific Data Hub](README.md)
 * [PDH Catalogue](catalogue/README.md)
   * [User Guide](catalogue/help.md)
-  * [Metadata](catalogue/metadata.md)
   * [API](catalogue/api.md)
 * [PacificMap](pacific-map/README.md)
   * [User Guide](pacific-map/user-documentation.md)
