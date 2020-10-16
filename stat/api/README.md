@@ -137,7 +137,8 @@ Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi
 Pragma: no-cache
 Server: cloudflare
 
-<?xml version="1.0" encoding="utf-8"?><!--NSI Web Service v7.13.0.0-->
+<?xml version="1.0" encoding="utf-8"?>
+<!--NSI Web Service v7.13.0.0-->
 <message:GenericData xmlns:footer="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message/footer" xmlns:generic="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic" xmlns:message="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xmlns:common="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xml="http://www.w3.org/XML/1998/namespace">
 <message:Header>
 <message:ID>IREF0919307a49a947be8b3b0ad3ed78de70</message:ID>
@@ -728,21 +729,21 @@ An example request for the Consumer Price Index dataflow \(DF\_CPI\), specifying
 {% endapi-method-response-example-description %}
 
 ```markup
-< Date: Fri, 16 Oct 2020 06:35:59 GMT
-< Content-Type: application/vnd.sdmx.structure+xml; version=2.1; charset=utf-8
-< Transfer-Encoding: chunked
-< Connection: keep-alive
-< Set-Cookie: __cfduid=dfd97cf769efd84d0ccd013362e8a84241602830158; expires=Sun, 15-Nov-20 06:35:58 GMT; path=/; domain=.pacificdata.org; HttpOnly; SameSite=Lax
-< CF-Ray: 5e2fc34cde53e9bf-BNE
-< Accept-Ranges: values
-< Cache-Control: no-store,no-cache
-< Vary: Accept, Accept-Encoding
-< CF-Cache-Status: DYNAMIC
-< cf-request-id: 05d1b8640b0000e9bf31346000000001
-< Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-< Pragma: no-cache
-< Server: cloudflare
-<
+Date: Fri, 16 Oct 2020 06:35:59 GMT
+Content-Type: application/vnd.sdmx.structure+xml; version=2.1; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=dfd97cf769efd84d0ccd013362e8a84241602830158; expires=Sun, 15-Nov-20 06:35:58 GMT; path=/; domain=.pacificdata.org; HttpOnly; SameSite=Lax
+CF-Ray: 5e2fc34cde53e9bf-BNE
+Accept-Ranges: values
+Cache-Control: no-store,no-cache
+Vary: Accept, Accept-Encoding
+CF-Cache-Status: DYNAMIC
+cf-request-id: 05d1b8640b0000e9bf31346000000001
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Pragma: no-cache
+Server: cloudflare
+
 <?xml version="1.0" encoding="utf-8"?>
 <!--NSI Web Service v7.13.0.0-->
 <message:Structure xmlns:message="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xmlns:structure="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure" xmlns:common="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
