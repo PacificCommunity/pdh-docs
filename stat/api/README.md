@@ -893,11 +893,47 @@ Possible values are:
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-
+An example API request for all of the agency schemes \(returned as XML\): `curl -v -X GET "https://stats-nsi-stable.pacificdata.org/rest/agencyscheme"`
 {% endapi-method-response-example-description %}
 
-```
+```markup
+Date: Fri, 16 Oct 2020 10:29:21 GMT
+Content-Type: application/vnd.sdmx.structure+xml; version=2.1; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=db72583daabc6da0e4d2c1bc99b03cc8e1602844161; expires=Sun, 15-Nov-20 10:29:21 GMT; path=/; domain=.pacificdata.org; HttpOnly; SameSite=Lax
+CF-Ray: 5e3119271ed3e9bf-BNE
+Accept-Ranges: values
+Cache-Control: no-store,no-cache
+Vary: Accept, Accept-Encoding
+CF-Cache-Status: DYNAMIC
+cf-request-id: 05d28e0c6d0000e9bf2db16000000001
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Pragma: no-cache
+Server: cloudflare
 
+<?xml version="1.0" encoding="utf-8"?>
+<!--NSI Web Service v7.13.0.0-->
+<message:Structure xmlns:message="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xmlns:structure="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure" xmlns:common="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+  <message:Header>
+    <message:ID>IDREF11299</message:ID>
+    <message:Test>false</message:Test>
+    <message:Prepared>2020-10-16T10:29:21.2419081+00:00</message:Prepared>
+    <message:Sender id="Unknown" />
+    <message:Receiver id="Unknown" />
+  </message:Header>
+  <message:Structures>
+    <structure:OrganisationSchemes>
+      <structure:AgencyScheme id="AGENCIES" agencyID="SPC" version="1.0" isFinal="false">
+        <common:Name xml:lang="en">SPC agency scheme</common:Name>
+        <structure:Agency id="SPC">
+          <common:Name xml:lang="en">Pacific Community (SPC)</common:Name>
+          <common:Name xml:lang="fr">Communauté du Pacifique (CPS)</common:Name>
+        </structure:Agency>
+      </structure:AgencyScheme>
+    </structure:OrganisationSchemes>
+  </message:Structures>
+</message:Structure>* Connection #0 to host stats-nsi-stable.pacificdata.org left intact
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -960,11 +996,49 @@ Possible values are:
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-
+An example API request for the Currencies category \(CAT\_CURRENCIES\) used by dataflows \(returned as XML\): `curl -v -X GET "https://stats-nsi-stable.pacificdata.org/rest/categorisation/SPC/CAT_CURRENCIES"`
 {% endapi-method-response-example-description %}
 
-```
+```markup
+Date: Fri, 16 Oct 2020 10:35:42 GMT
+Content-Type: application/vnd.sdmx.structure+xml; version=2.1; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d500d33b55d0c10297ba7dfceedc660bd1602844542; expires=Sun, 15-Nov-20 10:35:42 GMT; path=/; domain=.pacificdata.org; HttpOnly; SameSite=Lax
+CF-Ray: 5e312278b818329b-BNE
+Accept-Ranges: values
+Cache-Control: no-store,no-cache
+Vary: Accept, Accept-Encoding
+CF-Cache-Status: DYNAMIC
+cf-request-id: 05d293df750000329b46976000000001
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Pragma: no-cache
+Server: cloudflare
 
+<?xml version="1.0" encoding="utf-8"?>
+<!--NSI Web Service v7.13.0.0-->
+<message:Structure xmlns:message="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xmlns:structure="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure" xmlns:common="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+  <message:Header>
+    <message:ID>IDREF11306</message:ID>
+    <message:Test>false</message:Test>
+    <message:Prepared>2020-10-16T10:35:42.9540952+00:00</message:Prepared>
+    <message:Sender id="Unknown" />
+    <message:Receiver id="Unknown" />
+  </message:Header>
+  <message:Structures>
+    <structure:Categorisations>
+      <structure:Categorisation id="CAT_CURRENCIES" agencyID="SPC" version="2.0" isFinal="false">
+        <common:Name xml:lang="en">Categorisation for the Currencies dataflow</common:Name>
+        <structure:Source>
+          <Ref id="DF_CURRENCIES" version="2.0" agencyID="SPC" package="datastructure" class="Dataflow" />
+        </structure:Source>
+        <structure:Target>
+          <Ref id="ECO" maintainableParentID="CAS_COM_TOPIC" maintainableParentVersion="1.0" agencyID="SPC" package="categoryscheme" class="Category" />
+        </structure:Target>
+      </structure:Categorisation>
+    </structure:Categorisations>
+  </message:Structures>
+</message:Structure>* Connection #0 to host stats-nsi-stable.pacificdata.org left intact
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -1027,11 +1101,147 @@ Possible values are:
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-
+An example API request for all category schemes \(returned as XML\): `curl -v -X GET "https://stats-nsi-stable.pacificdata.org/rest/categoryscheme"`
 {% endapi-method-response-example-description %}
 
-```
+```markup
+Date: Fri, 16 Oct 2020 10:38:25 GMT
+Content-Type: application/vnd.sdmx.structure+xml; version=2.1; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d70f61bc721dfb8d40bcaadbb1ff2b1281602844705; expires=Sun, 15-Nov-20 10:38:25 GMT; path=/; domain=.pacificdata.org; HttpOnly; SameSite=Lax
+CF-Ray: 5e31266fb85532a4-BNE
+Accept-Ranges: values
+Cache-Control: no-store,no-cache
+Vary: Accept, Accept-Encoding
+CF-Cache-Status: DYNAMIC
+cf-request-id: 05d29659d7000032a46a2a7000000001
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Pragma: no-cache
+Server: cloudflare
 
+<?xml version="1.0" encoding="utf-8"?>
+<!--NSI Web Service v7.13.0.0-->
+<message:Structure xmlns:message="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xmlns:structure="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure" xmlns:common="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+  <message:Header>
+    <message:ID>IDREF11309</message:ID>
+    <message:Test>false</message:Test>
+    <message:Prepared>2020-10-16T10:38:25.3660767+00:00</message:Prepared>
+    <message:Sender id="Unknown" />
+    <message:Receiver id="Unknown" />
+  </message:Header>
+  <message:Structures>
+    <structure:CategorySchemes>
+      <structure:CategoryScheme id="CAS_COM_DEV" agencyID="SPC" version="1.0" isFinal="false">
+        <common:Name xml:lang="en">Development indicators</common:Name>
+        <common:Name xml:lang="fr">Indicateurs de développement</common:Name>
+        <structure:Category id="SDG">
+          <common:Annotations>
+            <common:Annotation>
+              <common:AnnotationType>ORDER</common:AnnotationType>
+              <common:AnnotationText xml:lang="en">10</common:AnnotationText>
+              <common:AnnotationText xml:lang="fr">10</common:AnnotationText>
+            </common:Annotation>
+          </common:Annotations>
+          <common:Name xml:lang="en">Sustainable Development Goals</common:Name>
+          <common:Name xml:lang="fr">Objectifs de Développement Durable</common:Name>
+        </structure:Category>
+        <structure:Category id="NMDI">
+          <common:Annotations>
+            <common:Annotation>
+              <common:AnnotationType>ORDER</common:AnnotationType>
+              <common:AnnotationText xml:lang="en">20</common:AnnotationText>
+              <common:AnnotationText xml:lang="fr">20</common:AnnotationText>
+            </common:Annotation>
+          </common:Annotations>
+          <common:Name xml:lang="en">National Minimum Development Indicators</common:Name>
+          <common:Name xml:lang="fr">Indicateurs Minima du Développement National</common:Name>
+        </structure:Category>
+      </structure:CategoryScheme>
+      <structure:CategoryScheme id="CAS_COM_TOPIC" agencyID="SPC" version="1.0" isFinal="false">
+        <common:Name xml:lang="en">Topic</common:Name>
+        <common:Name xml:lang="fr">Thème</common:Name>
+        <structure:Category id="ECO">
+          <common:Annotations>
+            <common:Annotation>
+              <common:AnnotationType>ORDER</common:AnnotationType>
+              <common:AnnotationText xml:lang="en">10</common:AnnotationText>
+              <common:AnnotationText xml:lang="fr">10</common:AnnotationText>
+            </common:Annotation>
+          </common:Annotations>
+          <common:Name xml:lang="en">Economy</common:Name>
+          <common:Name xml:lang="fr">Économie</common:Name>
+        </structure:Category>
+        <structure:Category id="ENV">
+          <common:Annotations>
+            <common:Annotation>
+              <common:AnnotationType>ORDER</common:AnnotationType>
+              <common:AnnotationText xml:lang="en">20</common:AnnotationText>
+              <common:AnnotationText xml:lang="fr">20</common:AnnotationText>
+            </common:Annotation>
+          </common:Annotations>
+          <common:Name xml:lang="en">Environment</common:Name>
+          <common:Name xml:lang="fr">Environnement</common:Name>
+        </structure:Category>
+        <structure:Category id="HEA">
+          <common:Annotations>
+            <common:Annotation>
+              <common:AnnotationType>ORDER</common:AnnotationType>
+              <common:AnnotationText xml:lang="en">30</common:AnnotationText>
+              <common:AnnotationText xml:lang="fr">30</common:AnnotationText>
+            </common:Annotation>
+          </common:Annotations>
+          <common:Name xml:lang="en">Health</common:Name>
+          <common:Name xml:lang="fr">Santé</common:Name>
+        </structure:Category>
+        <structure:Category id="IND">
+          <common:Annotations>
+            <common:Annotation>
+              <common:AnnotationType>ORDER</common:AnnotationType>
+              <common:AnnotationText xml:lang="en">40</common:AnnotationText>
+              <common:AnnotationText xml:lang="fr">40</common:AnnotationText>
+            </common:Annotation>
+          </common:Annotations>
+          <common:Name xml:lang="en">Industry and Services</common:Name>
+          <common:Name xml:lang="fr">Industrie et services</common:Name>
+        </structure:Category>
+        <structure:Category id="POP">
+          <common:Annotations>
+            <common:Annotation>
+              <common:AnnotationType>ORDER</common:AnnotationType>
+              <common:AnnotationText xml:lang="en">50</common:AnnotationText>
+              <common:AnnotationText xml:lang="fr">50</common:AnnotationText>
+            </common:Annotation>
+          </common:Annotations>
+          <common:Name xml:lang="en">Population</common:Name>
+          <common:Name xml:lang="fr">Population</common:Name>
+        </structure:Category>
+        <structure:Category id="SOC">
+          <common:Annotations>
+            <common:Annotation>
+              <common:AnnotationType>ORDER</common:AnnotationType>
+              <common:AnnotationText xml:lang="en">60</common:AnnotationText>
+              <common:AnnotationText xml:lang="fr">60</common:AnnotationText>
+            </common:Annotation>
+          </common:Annotations>
+          <common:Name xml:lang="en">Social</common:Name>
+          <common:Name xml:lang="fr">Social</common:Name>
+        </structure:Category>
+        <structure:Category id="XDO">
+          <common:Annotations>
+            <common:Annotation>
+              <common:AnnotationType>ORDER</common:AnnotationType>
+              <common:AnnotationText xml:lang="en">70</common:AnnotationText>
+              <common:AnnotationText xml:lang="fr">70</common:AnnotationText>
+            </common:Annotation>
+          </common:Annotations>
+          <common:Name xml:lang="en">Multi-domain</common:Name>
+          <common:Name xml:lang="fr">Multi-domaine</common:Name>
+        </structure:Category>
+      </structure:CategoryScheme>
+    </structure:CategorySchemes>
+  </message:Structures>
+</message:Structure>* Connection #0 to host stats-nsi-stable.pacificdata.org left intact
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -1094,11 +1304,288 @@ Possible values are:
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-
+An example API request for the codelist for units of measure \(CL\_COM\_UNIT\_MEASURE\) \(returned as XML\): `curl -v -X GET "https://stats-nsi-stable.pacificdata.org/rest/codelist/SPC/CL_COM_UNIT_MEASURE"`
 {% endapi-method-response-example-description %}
 
-```
+```markup
+Date: Fri, 16 Oct 2020 10:46:51 GMT
+Content-Type: application/vnd.sdmx.structure+xml; version=2.1; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d0b3b57cd40f3e51c8b6a36f754e8add81602845211; expires=Sun, 15-Nov-20 10:46:51 GMT; path=/; domain=.pacificdata.org; HttpOnly; SameSite=Lax
+CF-Ray: 5e3132ca49a9e9b3-BNE
+Accept-Ranges: values
+Cache-Control: no-store,no-cache
+Vary: Accept, Accept-Encoding
+CF-Cache-Status: DYNAMIC
+cf-request-id: 05d29e126e0000e9b3a631c000000001
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Pragma: no-cache
+Server: cloudflare
 
+<?xml version="1.0" encoding="utf-8"?>
+<!--NSI Web Service v7.13.0.0-->
+<message:Structure xmlns:message="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xmlns:structure="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure" xmlns:common="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+  <message:Header>
+    <message:ID>IDREF11312</message:ID>
+    <message:Test>false</message:Test>
+    <message:Prepared>2020-10-16T10:46:51.3717248+00:00</message:Prepared>
+    <message:Sender id="Unknown" />
+    <message:Receiver id="Unknown" />
+  </message:Header>
+  <message:Structures>
+    <structure:Codelists>
+      <structure:Codelist id="CL_COM_UNIT_MEASURE" agencyID="SPC" version="1.0" isFinal="false">
+        <common:Name xml:lang="en">Common codelist for units of measure</common:Name>
+        <common:Name xml:lang="fr">Liste de codes commune pour les unités de mesure</common:Name>
+        <structure:Code id="N">
+          <common:Name xml:lang="en">units</common:Name>
+          <common:Name xml:lang="fr">unités</common:Name>
+        </structure:Code>
+        <structure:Code id="PERCENT">
+          <common:Name xml:lang="en">percent</common:Name>
+          <common:Name xml:lang="fr">pourcents</common:Name>
+        </structure:Code>
+        <structure:Code id="KM2">
+          <common:Name xml:lang="en">square kilometre</common:Name>
+          <common:Name xml:lang="fr">kilomètre carré</common:Name>
+        </structure:Code>
+        <structure:Code id="POP_KM2">
+          <common:Name xml:lang="en">persons per square kilometre</common:Name>
+          <common:Name xml:lang="fr">personnes par kilomètre carré</common:Name>
+        </structure:Code>
+        <structure:Code id="RATIO_POP">
+          <common:Name xml:lang="en">ratio to total population</common:Name>
+          <common:Name xml:lang="fr">rapport à la population totale</common:Name>
+        </structure:Code>
+        <structure:Code id="INDEX">
+          <common:Name xml:lang="en">index</common:Name>
+          <common:Name xml:lang="fr">indice</common:Name>
+        </structure:Code>
+        <structure:Code id="PER_100000_LIVE_BIRTHS">
+          <common:Name xml:lang="en">per 100,000 live births</common:Name>
+          <common:Name xml:lang="fr">pour 100 000 naissances vivantes</common:Name>
+        </structure:Code>
+        <structure:Code id="PER_100000_POP">
+          <common:Name xml:lang="en">per 100,000 population</common:Name>
+          <common:Name xml:lang="fr">pour 100 000 habitants</common:Name>
+        </structure:Code>
+        <structure:Code id="PER_1000_POP">
+          <common:Name xml:lang="en">per 1,000 population</common:Name>
+          <common:Name xml:lang="fr">pour 1000 habitants</common:Name>
+        </structure:Code>
+        <structure:Code id="LITRES_PURE_ALCOHOL">
+          <common:Name xml:lang="en">litres pure alcohol</common:Name>
+          <common:Name xml:lang="fr">litres d'alcool pur</common:Name>
+        </structure:Code>
+        <structure:Code id="PER_100_POP">
+          <common:Name xml:lang="en">per 100 population</common:Name>
+          <common:Name xml:lang="fr">pour 100 habitants</common:Name>
+        </structure:Code>
+        <structure:Code id="USD_MILLIONS">
+          <common:Name xml:lang="en">usd in millions</common:Name>
+          <common:Name xml:lang="fr">usd en millions</common:Name>
+        </structure:Code>
+        <structure:Code id="USD">
+          <common:Name xml:lang="en">USD</common:Name>
+          <common:Name xml:lang="fr">USD</common:Name>
+        </structure:Code>
+        <structure:Code id="T">
+          <common:Name xml:lang="en">metric tons</common:Name>
+          <common:Name xml:lang="fr">tonnes métriques</common:Name>
+        </structure:Code>
+        <structure:Code id="CUR_LCU">
+          <common:Name xml:lang="en">local currency</common:Name>
+          <common:Name xml:lang="fr">monnaie locale</common:Name>
+        </structure:Code>
+        <structure:Code id="USDBBL">
+          <common:Name xml:lang="en">$/bbl</common:Name>
+          <common:Name xml:lang="fr">$/bbl</common:Name>
+        </structure:Code>
+        <structure:Code id="USDMT">
+          <common:Name xml:lang="en">$/mt</common:Name>
+          <common:Name xml:lang="fr">$/mt</common:Name>
+        </structure:Code>
+        <structure:Code id="USDMMBTU">
+          <common:Name xml:lang="en">$/mmbtu</common:Name>
+          <common:Name xml:lang="fr">$/mmbtu</common:Name>
+        </structure:Code>
+        <structure:Code id="BASE2010">
+          <common:Name xml:lang="en">2010=100</common:Name>
+          <common:Name xml:lang="fr">2010=100</common:Name>
+        </structure:Code>
+        <structure:Code id="USDKG">
+          <common:Name xml:lang="en">$/kg</common:Name>
+          <common:Name xml:lang="fr">$/kg</common:Name>
+        </structure:Code>
+        <structure:Code id="USDCM">
+          <common:Name xml:lang="en">$/cubic meter</common:Name>
+          <common:Name xml:lang="fr">$/cubic meter</common:Name>
+        </structure:Code>
+        <structure:Code id="USHSHEET">
+          <common:Name xml:lang="en">¢/sheet</common:Name>
+          <common:Name xml:lang="fr">¢/sheet</common:Name>
+        </structure:Code>
+        <structure:Code id="USDDMTU">
+          <common:Name xml:lang="en">$/dmtu</common:Name>
+          <common:Name xml:lang="fr">$/dmtu</common:Name>
+        </structure:Code>
+        <structure:Code id="USDTROYOZ">
+          <common:Name xml:lang="en">$/troy oz</common:Name>
+          <common:Name xml:lang="fr">$/troy oz</common:Name>
+        </structure:Code>
+        <structure:Code id="BASE2005">
+          <common:Name xml:lang="en">2005=100</common:Name>
+          <common:Name xml:lang="fr">2005=100</common:Name>
+        </structure:Code>
+        <structure:Code id="CENTSKG">
+          <common:Name xml:lang="en">cents/kg</common:Name>
+          <common:Name xml:lang="fr">cents/kg</common:Name>
+        </structure:Code>
+        <structure:Code id="NZD">
+          <common:Name xml:lang="en">New Zealand Dollar</common:Name>
+          <common:Name xml:lang="fr">Dollar néo-zélandais</common:Name>
+        </structure:Code>
+        <structure:Code id="FJD">
+          <common:Name xml:lang="en">Fiji Dollar</common:Name>
+          <common:Name xml:lang="fr">Dollar fidjien</common:Name>
+        </structure:Code>
+        <structure:Code id="AUD">
+          <common:Name xml:lang="en">Australian Dollar</common:Name>
+          <common:Name xml:lang="fr">Dollar australien</common:Name>
+        </structure:Code>
+        <structure:Code id="XPF">
+          <common:Name xml:lang="en">CFP Franc</common:Name>
+          <common:Name xml:lang="fr">Franc CFP</common:Name>
+        </structure:Code>
+        <structure:Code id="PGK">
+          <common:Name xml:lang="en">Kina</common:Name>
+          <common:Name xml:lang="fr">Kina</common:Name>
+        </structure:Code>
+        <structure:Code id="SBD">
+          <common:Name xml:lang="en">Solomon Islands Dollar</common:Name>
+          <common:Name xml:lang="fr">Dollar des Îles Salomon</common:Name>
+        </structure:Code>
+        <structure:Code id="TOP">
+          <common:Name xml:lang="en">Pa’anga</common:Name>
+          <common:Name xml:lang="fr">Pa’anga</common:Name>
+        </structure:Code>
+        <structure:Code id="VUV">
+          <common:Name xml:lang="en">Vatu</common:Name>
+          <common:Name xml:lang="fr">Vatu</common:Name>
+        </structure:Code>
+        <structure:Code id="WST">
+          <common:Name xml:lang="en">Tala</common:Name>
+          <common:Name xml:lang="fr">Tala</common:Name>
+        </structure:Code>
+        <structure:Code id="USD_POP">
+          <common:Name xml:lang="en">USD per person</common:Name>
+          <common:Name xml:lang="fr">USD par personne</common:Name>
+        </structure:Code>
+        <structure:Code id="NZD_POP">
+          <common:Name xml:lang="en">New Zealand Dollar per person</common:Name>
+          <common:Name xml:lang="fr">Dollar néo-zélandais par personne</common:Name>
+        </structure:Code>
+        <structure:Code id="FJD_POP">
+          <common:Name xml:lang="en">Fiji Dollar per person</common:Name>
+          <common:Name xml:lang="fr">Dollar fidjien par personne</common:Name>
+        </structure:Code>
+        <structure:Code id="AUD_POP">
+          <common:Name xml:lang="en">Australian Dollar per person</common:Name>
+          <common:Name xml:lang="fr">Dollar australien par personne</common:Name>
+        </structure:Code>
+        <structure:Code id="XPF_POP">
+          <common:Name xml:lang="en">CFP Franc per person</common:Name>
+          <common:Name xml:lang="fr">Franc CFP par personne</common:Name>
+        </structure:Code>
+        <structure:Code id="PGK_POP">
+          <common:Name xml:lang="en">Kina per person</common:Name>
+          <common:Name xml:lang="fr">Kina par personne</common:Name>
+        </structure:Code>
+        <structure:Code id="SBD_POP">
+          <common:Name xml:lang="en">Solomon Islands Dollar per person</common:Name>
+          <common:Name xml:lang="fr">Dollar des Îles Salomon par personne</common:Name>
+        </structure:Code>
+        <structure:Code id="TOP_POP">
+          <common:Name xml:lang="en">Pa’anga per person</common:Name>
+          <common:Name xml:lang="fr">Pa’anga par personne</common:Name>
+        </structure:Code>
+        <structure:Code id="VUV_POP">
+          <common:Name xml:lang="en">Vatu per person</common:Name>
+          <common:Name xml:lang="fr">Vatu par personne</common:Name>
+        </structure:Code>
+        <structure:Code id="WST_POP">
+          <common:Name xml:lang="en">Tala per person</common:Name>
+          <common:Name xml:lang="fr">Tala par personne</common:Name>
+        </structure:Code>
+        <structure:Code id="GY">
+          <common:Name xml:lang="en">Growth Rate, Over 1 Year</common:Name>
+          <common:Name xml:lang="fr">Taux de croissance, sur 1 an</common:Name>
+        </structure:Code>
+        <structure:Code id="USD_R_POP">
+          <common:Name xml:lang="en">Per Capita, US $, Exchange Rates Converted</common:Name>
+          <common:Name xml:lang="fr">Par habitant, US $, taux de change convertis</common:Name>
+        </structure:Code>
+        <structure:Code id="PERCENT_GDP">
+          <common:Name xml:lang="en">As a % of GDP</common:Name>
+          <common:Name xml:lang="fr">En% du PIB</common:Name>
+        </structure:Code>
+        <structure:Code id="YR">
+          <common:Name xml:lang="en">Years</common:Name>
+          <common:Name xml:lang="fr">Années</common:Name>
+        </structure:Code>
+        <structure:Code id="PER_1000_LIVE_BIRTHS">
+          <common:Name xml:lang="en">per 1,000 live births</common:Name>
+          <common:Name xml:lang="fr">pour 1000 naissances vivantes</common:Name>
+        </structure:Code>
+        <structure:Code id="RF">
+          <common:Name xml:lang="en">Relative frequency (% of total)</common:Name>
+          <common:Name xml:lang="fr">Fréquence relative (% du total)</common:Name>
+        </structure:Code>
+        <structure:Code id="g">
+          <common:Name xml:lang="en">g</common:Name>
+          <common:Name xml:lang="fr">g</common:Name>
+        </structure:Code>
+        <structure:Code id="kcal">
+          <common:Name xml:lang="en">kcal</common:Name>
+          <common:Name xml:lang="fr">kcal</common:Name>
+        </structure:Code>
+        <structure:Code id="kj">
+          <common:Name xml:lang="en">kj</common:Name>
+          <common:Name xml:lang="fr">kj</common:Name>
+        </structure:Code>
+        <structure:Code id="mg">
+          <common:Name xml:lang="en">mg</common:Name>
+          <common:Name xml:lang="fr">mg</common:Name>
+        </structure:Code>
+        <structure:Code id="YEAR">
+          <common:Name xml:lang="en">years</common:Name>
+          <common:Name xml:lang="fr">années</common:Name>
+        </structure:Code>
+        <structure:Code id="BOOL">
+          <common:Name xml:lang="en">Boolean or binary measure</common:Name>
+          <common:Name xml:lang="fr">Mesure booléenne ou binaire</common:Name>
+        </structure:Code>
+        <structure:Code id="CON_USD">
+          <common:Name xml:lang="en">Constant USD</common:Name>
+          <common:Name xml:lang="fr">USD constant</common:Name>
+        </structure:Code>
+        <structure:Code id="HA">
+          <common:Name xml:lang="en">Hectares</common:Name>
+          <common:Name xml:lang="fr">Hectares</common:Name>
+        </structure:Code>
+        <structure:Code id="MJ_PER_GDP_CON_PPP_USD">
+          <common:Name xml:lang="en">Megajoules per USD constant PPP GDP</common:Name>
+          <common:Name xml:lang="fr">Mégajoules par USD PIB PPA constant</common:Name>
+        </structure:Code>
+        <structure:Code id="PER_10000_POP">
+          <common:Name xml:lang="en">per 10,000 population</common:Name>
+          <common:Name xml:lang="fr">pour 10 000 habitants</common:Name>
+        </structure:Code>
+      </structure:Codelist>
+    </structure:Codelists>
+  </message:Structures>
+</message:Structure>* Connection #0 to host stats-nsi-stable.pacificdata.org left intact
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -1163,11 +1650,164 @@ Possible values are:
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-
+An example API request for common SPC concepts \(CS\_COMMON\) \(returned as XML\): `curl -v -X GET "https://stats-nsi-stable.pacificdata.org/rest/conceptscheme/SPC/CS_COMMON"`
 {% endapi-method-response-example-description %}
 
 ```
+Date: Fri, 16 Oct 2020 10:50:17 GMT
+Content-Type: application/vnd.sdmx.structure+xml; version=2.1; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d41d0f238e6803e89c514864a5c216f701602845417; expires=Sun, 15-Nov-20 10:50:17 GMT; path=/; domain=.pacificdata.org; HttpOnly; SameSite=Lax
+CF-Ray: 5e3137d138e732a0-BNE
+Accept-Ranges: values
+Cache-Control: no-store,no-cache
+Vary: Accept, Accept-Encoding
+CF-Cache-Status: DYNAMIC
+cf-request-id: 05d2a136c5000032a0f187d000000001
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Pragma: no-cache
+Server: cloudflare
 
+<?xml version="1.0" encoding="utf-8"?>
+<!--NSI Web Service v7.13.0.0-->
+<message:Structure xmlns:message="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xmlns:structure="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure" xmlns:common="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+  <message:Header>
+    <message:ID>IDREF11315</message:ID>
+    <message:Test>false</message:Test>
+    <message:Prepared>2020-10-16T10:50:17.3118345+00:00</message:Prepared>
+    <message:Sender id="Unknown" />
+    <message:Receiver id="Unknown" />
+  </message:Header>
+  <message:Structures>
+    <structure:Concepts>
+      <structure:ConceptScheme id="CS_COMMON" agencyID="SPC" version="2.0" isFinal="false">
+        <common:Name xml:lang="en">Common concepts for SPC .Stat data</common:Name>
+        <common:Name xml:lang="fr">Concepts communs pour les données .Stat de la CPS</common:Name>
+        <structure:Concept id="TIME_PERIOD">
+          <common:Name xml:lang="en">Time</common:Name>
+          <common:Name xml:lang="fr">Période</common:Name>
+        </structure:Concept>
+        <structure:Concept id="FREQ">
+          <common:Name xml:lang="en">Frequency</common:Name>
+          <common:Name xml:lang="fr">Fréquence</common:Name>
+        </structure:Concept>
+        <structure:Concept id="OBS_VALUE">
+          <common:Name xml:lang="en">Observation value</common:Name>
+          <common:Name xml:lang="fr">Valeur observée</common:Name>
+        </structure:Concept>
+        <structure:Concept id="OBS_SATUS">
+          <common:Name xml:lang="en">Observation Status</common:Name>
+          <common:Name xml:lang="fr">Statut de l'observation</common:Name>
+        </structure:Concept>
+        <structure:Concept id="CONF_STATUS">
+          <common:Name xml:lang="en">Confidentiality status</common:Name>
+          <common:Name xml:lang="fr">Confidentialité</common:Name>
+        </structure:Concept>
+        <structure:Concept id="UNIT_MEASURE">
+          <common:Name xml:lang="en">Unit of measure</common:Name>
+          <common:Name xml:lang="fr">Unité de mesure</common:Name>
+        </structure:Concept>
+        <structure:Concept id="UNIT_MULT">
+          <common:Name xml:lang="en">Unit multiplier</common:Name>
+          <common:Name xml:lang="fr">Multiplicateur d'unités</common:Name>
+        </structure:Concept>
+        <structure:Concept id="COMMENT">
+          <common:Name xml:lang="en">Comment</common:Name>
+          <common:Name xml:lang="fr">Commentaire</common:Name>
+        </structure:Concept>
+        <structure:Concept id="DECIMALS">
+          <common:Name xml:lang="en">Decimals</common:Name>
+          <common:Name xml:lang="fr">Décimales</common:Name>
+        </structure:Concept>
+        <structure:Concept id="GEO_AREA">
+          <common:Name xml:lang="en">Geographical area</common:Name>
+          <common:Name xml:lang="fr">Zone géographique</common:Name>
+        </structure:Concept>
+        <structure:Concept id="GEO_PICT">
+          <common:Name xml:lang="en">Pacific Island Countries and territories</common:Name>
+          <common:Name xml:lang="fr">Pays et territoires insulaires du Pacifique</common:Name>
+        </structure:Concept>
+        <structure:Concept id="SEX">
+          <common:Name xml:lang="en">Sex</common:Name>
+          <common:Name xml:lang="fr">Sexe</common:Name>
+        </structure:Concept>
+        <structure:Concept id="AGE">
+          <common:Name xml:lang="en">Age</common:Name>
+          <common:Name xml:lang="fr">Âge</common:Name>
+        </structure:Concept>
+        <structure:Concept id="CURRENCY">
+          <common:Name xml:lang="en">Currency</common:Name>
+          <common:Name xml:lang="fr">Devise</common:Name>
+        </structure:Concept>
+        <structure:Concept id="DATA_SOURCE">
+          <common:Name xml:lang="en">Data source</common:Name>
+          <common:Name xml:lang="fr">Source de données</common:Name>
+        </structure:Concept>
+        <structure:Concept id="INDICATOR">
+          <common:Name xml:lang="en">Indicator</common:Name>
+          <common:Name xml:lang="fr">Indicateur</common:Name>
+        </structure:Concept>
+        <structure:Concept id="COMMODITY">
+          <common:Name xml:lang="en">Commodity</common:Name>
+          <common:Name xml:lang="fr">Marchandise</common:Name>
+        </structure:Concept>
+        <structure:Concept id="URBANIZATION">
+          <common:Name xml:lang="en">Urbanization</common:Name>
+          <common:Name xml:lang="fr">Urbanisation</common:Name>
+        </structure:Concept>
+        <structure:Concept id="EDUCATION">
+          <common:Name xml:lang="en">Education level</common:Name>
+          <common:Name xml:lang="fr">Niveau d'éducation</common:Name>
+        </structure:Concept>
+        <structure:Concept id="OCCUPATION">
+          <common:Name xml:lang="en">Occupation</common:Name>
+          <common:Name xml:lang="fr">Profession</common:Name>
+        </structure:Concept>
+        <structure:Concept id="DISABILITY">
+          <common:Name xml:lang="en">Disability</common:Name>
+          <common:Name xml:lang="fr">Invalidité</common:Name>
+        </structure:Concept>
+        <structure:Concept id="INCOME">
+          <common:Name xml:lang="en">Income</common:Name>
+          <common:Name xml:lang="fr">Revenu</common:Name>
+        </structure:Concept>
+        <structure:Concept id="COMPOSITE_BREAKDOWN">
+          <common:Name xml:lang="en">Composite breakdown</common:Name>
+          <common:Name xml:lang="fr">Ventilation composite</common:Name>
+        </structure:Concept>
+        <structure:Concept id="ECONOMIC_SECTOR">
+          <common:Name xml:lang="en">Economic sector</common:Name>
+          <common:Name xml:lang="fr">Secteur économique</common:Name>
+        </structure:Concept>
+        <structure:Concept id="LABOUR_FORCE_STATUS">
+          <common:Name xml:lang="en">Labour force status</common:Name>
+          <common:Name xml:lang="fr">Statut d'activité professionnelle</common:Name>
+        </structure:Concept>
+        <structure:Concept id="EMPLOYMENT_STATUS">
+          <common:Name xml:lang="en">Employment status</common:Name>
+          <common:Name xml:lang="fr">Statut d'emploi</common:Name>
+        </structure:Concept>
+        <structure:Concept id="BASE_PER">
+          <common:Name xml:lang="en">Base period</common:Name>
+          <common:Name xml:lang="fr">Période de base</common:Name>
+        </structure:Concept>
+        <structure:Concept id="TIME_FORMAT">
+          <common:Name xml:lang="en">Time format</common:Name>
+          <common:Name xml:lang="fr">Format termporel</common:Name>
+        </structure:Concept>
+        <structure:Concept id="LABEMP_STATUS">
+          <common:Name xml:lang="en">Labour and employment status</common:Name>
+          <common:Name xml:lang="fr">Statut d'activité professionnelle et d'emploi</common:Name>
+        </structure:Concept>
+        <structure:Concept id="BUDGET">
+          <common:Name xml:lang="en">Budget</common:Name>
+          <common:Name xml:lang="fr">Budget</common:Name>
+        </structure:Concept>
+      </structure:ConceptScheme>
+    </structure:Concepts>
+  </message:Structures>
+</message:Structure>* Connection #0 to host stats-nsi-stable.pacificdata.org left intact
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
