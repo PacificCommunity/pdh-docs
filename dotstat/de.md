@@ -54,7 +54,7 @@ Table is displayed with row sections, rows and columns
 
 Customize menu item on the top bar
 
-![](../.gitbook/assets/image%20%2817%29.png)
+![](../.gitbook/assets/image%20%2820%29.png)
 
 At least one dimension must be in rows
 
@@ -64,7 +64,7 @@ Order of items
 
 Share menu item on the top bar
 
-![](../.gitbook/assets/image%20%2816%29.png)
+![](../.gitbook/assets/image%20%2817%29.png)
 
 First time e-mail address must be validated
 
@@ -84,17 +84,25 @@ Choose between codes, labels or both
 
 ## Link to metadata
 
-Download menu item on the top bar
+When a metadata document it will be availble from the "Download" menu next to the blue "i" icon.
+
+![](../.gitbook/assets/image%20%2814%29.png)
 
 ![](../.gitbook/assets/image%20%2815%29.png)
 
+Metadata documents comprise a first section with reference metadata \(data description, data source, processing, coverage, ...\) and a secopnd section providing informaiton on the data structure \(columns and codelists\).
+
+![](../.gitbook/assets/image%20%2819%29.png)
+
 Structural metadata accessible in SDMX-ML using the API 
 
-## Get API querries corresponding to the data selection
+## Get API queries corresponding to the data selection
 
-More &gt; API menu item on the top bar
+API queries corresponding to the data view currebklty displayed in the Data Explorer can be accessed using the "More" menu.
 
-![](../.gitbook/assets/image%20%2818%29.png)
+![](../.gitbook/assets/image%20%2821%29.png)
 
-See section on API
+Separate API queries are provided for structural metadata and for data.
+
+For more information see dedicated section on API.
 
