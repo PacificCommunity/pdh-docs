@@ -1,7 +1,3 @@
----
-description: 'Search, visualise and share Pacific data...'
----
-
 # Data Explorer
 
 

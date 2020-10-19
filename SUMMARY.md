@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Pacific Data Hub](README.md)
-* [PDH Catalogue](catalogue/README.md)
+* [Data Catalogue](catalogue/README.md)
   * [User Guide](catalogue/user-guide.md)
 * [PacificMap](pacific-map/README.md)
   * [User Guide](pacific-map/user-guide.md)
@@ -19,6 +19,6 @@
     * [Sample Code](stat/api/scode.md)
     * [CMS integration](stat/api/web-integration.md)
     * [API change history](stat/api/api-history.md)
-* [PDH Microdata Library](ml/README.md)
+* [Microdata Library](ml/README.md)
   * [User Guide](ml/user-guide.md)
 

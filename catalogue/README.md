@@ -1,4 +1,4 @@
-# PDH Catalogue
+# Data Catalogue
 
 At the core of the Pacific Data Hub is the PDH Catalogue. This platform is built on [CKAN](https://ckan.org), the world's leading open data management system.
 
