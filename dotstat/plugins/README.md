@@ -1,5 +1,5 @@
 ---
-description: A series of plugins to access Pacific data with statistical software
+description: Access Pacific data with your favorite data analysis software
 ---
 
 # Plugins
