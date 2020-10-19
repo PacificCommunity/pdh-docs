@@ -92,7 +92,7 @@ curl -v -X GET "https://sdd-dotstat-api-gateway.azure-api.net/data/DF_POP_SUM/NC
 For detailed implementations of API use, see [Sample Code](https://sdd-dotstat-api-gateway.portal.azure-api.net/sample-code).  
 
 
-#### Discovering dataflows <a id="dataflow"></a>
+## Discovering dataflows
 
 Depending on your application's needs, you may want to retrieve information on all existing dataflows. The `HTTP GET` method is used with the `dataflow` endpoint to get this type of information.
 
@@ -128,5 +128,5 @@ curl -v -X GET "https://sdd-dotstat-api-gateway.azure-api.net/dataflow/SPC/all/l
 
 **Sample Code**
 
-For example code which retrieves all dataflowIds, see [Sample Code](https://sdd-dotstat-api-gateway.portal.azure-api.net/sample-code#dataflow_ids).
+For example code which retrieves all dataflowIds, see [Sample Code](scode.md).
 
