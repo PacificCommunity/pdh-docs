@@ -54,7 +54,7 @@ Table is displayed with row sections, rows and columns
 
 Customize menu item on the top bar
 
-![](../.gitbook/assets/image%20%2820%29.png)
+![](../.gitbook/assets/image%20%2824%29.png)
 
 At least one dimension must be in rows
 
@@ -62,17 +62,28 @@ Order of items
 
 ## Share by e-mail
 
-Share menu item on the top bar
+A share functionnality allows sending a link to the data currenlty displayed in the Data Explorer per e-mail.
 
-![](../.gitbook/assets/image%20%2817%29.png)
+To access this functionnality the "Share" item from the top menu must be clicked.
 
-First time e-mail address must be validated
+![](../.gitbook/assets/image%20%2821%29.png)
 
-Share a snapshot or a live view
+Data can be shared in 2 ways :
+
+* As a snapshot of data meaning that data will not change even if updated on the site
+* As a view of latest data available meaning that latest avaiable data will always be shown when the shared link is clicked
+
+![](../.gitbook/assets/image%20%2815%29.png)
+
+The e-mail address to which a link will be sent must be provided. The first time an email is sent e-mailmust be validated simply b y clicking the "valide email link" in the message received from the Data Explorer.
+
+![](../.gitbook/assets/image%20%2820%29.png)
 
 ## Export data
 
 ![](../.gitbook/assets/image%20%2814%29.png)
+
+![](../.gitbook/assets/image%20%2826%29.png)
 
 Export data 
 
@@ -84,25 +95,25 @@ Choose between codes, labels or both
 
 ## Link to metadata
 
-When a metadata document it will be availble from the "Download" menu next to the blue "i" icon.
+When a metadata document it will be availble from the "Download" menu next to a blue "i" icon.
 
 ![](../.gitbook/assets/image%20%2814%29.png)
 
-![](../.gitbook/assets/image%20%2815%29.png)
+![](../.gitbook/assets/image%20%2816%29.png)
 
-Metadata documents comprise a first section with reference metadata \(data description, data source, processing, coverage, ...\) and a secopnd section providing informaiton on the data structure \(columns and codelists\).
+Metadata documents comprise a first section with reference metadata \(data description, data source, processing, coverage, ...\) and a secopnd section providing information on the data structure \(columns and codelists\).
 
-![](../.gitbook/assets/image%20%2819%29.png)
-
-Structural metadata accessible in SDMX-ML using the API 
+![](../.gitbook/assets/image%20%2823%29.png)
 
 ## Get API queries corresponding to the data selection
 
-API queries corresponding to the data view currebklty displayed in the Data Explorer can be accessed using the "More" menu.
+API queries corresponding to the data view currentlty displayed in the Data Explorer can be accessed using the "More" menu.
 
-![](../.gitbook/assets/image%20%2821%29.png)
+![](../.gitbook/assets/image%20%2825%29.png)
 
-Separate API queries are provided for structural metadata and for data.
+Separate API queries are provided for data and for structural metadata.
+
+![](../.gitbook/assets/image%20%2819%29.png)
 
 For more information see dedicated section on API.
 
