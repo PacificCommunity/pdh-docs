@@ -1,5 +1,5 @@
 ---
-description: 'Search, visualise and share Pacific data...'
+description: 'Search, visualise and share Pacific data'
 ---
 
 # PDH.stat

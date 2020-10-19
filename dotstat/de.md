@@ -1,3 +1,7 @@
+---
+description: The user-friendly interface to Pacific data
+---
+
 # Data Explorer
 
 For an introduction on how to use PDH.stat see this video :

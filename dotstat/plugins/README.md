@@ -1,5 +1,5 @@
 ---
-description: A series of plugins provide direct access to PDH.stat via its API
+description: A series of plugins to access Pacific data with statistical software
 ---
 
 # Plugins
