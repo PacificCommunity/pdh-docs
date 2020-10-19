@@ -4,7 +4,7 @@ description: The user-friendly interface to Pacific data
 
 # Data Explorer
 
-For an overview of PDH.stat Data Explorer features see this video :
+For an introduction on how to use PDH.stat see this video :
 
 {% embed url="https://youtu.be/65-ETNfFMBk" %}
 
