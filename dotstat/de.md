@@ -1,7 +1,3 @@
----
-description: 'Search, visualise and share Pacific data...'
----
-
 # Data Explorer
 
 For an introduction on how to use PDH.stat see this video :
