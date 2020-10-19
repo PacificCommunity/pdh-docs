@@ -18,6 +18,8 @@ and here:
 
 ## Find data
 
+## Default table view
+
 ## Refine selection
 
 ## Reshape the table
@@ -26,7 +28,7 @@ and here:
 
 ## Export data
 
-For more information about the PDH.stat API see the [API reference]().
+
 
 
 
