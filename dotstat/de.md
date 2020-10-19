@@ -26,7 +26,11 @@ Using textual search
 
 Using faceted search
 
-## Default table view
+## Table view
+
+Tables have a default view
+
+Limit to the number of observations displayed
 
 ## Refine selection
 
@@ -48,13 +52,49 @@ Add filters
 
 Table is displayed with row sections, rows and columns
 
-Customize menu
+Customize menu item on the top bar
+
+![](../.gitbook/assets/image%20%2817%29.png)
+
+At least one dimension must be in rows
+
+Order of items
 
 ## Share by e-mail
 
+Share menu item on the top bar
+
+![](../.gitbook/assets/image%20%2816%29.png)
+
+First time e-mail address must be validated
+
+Share a snapshot or a live view
+
 ## Export data
 
+![](../.gitbook/assets/image%20%2814%29.png)
 
+Export data 
 
+* Export Excel with filters applied
+* Export CSV with filters applied
+* Export CSV without filters applied
 
+Choose between codes, labels or both
+
+## Link to metadata
+
+Download menu item on the top bar
+
+![](../.gitbook/assets/image%20%2815%29.png)
+
+Structural metadata accessible in SDMX-ML using the API 
+
+## Get API querries corresponding to the data selection
+
+More &gt; API menu item on the top bar
+
+![](../.gitbook/assets/image%20%2818%29.png)
+
+See section on API
 
