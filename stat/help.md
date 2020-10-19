@@ -14,17 +14,17 @@ and here:
 
 [https://stats.oecd.org/Content/themes/OECD/static/help/WBOS%20User%20Guide%20\(EN\).PDF](https://stats.oecd.org/Content/themes/OECD/static/help/WBOS%20User%20Guide%20%28EN%29.PDF)
 
-## Loading PDH.stat
+## Access PDH.stat
 
-## Finding data
+## Find data
 
-## Manipulating data views
+## Refine selection
 
-## Downloading datasets
+## Reshape the table
 
-## Sharing
+## Share by e-mail
 
-## Using the API
+## Export data
 
 For more information about the PDH.stat API see the [API reference]().
 
