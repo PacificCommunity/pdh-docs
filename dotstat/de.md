@@ -1,22 +1,32 @@
+---
+description: 'Search, visualise and share Pacific data...'
+---
+
 # Data Explorer
 
-
+For an introduction on how to use PDH.stat see this video :
 
 {% embed url="https://youtu.be/65-ETNfFMBk" %}
 
 ## Access PDH.stat Data Explorer
 
-Access using the URL
+PDH.stat Data Explorer is accessible direclty using the following URL:
 
-Access from PDH Data Catalogue 
+[https://stats.pacificdata.org/](https://stats.pacificdata.org/)
 
-* From the Rools menu
-* From a catalogue entry
+![](../.gitbook/assets/image%20%2820%29.png)
 
-Access from SPC's Statistcs for Develoment Division \(SDD\) website
+PDH.stat Data Explorer is also accessible in several ways from the Data Catalogue: 
 
-* From the Data & Resources menu
-* rom from visualizations and widgets using PDH.stat data
+[https://pacificdata.org/](https://pacificdata.org/)
+
+* From the "Tools" menu
+
+![](../.gitbook/assets/image%20%2819%29.png)
+
+* Click on the "Source" link of catalogue entries
+
+![](../.gitbook/assets/image%20%2828%29.png)
 
 ## Find data
 
@@ -54,7 +64,7 @@ Table is displayed with row sections, rows and columns
 
 Customize menu item on the top bar
 
-![](../.gitbook/assets/image%20%2824%29.png)
+![](../.gitbook/assets/image%20%2826%29.png)
 
 At least one dimension must be in rows
 
@@ -66,7 +76,7 @@ A share functionnality allows sending a link to the data currenlty displayed in 
 
 To access this functionnality the "Share" item from the top menu must be clicked.
 
-![](../.gitbook/assets/image%20%2821%29.png)
+![](../.gitbook/assets/image%20%2823%29.png)
 
 Data can be shared in 2 ways :
 
@@ -77,13 +87,13 @@ Data can be shared in 2 ways :
 
 The e-mail address to which a link will be sent must be provided. The first time an email is sent e-mailmust be validated simply b y clicking the "valide email link" in the message received from the Data Explorer.
 
-![](../.gitbook/assets/image%20%2820%29.png)
+![](../.gitbook/assets/image%20%2822%29.png)
 
 ## Export data
 
 ![](../.gitbook/assets/image%20%2814%29.png)
 
-![](../.gitbook/assets/image%20%2826%29.png)
+![](../.gitbook/assets/image%20%2830%29.png)
 
 Data can be downloaded as Excel or as CSV, for CSV files a use may choose to export only data currenclty dispalyed by application of filters or to export the entire dataset.
 
@@ -97,17 +107,17 @@ When a metadata document it will be availble from the "Download" menu next to a 
 
 Metadata documents comprise a first section with reference metadata \(data description, data source, processing, coverage, ...\) and a secopnd section providing information on the data structure \(columns and codelists\).
 
-![](../.gitbook/assets/image%20%2823%29.png)
+![](../.gitbook/assets/image%20%2825%29.png)
 
 ## Get API queries corresponding to the data selection
 
 API queries corresponding to the data view currentlty displayed in the Data Explorer can be accessed using the "More" menu.
 
-![](../.gitbook/assets/image%20%2825%29.png)
+![](../.gitbook/assets/image%20%2827%29.png)
 
 Separate API queries are provided for data and for structural metadata.
 
-![](../.gitbook/assets/image%20%2819%29.png)
+![](../.gitbook/assets/image%20%2821%29.png)
 
-For more information see dedicated section on API.
+For more information see dedicated section on the use of the API.
 
