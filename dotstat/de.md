@@ -85,13 +85,7 @@ The e-mail address to which a link will be sent must be provided. The first time
 
 ![](../.gitbook/assets/image%20%2826%29.png)
 
-Export data 
-
-* Export Excel with filters applied
-* Export CSV with filters applied
-* Export CSV without filters applied
-
-Choose between codes, labels or both
+Data can be downloaded as Excel or as CSV, for CSV files a use may choose to export only data currenclty dispalyed by application of filters or to export the entire dataset.
 
 ## Link to metadata
 
