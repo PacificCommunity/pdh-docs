@@ -8,7 +8,7 @@ description: 'Search, visualise and share Pacific data'
 
 PDH.Stat contains more than 350 indicators represented in tables which include population figures, main economic indicators, social statistics and SDGs, and is continually expanding. A [full list of indicators available in PDH.stat can be found here](https://sdd.spc.int/indicators-stat).
 
-Different applications serves different types of users:
+Different applications and use cases are targeted to different types of users:
 
 ![](../.gitbook/assets/image%20%285%29.png)
 
