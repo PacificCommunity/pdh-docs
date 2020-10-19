@@ -12,13 +12,13 @@ For an introduction on how to use PDH.stat see this video :
 
 PDH.stat Data Explorer is accessible direclty using the following URL: [https://stats.pacificdata.org/](https://stats.pacificdata.org/)
 
-PDH.stat Data Explorer is also accessible in several ways from the [Data Catalogue](https://pacificdata.org/)
+The Data Explorer is also accessible in several ways from the [Data Catalogue](https://pacificdata.org/):
 
-* From the "Tools" menu
+* A link to the welcome page of the application is available from the "Tools" menu:
 
 ![](../.gitbook/assets/image%20%2819%29.png)
 
-* From catalogue entries
+* PDH Data Catalogue entries have a link to visualize the data in the Data Explorer as a source:
 
 ![](../.gitbook/assets/image%20%2828%29.png)
 
