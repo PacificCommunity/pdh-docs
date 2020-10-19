@@ -4,11 +4,11 @@ description: The user-friendly interface to Pacific data
 
 # Data Explorer
 
-For an introduction on how to use PDH.stat see this video :
+For an introduction on how to use PDH.stat Data Explorer see this video :
 
 {% embed url="https://youtu.be/65-ETNfFMBk" %}
 
-## Access PDH.stat Data Explorer
+## Access the Data Explorer
 
 PDH.stat Data Explorer is accessible direclty using the following URL: [https://stats.pacificdata.org/](https://stats.pacificdata.org/)
 
