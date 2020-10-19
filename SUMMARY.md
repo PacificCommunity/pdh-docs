@@ -18,7 +18,6 @@
     * [Use cases](stat/api/use-cases.md)
     * [Sample Code](stat/api/scode.md)
     * [CMS integration](stat/api/web-integration.md)
-    * [API change history](stat/api/api-history.md)
 * [Microdata Library](ml/README.md)
   * [User Guide](ml/user-guide.md)
 
