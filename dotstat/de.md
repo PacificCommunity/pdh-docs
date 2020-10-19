@@ -30,7 +30,25 @@ Using faceted search
 
 ## Refine selection
 
+View filters
+
+Remover filters
+
+* Remove one category
+* Remove all categories for one dimension
+* Clear all filters
+
+Add filters
+
+* Select all cagories
+* Select one category
+* Select multiple categories
+
 ## Reshape the table
+
+Table is displayed with row sections, rows and columns
+
+Customize menu
 
 ## Share by e-mail
 
