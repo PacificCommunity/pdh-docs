@@ -8,9 +8,9 @@ PDH.stat provides machine-to-machine accessibility to Pacific data through its R
 
 {% embed url="https://stats-nsi-stable.pacificdata.org" %}
 
-![](../../.gitbook/assets/image%20%2846%29.png)
+![](../../.gitbook/assets/image%20%2847%29.png)
 
-![Overview of main queriable SDMX classes](../../.gitbook/assets/image%20%2847%29.png)
+![Overview of main queriable SDMX classes](../../.gitbook/assets/image%20%2846%29.png)
 
 Sample API calls corresponding to particular data views can be produced from the Data Explorer, for more informaiton on this see [dedicated section from the Data Explorer documentation](https://app.gitbook.com/@pacific-community-spc/s/pacific-data-hub/~/drafts/-MK8Awsn0bi12OsZeTp7/dotstat/de#get-api-queries-corresponding-to-the-data-selection).
 
