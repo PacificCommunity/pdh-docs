@@ -14,10 +14,10 @@
     * [Python](dotstat/plugins/python.md)
     * [STATA](dotstat/plugins/stata.md)
   * [API](dotstat/api/README.md)
+    * [Interface](dotstat/api/interface.md)
     * [Concepts](dotstat/api/concepts.md)
     * [Use cases](dotstat/api/use-cases.md)
     * [Sample Code](dotstat/api/scode.md)
-    * [CMS integration](dotstat/api/web-integration.md)
 * [Microdata Library](ml/README.md)
   * [User Guide](ml/user-guide.md)
 
