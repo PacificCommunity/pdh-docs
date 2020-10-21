@@ -2351,7 +2351,7 @@ Server: cloudflare
 {% endapi-method %}
 
 {% hint style="info" %}
-See API change history.
+
 {% endhint %}
 
 
