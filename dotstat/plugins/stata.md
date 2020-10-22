@@ -1,3 +1,7 @@
+---
+description: Connect STAT to PDH.stat with sdmxpdh
+---
+
 # STATA
 
 ![](../../.gitbook/assets/image%20%2852%29.png)
