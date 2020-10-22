@@ -1,11 +1,10 @@
 ---
-description: >-
-  This Excel add-in creates a "live" connection between your Excel Workbook and
-  the Pacific Data Hub's .Stat API. It provides a list of available data sets
-  and a simple interface for applying filters.
+description: Create a live connection between your Excel Workbooks and PDH.stat
 ---
 
 # Excel
+
+![](../../.gitbook/assets/image%20%2849%29.png)
 
 ### Installation
 

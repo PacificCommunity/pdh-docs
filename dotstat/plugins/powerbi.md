@@ -1,6 +1,24 @@
+---
+description: Produce reports and dashboards with Power BI using a PowerQuery template
+---
+
 # Power BI
 
-Copy the data query and replace the bit in yellow below. Then copy all the code and add to a new query window in Power BI. This will extract the dataset. We still need to refine the code a little bit to neaten things up but with a little transformation you should be able to get some great examples.
+![](../../.gitbook/assets/image%20%2850%29.png)
+
+Get the API query corresponding to the data to be imported using the Data Explorer as explained here.
+
+Create a new data source in Power BI: Data &gt; Get Data &gt; Web &gt; Paste the API query URL
+
+Rename the data source created by right-clicking on it and sleecting "properties"
+
+Replace the PowerQuery with the template provided below:
+
+* Right-click on the data source and select "advanced editor"
+* Copy-paste the PowerQuery template below into the editor
+* Adapt the Source variable \(line 4 below\) by replacing the URL with the one obtained from PDH.stat Data Explorer, save and run
+
+Labels corresponding to codes used in the dataset can be collected using the “structure query” available from the Data Exporer or possibly from the metadata file attached to the dataset, accessible in the Data Explorer has explained here.
 
 ```text
 

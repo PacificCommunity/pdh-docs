@@ -1,7 +1,5 @@
 ---
-description: >-
-  This package allows you to connect to PDH.stat API and download data for
-  manipulation in R.
+description: Run advanced statistical analyses on Pacific data using the rsdmx package
 ---
 
 # R
