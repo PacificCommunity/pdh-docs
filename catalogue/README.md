@@ -4,7 +4,7 @@ At the core of the Pacific Data Hub is the PDH Catalogue. This platform is built
 
 CKAN is a powerful data management system that makes data accessible – by providing tools to streamline publishing, sharing, finding and using data. It is used by numerous governments, organisations and communities around the world to make their data discoverable.
 
-{% embed url="https://youtu.be/o7NCzaEvqdA" %}
+{% embed url="https://youtu.be/H1KBLkZUR2s" %}
 
 \*\*\*\*
 
