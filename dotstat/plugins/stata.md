@@ -1,5 +1,5 @@
 ---
-description: Connect STAT to PDH.stat with sdmxpdh
+description: Connect STATA to PDH.stat with sdmxpdh
 ---
 
 # STATA
