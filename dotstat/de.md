@@ -6,7 +6,7 @@ description: The user-friendly interface to Pacific data
 
 For an introduction on how to use the Data Explorer see this video :
 
-{% embed url="https://youtu.be/65-ETNfFMBk" %}
+{% embed url="https://youtu.be/mbY7nAJvQ8c" %}
 
 ## Access the Data Explorer
 
