@@ -1,10 +1,10 @@
 ---
-description: >-
-  The "pandaSDMX" package can be configured with one line of code to connect to
-  PDH.stat, allowing you to download data for use with pandas.
+description: most popular data science solution with the pandasdmx package
 ---
 
 # Python
+
+![](../../.gitbook/assets/image%20%2854%29.png)
 
 ### Install pandaSDMX
 
