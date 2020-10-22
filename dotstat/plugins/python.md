@@ -1,5 +1,7 @@
 ---
-description: most popular data science solution with the pandasdmx package
+description: >-
+  Access Pacific data with the most popular data science solution using the
+  pandasdmx library
 ---
 
 # Python
