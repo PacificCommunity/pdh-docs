@@ -2,7 +2,7 @@
 description: 'Entry point for documented census and survey datasets, and access to microdata'
 ---
 
-# Microdata Library
+# User Guide
 
 For an introduction on how to use the Microdata Library see this video :
 
