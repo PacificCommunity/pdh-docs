@@ -6,7 +6,7 @@ description: 'Entry point for documented census and survey datasets, and access 
 
 For an introduction on how to use the Microdata Library see this video :
 
-{% embed url="https://youtu.be/TBoFEEaRM-k" %}
+{% embed url="https://youtu.be/p-ZAqoVyrKE" %}
 
 ## Access the Microdata Library
 
@@ -24,7 +24,7 @@ A link is available from the "Tools" menu:
 
 ![](../.gitbook/assets/microdata-library-pdh-menu.png)
 
-PDH Data Catalogue entries have a link to visualize the data in the Microdata Library as a source:
+PDH Data Catalogue entries have a link to visualize the data at its source \(Microdata Library\):
 
 ![](../.gitbook/assets/link-to-microdata-library-from-pdh.png)
 
@@ -34,9 +34,7 @@ The Microdata Library Central Data Catalog allows users to search for published 
 
 ![](../.gitbook/assets/microdata-library-central-data-catalog.png)
 
- 
-
-A keyword search returns datasets containing the given keyword\(s\) in titles and descriptions. The variable description can also be used to search in more detail.
+ A keyword search returns datasets containing the given keyword\(s\) in titles and descriptions. The variable description can also be used to search in more detail.
 
 ![](../.gitbook/assets/microdata-library-central-data-catalog2.png)
 
@@ -46,5 +44,25 @@ The Microdata Library is registered in the Data Catalogue and can also be found 
 
 ## Explore a study
 
+**Study Description** - details all components of a study \(census or survey\) from identification to metadata production.
+
+![](../.gitbook/assets/microdata-library-explore-study.png)
+
+**Documentation** - provides access to questionnaires, reports, technical documents etc.
+
+![](../.gitbook/assets/microdata-library-explore-study-documentation.png)
+
+**Data Description** - provides a full listing of all datasets and variables created as part of the study.
+
+![](../.gitbook/assets/microdata-library-explore-study-data-description.png)
+
+Clicking on a data file provides a listing of all variables. Clicking on a variable then displays a profile of that variables' responses. 
+
+![](../.gitbook/assets/microdata-library-explore-study-data-description-variable.png)
+
 ## Access microdata
+
+To access microdata \(where available\), create an account and then follow the data request instructions
+
+![](../.gitbook/assets/microdata-library-explore-study-get-microdata.png)
 
