@@ -1,6 +1,6 @@
 # User Guide
 
-The [**PacificMap** ](https://map.pacificdata.org)is based on [**TeriaJS** ](https://terria.io)and other open source software. When you access data through it, you are typically accessing the data directly from the [**Pacific Data Hub**](https://pacificdata.org/data) catalogue or the ogranisations who are the custodians of that data.
+The [**PacificMap** ](https://map.pacificdata.org)is based on [**TerriaJS** ](https://terria.io)and other open source software. When you access data through it, you are typically accessing the data directly from the [**Pacific Data Hub**](https://pacificdata.org/data) catalogue or the ogranisations who are the custodians of that data.
 
 The **PacificMap:**
 
