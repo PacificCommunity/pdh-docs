@@ -77,11 +77,11 @@ print(dict)
 # {'dataflowId': 'DF_SDG', 'title': 'Sustainable Development Goals (all)', 'agencyId': 'SPC', 'version': '3.0'}
 ```
 
-## **Plot time series population data \(CSV format\) from PDH .Stat API**
+## **Plot time series population data using the Python plugin with PDH .Stat API**
 
-This python script makes a request for CSV-formatted population data over time, for a specified number of countries. It then manipulates the data and plots the results as a time series chart. It is designed to work for any number of countries, over any time period \(within API's constraints\). It could be adapted to handle other time series data.
+![](../../.gitbook/assets/population_snippet.png)
 
-![](../../.gitbook/assets/population_time_series.png)
+This python script demonstrates how the API can be accessed with the [Python pandasdmx plugin](../plugins/python.md). It makes a request for a filtered dataset of population projections for a specified number of countries. It then plots the results as a time series chart. It could be adapted to handle different countries, different time frames and other time series data too.
 
 ```python
 import pandas as pd
@@ -101,8 +101,8 @@ spc = sdmx.Request('SPC')
 # Sex and Age are set to _T which represents total/all
 key = dict(GEO_PICT=['NC', 'FJ', 'AS'], INDICATOR='MIDYEARPOPEST', SEX='_T', AGE='_T')
 
-# Set parameters to get data from 1970 to 2015
-params = dict(startPeriod='1970', endPeriod='2015')
+# Set parameters to get data from 1970 to 2010
+params = dict(startPeriod='1970', endPeriod='2010')
 
 # Make the data request and pass the key and parameters
 data = spc.data('DF_POP_PROJ', key=key, params=params)
@@ -111,11 +111,14 @@ data = spc.data('DF_POP_PROJ', key=key, params=params)
 df = sdmx.to_pandas(data)
 df = df.reset_index()
 
+# Replace country codes with real names
+df['GEO_PICT'] = df['GEO_PICT'].replace({'NC':'New Caledonia', 'AS': 'American Samoa', 'FJ': 'Fiji'})
+
 # Group by country and plot the data as line charts
 fig, ax = plt.subplots()
 for key, grp in df.groupby(['GEO_PICT']):
     ax = grp.plot(ax=ax, kind='line', x='TIME_PERIOD', y='value', label=key)
-plt.title('Population estimates 1970 to 2015')
+plt.title('Population estimates 1970 to 2010')
 plt.xlabel('Year')
 plt.ylabel('Population')
 plt.legend(loc='best')

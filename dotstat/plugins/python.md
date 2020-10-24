@@ -54,7 +54,7 @@ datasets
 
 ![](../../.gitbook/assets/df.png)
 
-To connect to a data flow and convert it into a pandas dataframe or series:
+To connect to a data flow and convert it into a pandas Multi-index series:
 
 ```python
 data = spc.data('DF_CPI')
@@ -63,4 +63,15 @@ df
 ```
 
 ![](../../.gitbook/assets/data.png)
+
+And then to turn the series into a dataframe, reset the index:
+
+```python
+df = df.reset_index()
+df
+```
+
+![](../../.gitbook/assets/screenshot-2020-10-24-154653.png)
+
+For an example of how to use the plugin in combination with the API key and parameter settings, see the [time series plot example](../api/scode.md#plot-time-series-population-data-using-the-python-plugin-with-pdh-stat-api).
 

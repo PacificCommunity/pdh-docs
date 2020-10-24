@@ -2,10 +2,10 @@
 
 The PDH .Stat API is an efficient way of accessing Pacific data for a variety of use cases. Here we outline a few different types of use cases, so that you can learn how to best leverage the API's functionality for your need.
 
-* [query building with Data Explorer](https://sdd-dotstat-api-gateway.portal.azure-api.net/use-cases#data_explorer)
-* [making a data request](https://sdd-dotstat-api-gateway.portal.azure-api.net/use-cases#data_req)
-* [making a data request for a specific response format](https://sdd-dotstat-api-gateway.portal.azure-api.net/use-cases#data_format)
-* [making a dataflow request \(retrieving information on existing datasets\)](https://sdd-dotstat-api-gateway.portal.azure-api.net/use-cases#dataflow)
+* [Query building with Data Explorer](use-cases.md#query-building-with-data-explorer)
+* [Making a data request](use-cases.md#making-a-data-request)
+* [Making a data request for a specific response format](use-cases.md#making-a-data-request-for-a-specific-format)
+* [Making a dataflow request \(retrieving information on existing datasets\)](use-cases.md#discovering-dataflows)
 
 ## Query building with Data Explorer
 
@@ -22,7 +22,7 @@ In general, you will use the `HTTP GET` method with the `data` endpoint to reque
 The basic template for the API data request URL is defined below.
 
 ```text
-https://sdd-dotstat-api-gateway.azure-api.net/data/flowID/key/provider?queryparameters
+https://stats-nsi-stable.pacificdata.org/rest/data/flowID/key?queryparameters
 ```
 
 **The key parameter**
@@ -38,58 +38,40 @@ Examples of `key` parameter for different dataflows:
 
 **Example: Retrieving population data for two countries**
 
-In this example, we want data allowing us to compare the population growth of Fiji and New Caledonia over time \(1969 to 2018\). The following API request will return the SDMX data we're after:
+In this example, we want data on population estimates of Fiji and New Caledonia over time \(1970 to 2018\). The following API request will return the SDMX data we're after:
 
 ```text
-https://sdd-dotstat-api-gateway.azure-api.net/data/DF_POP_SUM/NC+FJ./all?startPeriod=1969&endPeriod=2018
+https://stats-nsi-stable.pacificdata.org/rest/data/DF_POP_PROJ/A.NC+FJ...?startPeriod=1970&endPeriod=2018
 ```
 
 * Path Parameters
 * **data** : indicates that we want to access a given "dataflow"
-* **DF\_POP\_SUM** : `flowID` parameter, uniquely identifies the SDMX "dataflow" \("Population Summary" in this case\)
-* **NC+FJ.** : `key` parameter, filters results to get data about New Caledonia \(NC\) and Fiji \(FJ\)
-* **all** : `provider` parameter, indicates that we want data from all possible providers
+* **DF\_POP\_PROJ** : `flowID` parameter, uniquely identifies the SDMX "dataflow" \("Population Projections" in this case\)
+* **A.NC+FJ...** : `key` parameter, filters results to get Annual data about New Caledonia \(NC\) and Fiji \(FJ\). The points represent "wildcards" for other optional filters \(such as sex, age, and type of population indicator\), meaning that we will get data on all of those options.
 * Query Parameters
-* **startPeriod=1969** : `startPeriod` parameter, gets data starting from 1969
+* **startPeriod=1970** : `startPeriod` parameter, gets data starting from 1970
 * **endPeriod=2018** : `endPeriod` parameter, gets data up until 2018
 
-When we include our subscription key as well, the request would look something like this.
-
-Request
-
-```text
-curl -v -X GET "https://sdd-dotstat-api-gateway.azure-api.net/data/DF_POP_SUM/NC+FJ./all?startPeriod=1969&endPeriod=2018" -H "Ocp-Apim-Subscription-Key: {subscription key}"
-```
-
-**Example: Requesting data in a specific format**
+## **Making a data request for a specific format**
 
 Data requests can specify what the response data format should be: json, csv, SDMX etc. In this example, we will get the same population data as in the above example, but we want the response in a JSON format. The following API request will return the JSON data we're after:
 
 ```text
-https://sdd-dotstat-api-gateway.azure-api.net/data/DF_POP_SUM/NC+FJ./all?startPeriod=1969&endPeriod=2018&format=jsondata
+https://stats-nsi-stable.pacificdata.org/rest/data/DF_POP_PROJ/A.NC+FJ...?startPeriod=1970&endPeriod=2018&format=jsondata
 ```
 
 * Path Parameters
 * **data** : indicates that we want to access a given "dataflow"
-* **DF\_POP\_SUM** : `flowID` parameter, uniquely identifies the SDMX "dataflow" \("Population Summary" in this case\)
-* **NC+FJ.** : `key` parameter, filters results to get data about New Caledonia \(NC\) and Fiji \(FJ\)
-* **all** : `provider` parameter, indicates that we want data from all possible providers
+* **DF\_POP\_PROJ** : `flowID` parameter, uniquely identifies the SDMX "dataflow" \("Population Summary" in this case\)
+* **A.NC+FJ...** : `key` parameter, filters results to get Annual data about New Caledonia \(NC\) and Fiji \(FJ\). The points represent "wildcards" for other optional filters \(such as sex, age, and type of population indicator\), meaning that we will get data on all of those options.
 * Query Parameters
-* **startPeriod=1969** : `startPeriod` parameter, gets data starting from 1969
+* **startPeriod=1970** : `startPeriod` parameter, gets data starting from 1969
 * **endPeriod=2018** : `endPeriod` parameter, gets data up until 2018
 * **format=jsondata** : `format` parameter, defines the desired response format: jsondata, csv, genericdata etc.
 
-When we include our subscription key as well, the request would look something like this.
-
-Request
-
-```text
-curl -v -X GET "https://sdd-dotstat-api-gateway.azure-api.net/data/DF_POP_SUM/NC+FJ./all?startPeriod=1969&endPeriod=2018&format=jsondata" -H "Ocp-Apim-Subscription-Key: {subscription key}"
-```
-
 **Sample Code**
 
-For detailed implementations of API use, see [Sample Code](https://sdd-dotstat-api-gateway.portal.azure-api.net/sample-code).  
+For detailed implementations of API use, see [Sample Code](scode.md).  
 
 
 ## Discovering dataflows
@@ -99,7 +81,7 @@ Depending on your application's needs, you may want to retrieve information on a
 The basic template for the API dataflow request URL is defined below.
 
 ```text
-https://sdd-dotstat-api-gateway.azure-api.net/dataflow/agencyID/resourceID/version?queryparameters
+https://stats-nsi-stable.pacificdata.org/rest/dataflow/agencyID/resourceID/version?queryparameters
 ```
 
 **Example: Retrieve all dataflows for a specific agency**
@@ -107,7 +89,7 @@ https://sdd-dotstat-api-gateway.azure-api.net/dataflow/agencyID/resourceID/versi
 In this example, we want to know all existing dataflows maintained by SPC, and details about those dataflows. The following API request will return the SDMX data we're after:
 
 ```text
-https://sdd-dotstat-api-gateway.azure-api.net/dataflow/SPC/all/latest?detail=full
+https://stats-nsi-stable.pacificdata.org/rest/dataflow/SPC/all/latest?detail=full
 ```
 
 * Path Parameters
@@ -117,14 +99,6 @@ https://sdd-dotstat-api-gateway.azure-api.net/dataflow/SPC/all/latest?detail=ful
 * **latest** : `version` parameter, gets the latest version of the resource
 * Query Parameters
 * **detail=full** : `detail` parameter, determines what sort of information about resources is returned
-
-When we include our subscription key as well, the request would look something like this.
-
-Request
-
-```text
-curl -v -X GET "https://sdd-dotstat-api-gateway.azure-api.net/dataflow/SPC/all/latest?detail=full" -H "Ocp-Apim-Subscription-Key: {subscription key}"
-```
 
 **Sample Code**
 
