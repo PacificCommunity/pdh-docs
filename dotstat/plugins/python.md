@@ -26,10 +26,12 @@ To establish a connection to PDH.stat in a project using pandasdmx, use the code
 
 ```python
 import pandasdmx as sdmx
-sdmx.add_source({"id": "SPC", 
-"documentation":"https://stats.pacificdata.org/?locale=en", 
-"url":"https://stats-nsi-stable.pacificdata.org/rest", 
-"name":"Pacific Data Hub DotStat"})
+sdmx.add_source({
+                "id": "SPC", 
+                "documentation":"https://stats.pacificdata.org/?locale=en", 
+                "url":"https://stats-nsi-stable.pacificdata.org/rest", 
+                "name":"Pacific Data Hub DotStat"
+                })
 ```
 
 To see the available sources and check for PDH.stat:
