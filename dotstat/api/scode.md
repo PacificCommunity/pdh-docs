@@ -7,6 +7,8 @@ description: >-
 
 # Sample Code
 
+Many of these tasks can be simplified through the .Stat API's suite of [plugins](../plugins/).
+
 ## **Get all dataflow IDs from PDH .Stat API**
 
 This python script returns a list of all existing dataflowIDs. This can be useful for applications which need to check for new/updated dataflows.
@@ -15,28 +17,26 @@ This python script returns a list of all existing dataflowIDs. This can be usefu
 import requests
 from bs4 import BeautifulSoup
 
-base_url = 'https://sdd-dotstat-api-gateway.azure-api.net/'
-key = str(input('Enter subscription key: '))
+base_url = 'https://stats-nsi-stable.pacificdata.org/rest/'
 
-def get_endpoints(base_url, key):
+def get_endpoints(base_url):
   """
   Get the dataflowIDs of all existing dataflows in PDH .Stat API
         :param base_url: the API's base URL
-        :param key: your subscription key
         :return: list of strings
   """
   endpoints = []
   resources_url = base_url + 'dataflow/all/all/latest?detail=full'
-  headers = {'Ocp-Apim-Subscription-Key': key}
-  resp = requests.get(resources_url, headers=headers, verify=False)
+  resp = requests.get(resources_url, verify=False)
   soup = BeautifulSoup(resp.text, 'xml')
   for name in soup.findAll('Dataflow'):
     endpoints.append(name['id'])
   return endpoints
 
-df_ids = get_endpoints(base_url, key)
+df_ids = get_endpoints(base_url)
 print(df_ids)
-# Output: ['DF_CPI', 'DF_IMTS', 'DF_POCKET', 'DF_POP_SUM', 'DF_SDG']
+
+# Output: ['DF_COMMODITY_PRICES', 'DF_CPI', 'DF_CURRENCIES', 'DF_EMPLOYED', 'DF_EMPRATES', 'DF_GFS', 'DF_HHEXP', 'DF_IMTS', 'DF_LABEMP', 'DF_NATIONAL_ACCOUNTS', 'DF_NEET', 'DF_NMDI', 'DF_NMDI_DEV', 'DF_NMDI_EDU', 'DF_NMDI_FIS', 'DF_NMDI_HEA', 'DF_NMDI_INF', 'DF_NMDI_OTH', 'DF_NMDI_POP', 'DF_OVERSEAS_VISITORS', 'DF_POCKET', 'DF_POP_COAST', 'DF_POP_DENSITY', 'DF_POP_PROJ', 'DF_SDG', 'DF_SDG_01', 'DF_SDG_02', 'DF_SDG_03', 'DF_SDG_04', 'DF_SDG_05', 'DF_SDG_06', 'DF_SDG_07', 'DF_SDG_08', 'DF_SDG_09', 'DF_SDG_10', 'DF_SDG_11', 'DF_SDG_12', 'DF_SDG_13', 'DF_SDG_14', 'DF_SDG_15', 'DF_SDG_16', 'DF_SDG_17', 'DF_UIS', 'DF_VITAL']
 ```
 
 ## **Get basic metadata about a dataflow from PDH .Stat API**
@@ -47,26 +47,21 @@ This python script returns a dictionary with the title, agencyId, version for a 
 import requests
 from bs4 import BeautifulSoup
 
-base_url = 'https://sdd-dotstat-api-gateway.azure-api.net/'
+base_url = 'https://stats-nsi-stable.pacificdata.org/rest/'
 df = str(input('Enter dataflow ID: '))
 # Or hard-code an example dataflow
 # df = 'DF_SDG'
-key = str(input('Enter subscription key: '))
-# Or hard-code your key
-# key = 'your key'
 
-def basic_metadata(base_url, df, key):
+def basic_metadata(base_url, df):
   """
   Get some basic metadata on a dataflow in PDH .Stat API
         :param base_url: the API's base URL (string)
         :param df: the dataflow ID (string) e.g. 'DF_SDG'
-        :param key: your subscription key (string)
         :return: dictionary of metadata key, value pairs
   """
   meta_suffix = 'latest/?references=all&detail=referencepartial'
   meta_url = '{}dataflow/all/{}/{}'.format(base_url, df, meta_suffix)
-  headers = {'Ocp-Apim-Subscription-Key': key}
-  meta = requests.get(meta_url, headers=headers, verify=False)
+  meta = requests.get(meta_url, verify=False)
   soup = BeautifulSoup(meta.text, 'xml')
   structure = soup.find('Dataflow', attrs= {'id': df})
   meta_dict = {'dataflowId' : df}
@@ -75,10 +70,11 @@ def basic_metadata(base_url, df, key):
   meta_dict['version'] = structure['version']
   return meta_dict
 
-dict = basic_metadata(base_url, df, key)
+dict = basic_metadata(base_url, df)
 print(dict)
+
 # Output (assuming :param df is 'DF_SDG')
-# {'dataflowId': 'DF_SDG', 'title': 'Sustainable Development Indicators', 'agencyId': 'SPC', 'version': '1.0'}
+# {'dataflowId': 'DF_SDG', 'title': 'Sustainable Development Goals (all)', 'agencyId': 'SPC', 'version': '3.0'}
 ```
 
 ## **Plot time series population data \(CSV format\) from PDH .Stat API**
@@ -88,53 +84,41 @@ This python script makes a request for CSV-formatted population data over time, 
 ![](../../.gitbook/assets/population_time_series.png)
 
 ```python
-import requests
 import pandas as pd
 import matplotlib.pyplot as plt
-import numpy as np
+import pandasdmx as sdmx
 
-# This query requests CSV data with population data for New Caledonia, Fiji, American Samoa, from 1969 to 2015
-query_url = 'https://sdd-dotstat-api-gateway.azure-api.net/data/DF_POP_SUM/NC+FJ+AS./all?startPeriod=1969&endPeriod=2015&format=csv'
+# SPC PDH .Stat as a source for pandasdmx
+sdmx.add_source({
+                "id": "SPC",
+                "documentation":"https://stats.pacificdata.org/?locale=en",
+                "url":"https://stats-nsi-stable.pacificdata.org/rest",
+                "name":"Pacific Data Hub DotStat"
+                })
+spc = sdmx.Request('SPC')
 
-key = str(input('Enter subscription key: '))
-# Or hard-code your key
-#key = 'your-key'
+# Design key to fetch mid-year population estimates for New Caledonia, Fiji and American Samoa
+# Sex and Age are set to _T which represents total/all
+key = dict(GEO_PICT=['NC', 'FJ', 'AS'], INDICATOR='MIDYEARPOPEST', SEX='_T', AGE='_T')
 
-def plot_time_series(query_url, key):
-  """
-  Plot time series population data from a CSV-formatted API GET response
-        :param query_url: the API request URL (string)
-        :param key: your API subscription key (string)
-        :return: time series plot
-  """
-  headers = {'Ocp-Apim-Subscription-Key': key}
-  csv_data = requests.get(query_url, headers=headers, verify=False)
-  # Make a dataframe from the csv-formatted text
-  csv_df = pd.DataFrame([x.split(',') for x in csv_data.text.split('\n')])
-  csv_df.columns = csv_df.iloc[0]
-  # Find unique country names
-  countries = filter(None, list(csv_df.SPC_AREA.unique()))
-  countries = [y for y in countries if (len(y) == 2)]
-  # Find the timeline
-  time = filter(None, list(csv_df.TIME_PERIOD.unique()))
-  time = [z for z in time if (len(z) == 4)]
-  # Store max values, for sizing of chart
-  maxvals = []
-  # Plot data over time for each country
-  for code in countries:
-      data = csv_df[csv_df['SPC_AREA'] == code]
-      vals = [int(m) for m in data['OBS_VALUE'].tolist()]
-      maxvals.append(max(vals))
-      plt.plot(time, vals, label=code)
-  # Set up the plot
-  plt.legend()
-  plt.title('Population growth over time')
-  plt.xlabel('Year')
-  plt.ylabel('Population')
-  plt.yticks(np.arange(0, max(maxvals)+10000, 100000))
+# Set parameters to get data from 1970 to 2015
+params = dict(startPeriod='1970', endPeriod='2015')
 
-  return plt.show()
+# Make the data request and pass the key and parameters
+data = spc.data('DF_POP_PROJ', key=key, params=params)
 
-plot_time_series(query_url, key)
+# Load as dataframe
+df = sdmx.to_pandas(data)
+df = df.reset_index()
+
+# Group by country and plot the data as line charts
+fig, ax = plt.subplots()
+for key, grp in df.groupby(['GEO_PICT']):
+    ax = grp.plot(ax=ax, kind='line', x='TIME_PERIOD', y='value', label=key)
+plt.title('Population estimates 1970 to 2015')
+plt.xlabel('Year')
+plt.ylabel('Population')
+plt.legend(loc='best')
+plt.show()
 ```
 

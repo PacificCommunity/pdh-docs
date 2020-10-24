@@ -76,5 +76,5 @@ Again, let's use `DF_CPI`.
 
 ### Download
 
-\`\`[`Download plugin via GitHub repository`](https://github.com/PacificCommunity/statasdmx)\`\`
+\`\`[`Download plugin via GitHub repository`](https://github.com/PacificCommunity/pdh-docs/tree/bbb8cfd074ce62a30a3afca8205b8618f9a53197/PacificCommunity/statasdmx/README.md#sdmxpdh)\`\`
 
