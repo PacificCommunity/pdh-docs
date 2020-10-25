@@ -16,7 +16,7 @@
   * [API](dotstat/api/README.md)
     * [Interface](dotstat/api/interface.md)
     * [Use cases](dotstat/api/use-cases.md)
-    * [Sample Code](dotstat/api/scode.md)
+    * [Sample code](dotstat/api/scode.md)
 * [Microdata Library](ml/README.md)
   * [User Guide](ml/user-guide.md)
 

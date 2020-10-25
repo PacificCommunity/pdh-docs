@@ -1,6 +1,12 @@
+---
+description: >-
+  The PDH.stat API is an efficient way of accessing Pacific data for a variety
+  of use cases.
+---
+
 # Use cases
 
-The PDH .Stat API is an efficient way of accessing Pacific data for a variety of use cases. Here we outline a few different types of use cases, so that you can learn how to best leverage the API's functionality for your need.
+Here we outline a few different types of use cases, so that you can learn how to best leverage the API's functionality for your need.
 
 * [Query building with Data Explorer](use-cases.md#query-building-with-data-explorer)
 * [Making a data request](use-cases.md#making-a-data-request)
@@ -9,7 +15,7 @@ The PDH .Stat API is an efficient way of accessing Pacific data for a variety of
 
 ## Query building with Data Explorer
 
-If you're making a "one-off" data request about a certain topic, the [PDH.Stat Data Explorer](https://stats.pacificdata.org/data-explorer/#/) may be the easiest way to go about it. The intuitive interface allows you to choose a dataset, adjust filters and view the results in a table or chart. You can then produce the API request URL for the actual SDMX data you've accessed. This makes it useful for API query building.
+If you're making a "one-off" data request about a certain topic, the [PDH.stat Data Explorer](https://stats.pacificdata.org/data-explorer/#/) may be the easiest way to go about it. The intuitive interface allows you to choose a dataset, adjust filters and view the results in a table or chart. You can then produce the API request URL for the actual SDMX data you've accessed. This makes it useful for API query building.
 
 Visit the Data Explorer [here](https://stats.pacificdata.org/data-explorer/#/).
 
@@ -71,8 +77,7 @@ https://stats-nsi-stable.pacificdata.org/rest/data/DF_POP_PROJ/A.NC+FJ...?startP
 
 **Sample Code**
 
-For detailed implementations of API use, see [Sample Code](scode.md).  
-
+For detailed implementations of API use, see [Sample Code](scode.md).
 
 ## Discovering dataflows
 

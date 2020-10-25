@@ -1,17 +1,17 @@
 ---
 description: >-
-  Here are some worked examples of the PDH .Stat API being used for various
+  Here are some worked examples of the PDH.stat API being used for various
   reasons. Full details of each implementation are available in the provided
   Github links.
 ---
 
-# Sample Code
+# Sample code
 
-Many of these tasks can be simplified through the .Stat API's suite of [plugins](../plugins/).
+Many of these tasks can be simplified through the PDH.stat API's suite of [plugins](../plugins/).
 
-## **Get all dataflow IDs from PDH .Stat API**
+## **Get all dataflow IDs from PDH.stat API**
 
-This python script returns a list of all existing dataflowIDs. This can be useful for applications which need to check for new/updated dataflows.
+This Python script returns a list of all existing dataflowIDs. This can be useful for applications which need to check for new/updated dataflows.
 
 ```python
 import requests
@@ -39,9 +39,9 @@ print(df_ids)
 # Output: ['DF_COMMODITY_PRICES', 'DF_CPI', 'DF_CURRENCIES', 'DF_EMPLOYED', 'DF_EMPRATES', 'DF_GFS', 'DF_HHEXP', 'DF_IMTS', 'DF_LABEMP', 'DF_NATIONAL_ACCOUNTS', 'DF_NEET', 'DF_NMDI', 'DF_NMDI_DEV', 'DF_NMDI_EDU', 'DF_NMDI_FIS', 'DF_NMDI_HEA', 'DF_NMDI_INF', 'DF_NMDI_OTH', 'DF_NMDI_POP', 'DF_OVERSEAS_VISITORS', 'DF_POCKET', 'DF_POP_COAST', 'DF_POP_DENSITY', 'DF_POP_PROJ', 'DF_SDG', 'DF_SDG_01', 'DF_SDG_02', 'DF_SDG_03', 'DF_SDG_04', 'DF_SDG_05', 'DF_SDG_06', 'DF_SDG_07', 'DF_SDG_08', 'DF_SDG_09', 'DF_SDG_10', 'DF_SDG_11', 'DF_SDG_12', 'DF_SDG_13', 'DF_SDG_14', 'DF_SDG_15', 'DF_SDG_16', 'DF_SDG_17', 'DF_UIS', 'DF_VITAL']
 ```
 
-## **Get basic metadata about a dataflow from PDH .Stat API**
+## **Get basic metadata about a dataflow from PDH.stat API**
 
-This python script returns a dictionary with the title, agencyId, version for a given dataflowId. This can be useful for applications which harvest from PDH .Stat or simply need to display information about a dataset/dataflow. The function can be used iteratively for information on more than one dataflow.
+This Python script returns a dictionary with the title, agencyId, version for a given dataflowId. This can be useful for applications which harvest from PDH.stat or simply need to display information about a dataset/dataflow. The function can be used iteratively for information on more than one dataflow.
 
 ```python
 import requests
@@ -81,7 +81,7 @@ print(dict)
 
 ![](../../.gitbook/assets/population_snippet.png)
 
-This python script demonstrates how the API can be accessed with the [Python pandasdmx plugin](../plugins/python.md). It makes a request for a filtered dataset of population projections for a specified number of countries. It then plots the results as a time series chart. It could be adapted to handle different countries, different time frames and other time series data too.
+This Python script demonstrates how the API can be accessed with the [Python pandasdmx plugin](../plugins/python.md). It makes a request for a filtered dataset of population projections for a specified number of countries. It then plots the results as a time series chart. It could be adapted to handle different countries, different time frames and other time series data too.
 
 ```python
 import pandas as pd
