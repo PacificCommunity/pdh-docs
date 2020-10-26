@@ -2350,9 +2350,5 @@ Server: cloudflare
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% hint style="info" %}
-
-{% endhint %}
-
 
 

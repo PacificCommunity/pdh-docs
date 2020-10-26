@@ -18,7 +18,7 @@ PDH.stat Data Explorer is accessible direclty using the following URL:
 
 ### From the Data Catalogue
 
-The application is also accessible in several ways from the [Data Catalogue](https://pacificdata.org/):
+The application is also accessible in several ways from the [Data Catalogue](../catalogue/):
 
 A link is available from the "Tools" menu:
 
@@ -48,7 +48,7 @@ The research results page implements what is called a "faceted search" allowing 
 
 ### From the Data Calalogue
 
- PDH.stat data is registered in the Data Catalogue and can also be found using its various different functionnalities. For more information see [dedicated section on the use of the Data Catalogue](https://app.gitbook.com/@pacific-community-spc/s/pacific-data-hub/~/drafts/-MJz0A5FvX84FSq5yBMJ/catalogue).
+ PDH.stat data is registered in the Data Catalogue and can also be found using its various different functionnalities. For more information see [dedicated section on the use of the Data Catalogue](../catalogue/).
 
 ## View the data
 
@@ -157,5 +157,5 @@ Separate API queries are provided for data and for structural metadata.
 
 ![](../.gitbook/assets/image%20%2826%29.png)
 
-For more information see [dedicated section on the use of the API](https://app.gitbook.com/@pacific-community-spc/s/pacific-data-hub/~/drafts/-MJz0A5FvX84FSq5yBMJ/dotstat/api).
+For more information see [dedicated section on the use of the API](api/).
 

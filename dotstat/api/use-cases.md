@@ -15,9 +15,7 @@ Here we outline a few different types of use cases, so that you can learn how to
 
 ## Query building with Data Explorer
 
-If you're making a "one-off" data request about a certain topic, the [PDH.stat Data Explorer](https://stats.pacificdata.org/data-explorer/#/) may be the easiest way to go about it. The intuitive interface allows you to choose a dataset, adjust filters and view the results in a table or chart. You can then produce the API request URL for the actual SDMX data you've accessed. This makes it useful for API query building.
-
-Visit the Data Explorer [here](https://stats.pacificdata.org/data-explorer/#/).
+If you're making a "one-off" data request about a certain topic, the [PDH.stat Data Explorer](https://stats.pacificdata.org/data-explorer/#/) may be the easiest way to go about it. The intuitive interface allows you to choose a dataset, adjust filters and view the results in a table or chart. You can then produce the API request URL for the actual SDMX data you've accessed. This makes it useful for API query building and is explained in a [dedicated section of the Data Explorer documentation](../de.md#get-api-queries-corresponding-to-the-data-selection).
 
 ## Making a data request
 

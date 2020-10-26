@@ -12,7 +12,7 @@ PDH.stat provides machine-to-machine accessibility to Pacific data through its R
 
 ![Overview of main queriable SDMX classes](../../.gitbook/assets/image%20%2846%29.png)
 
-Sample API calls corresponding to particular data views can be produced from the Data Explorer, for more information on this see [dedicated section from the Data Explorer documentation](https://app.gitbook.com/@pacific-community-spc/s/pacific-data-hub/~/drafts/-MK8Awsn0bi12OsZeTp7/dotstat/de#get-api-queries-corresponding-to-the-data-selection).
+Sample API calls corresponding to particular data views can be produced from the Data Explorer, for more information on this see [dedicated section from the Data Explorer documentation](../de.md).
 
 For more information on SDMX web services see the following references:
 

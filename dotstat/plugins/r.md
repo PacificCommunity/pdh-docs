@@ -91,7 +91,7 @@ as.data.frame(readSDMX(providerId = "PDH",
                 end=2015))
 ```
 
-Given that the `key` variables can change depending on the dataflow, it can be easier to retrieve all data and then filter manually in R. Alternatively, use the [Data Explorer](https://stats.pacificdata.org/?locale=en) to filter a dataset and then view the relevant API call and key.
+Given that the `key` variables can change depending on the dataflow, it can be easier to retrieve all data and then filter manually in R. Alternatively, use the [Data Explorer](https://stats.pacificdata.org/?locale=en) to filter a dataset and then view the relevant API call and key as explained [here](../de.md#get-api-queries-corresponding-to-the-data-selection).
 
 ![](../../.gitbook/assets/cookfiji.png)
 

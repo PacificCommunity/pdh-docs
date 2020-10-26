@@ -67,7 +67,7 @@ sdmxpdh data SPC, clear dataset(DF_CPI) dimensions(A.FJ+GU.INF.) start(2005) end
 list
 ```
 
-Using the `dimensions()` option is tricky, see the API [documentation ](../api/interface.md)for a guide.
+Using the `dimensions()` option is tricky, see the API [documentation ](../api/)for a guide.
 
 #### Get a datastructure definition for a dataflow
 
