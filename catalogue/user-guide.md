@@ -1,5 +1,9 @@
 # User Guide
 
+For an introduction on how to use the PDH Data Catalogue see this video:
+
+{% embed url="https://youtu.be/H1KBLkZUR2s" %}
+
 This user guide covers using CKAN's web interface to organize, publish and find data. CKAN also has a powerful API \(machine interface\), which makes it easy to develop extensions and links with other information systems. The API is documented in :doc:`/api/index`.
 
 Some web UI features relating to site administration are available only to users with sysadmin status, and are documented in :doc:`sysadmin-guide`.
