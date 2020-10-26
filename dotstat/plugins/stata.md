@@ -10,7 +10,7 @@ description: Connect STATA to PDH.stat with sdmxpdh
 
 ### sdmxpdh
 
-SDMXPDH is a version of the SDMXUSE Stata module, with the changes allowing users to connect to Pacific Data Hub .Stat API \(PDH.stat\).
+SDMXPDH is a version of the SDMXUSE Stata module, with the changes allowing users to connect to Pacific Data Hub .Stat API \(PDH.stat\). See the code [here](https://github.com/PacificCommunity/statasdmx).
 
 Full credit goes to Sebastien Fontenay, Robert Picard, Nicholas Cox.
 
@@ -60,11 +60,11 @@ For example, use dataflow `DF_CPI` \(Consumer Price Index\)
 
 This time, we want `DF_CPI` time series data from 2005 to 2018, for countries Fiji and Guam.
 
-`sdmxpdh data SPC, clear dataset(DF_CPI) dimensions(.FJ+GU._T.....GY) start(2005) end(2018) timeseries`
+`sdmxpdh data SPC, clear dataset(DF_CPI) dimensions(A.FJ+GU.INF.) start(2005) end(2018) timeseries`
 
 `list`
 
-Using the `dimensions()` option is tricky, see the API documentation for a guide \([https://sdd-dotstat-api-gateway.portal.azure-api.net/docs/services/pdh-stat-api/operations/get-data-flow-key-provider?&groupBy=tag](https://sdd-dotstat-api-gateway.portal.azure-api.net/docs/services/pdh-stat-api/operations/get-data-flow-key-provider?&groupBy=tag)\).
+Using the `dimensions()` option is tricky, see the API [documentation ](../api/interface.md)for a guide.
 
 #### Get a datastructure definition for a dataflow
 
