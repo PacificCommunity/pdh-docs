@@ -4,7 +4,11 @@ description: Connect STATA to PDH.stat with sdmxpdh
 
 # STATA
 
+![](../../.gitbook/assets/image%20%2877%29.png)
+
 ![](../../.gitbook/assets/image%20%2852%29.png)
+
+## STATA
 
 ## STATA
 

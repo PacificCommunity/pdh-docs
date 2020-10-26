@@ -6,7 +6,7 @@ description: Produce reports and dashboards with Power BI using a PowerQuery tem
 
 ![](../../.gitbook/assets/image%20%2850%29.png)
 
-Get the API query corresponding to the data to be imported using the Data Explorer as explained here.
+Get the API query corresponding to the data to be imported using the Data Explorer as explained [here](https://app.gitbook.com/@pacific-community-spc/s/pacific-data-hub/dotstat/de#get-api-queries-corresponding-to-the-data-selection).
 
 Create a new data source in Power BI: Data &gt; Get Data &gt; Web &gt; Paste the API query URL
 
@@ -16,9 +16,9 @@ Replace the PowerQuery with the template provided below:
 
 * Right-click on the data source and select "advanced editor"
 * Copy-paste the PowerQuery template below into the editor
-* Adapt the Source variable \(line 4 below\) by replacing the URL with the one obtained from PDH.stat Data Explorer, save and run
+* Adapt the "Source" variable from the query \(line 4 below\) by replacing the URL with the one obtained from PDH.stat Data Explorer, save and run
 
-Labels corresponding to codes used in the dataset can be collected using the “structure query” available from the Data Exporer or possibly from the metadata file attached to the dataset, accessible in the Data Explorer has explained here.
+Labels corresponding to codes used in the dataset can be collected using the “structure query” available from the Data Exporer or possibly from the metadata file attached to the dataset, accessible in the Data Explorer has explained [here](https://app.gitbook.com/@pacific-community-spc/s/pacific-data-hub/~/drafts/-MKHVBJLfZGUkh7nHeLU/dotstat/de#link-to-metadata).
 
 ```text
 
