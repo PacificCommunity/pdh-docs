@@ -24,7 +24,7 @@ Robert Picard & Nicholas J. Cox, 2011. "MOSS: Stata module to find multiple occu
 
 Instructions work for Stata SE 15.1 in Windows
 
-Download `.ado` and `.sthlp` files from the repo
+Download `.ado` and `.sthlp` files from the Github repository [here](https://github.com/PacificCommunity/statasdmx).
 
 In Stata, find your "PERSONAL" directory path with the command: `sysdir`
 
@@ -44,25 +44,28 @@ General command structure is: `sdmxpdh <resource> <provider>, <filters>`
 
 #### See all dataflows from Pacific Data Hub
 
-`sdmxpdh dataflow SPC, clear`
-
-`list`
+```r
+sdmxpdh dataflow SPC, clear
+list
+```
 
 #### Get all data for a dataflow
 
 For example, use dataflow `DF_CPI` \(Consumer Price Index\)
 
-`sdmxpdh data SPC, clear dataset(DF_CPI)`
-
-`list`
+```r
+sdmxpdh data SPC, clear dataset(DF_CPI)
+list
+```
 
 #### Get specific data for a dataflow
 
 This time, we want `DF_CPI` time series data from 2005 to 2018, for countries Fiji and Guam.
 
-`sdmxpdh data SPC, clear dataset(DF_CPI) dimensions(A.FJ+GU.INF.) start(2005) end(2018) timeseries`
-
-`list`
+```r
+sdmxpdh data SPC, clear dataset(DF_CPI) dimensions(A.FJ+GU.INF.) start(2005) end(2018) timeseries
+list
+```
 
 Using the `dimensions()` option is tricky, see the API [documentation ](../api/interface.md)for a guide.
 
@@ -70,11 +73,8 @@ Using the `dimensions()` option is tricky, see the API [documentation ](../api/i
 
 Again, let's use `DF_CPI`.
 
-`sdmxpdh datastructure SPC, clear dataset(DF_CPI)`
-
-`list`
-
-### Download
-
-\`\`[`Download plugin via GitHub repository`](https://github.com/PacificCommunity/statasdmx)\`\`
+```r
+sdmxpdh datastructure SPC, clear dataset(DF_CPI)
+list
+```
 
