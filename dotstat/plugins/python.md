@@ -8,14 +8,6 @@ description: >-
 
 ![](../../.gitbook/assets/image%20%2878%29.png)
 
-![](../../.gitbook/assets/image%20%2854%29.png)
-
-![](../../.gitbook/assets/image%20%2878%29.png)
-
-### Install pandaSDMX
-
-### Install pandaSDMX
-
 ### Install pandaSDMX
 
 These steps have been tested with Python 3.7.4 in an Anaconda environment on Windows 10.

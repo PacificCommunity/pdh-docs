@@ -6,10 +6,6 @@ description: Run advanced statistical analyses on Pacific data using the rsdmx p
 
 ![](../../.gitbook/assets/image%20%2879%29.png)
 
-![](../../.gitbook/assets/image%20%2853%29.png)
-
-### Overview
-
 ### Overview
 
 The package is an adaptation of the `rsdmx` package developed by Emmanuel Blondel, and contributors Matthieu Stigler and Eric Persson. Learn more about the original package [here](https://github.com/opensdmx/rsdmx). It has been configured to include Pacific Data Hub's .Stat API as a default service provider. Full credit goes to the original authors, who can be cited at[![DOI](https://zenodo.org/badge/5183/opensdmx/rsdmx.svg)](http://doi.org/10.5281/zenodo.592404)
