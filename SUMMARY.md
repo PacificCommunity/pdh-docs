@@ -5,6 +5,7 @@
   * [User Guide](catalogue/user-guide.md)
 * [PacificMap](pacific-map/README.md)
   * [User Guide](pacific-map/user-guide.md)
+  * [User Guide\_draft](pacific-map/user-guide_draft.md)
 * [PDH.stat](dotstat/README.md)
   * [Data Explorer](dotstat/de.md)
   * [Plugins](dotstat/plugins/README.md)
