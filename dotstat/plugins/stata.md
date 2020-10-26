@@ -10,7 +10,7 @@ description: Connect STATA to PDH.stat with sdmxpdh
 
 ### sdmxpdh
 
-SDMXPDH is a version of the SDMXUSE Stata module, with the changes allowing users to connect to Pacific Data Hub .Stat API \(PDH.STAT\).
+SDMXPDH is a version of the SDMXUSE Stata module, with the changes allowing users to connect to Pacific Data Hub .Stat API \(PDH.stat\).
 
 Full credit goes to Sebastien Fontenay, Robert Picard, Nicholas Cox.
 
@@ -38,7 +38,7 @@ Check the install worked by bringing up the SDMXPDH help document: `help sdmxpdh
 
 ### Quick start
 
-PDH.STAT resources are maintained by SPC \(Pacific Community\), so SPC is the provider for resources.
+PDH.stat resources are maintained by SPC \(Pacific Community\), so SPC is the provider for resources.
 
 General command structure is: `sdmxpdh <resource> <provider>, <filters>`
 
