@@ -1,5 +1,9 @@
 # User Guide
 
+For an introduction on how to use Pacific map see this video:
+
+{% embed url="https://youtu.be/drsCpfCF27M" %}
+
 ### Introduction
 
 The [**PacificMap** ](https://map.pacificdata.org)is based on [**TerriaJS** ](https://terria.io)and other open source software. When you access data through it, you are typically accessing the data directly from the [**Pacific Data Hub**](https://pacificdata.org/data) catalogue or the organizations who are the custodians of that data.
