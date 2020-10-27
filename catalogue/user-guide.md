@@ -1,20 +1,20 @@
 # User Guide
 
-For an introduction on how to use the Pacific Data Catalogue see this video:
+For an introduction on how to use the Data Catalogue see this video:
 
 {% embed url="https://youtu.be/H1KBLkZUR2s" %}
 
-### How to get started with the Pacific Data Catalogue
+### How to get started with the Data Catalogue
 
 Go to the Pacific Data Hub home page [https://pacificdata.org/](https://pacificdata.org/)
 
-You will be redirected to the Pacific Data Catalogue when you make your data search either using the **Search bar** or the **Shortcuts** located below.
+You will be redirected to the Data Catalogue when you make your data search either using the **Search bar** or the **Shortcuts** located below.
 
 ![](../.gitbook/assets/image%20%2883%29.png)
 
 ### Search data
 
-In this example we have typed "cyclone" in the search bar and redirected to the Pacific Data Catalogue
+In this example we have typed "cyclone" in the search bar and redirected to the Data Catalogue
 
 ![](../.gitbook/assets/image%20%2881%29.png)
 
