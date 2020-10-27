@@ -1,6 +1,6 @@
 # User Guide
 
-For an introduction on how to use the PDH Data Catalogue see this video:
+For an introduction on how to use the Pacific Data Catalogue see this video:
 
 {% embed url="https://youtu.be/H1KBLkZUR2s" %}
 
