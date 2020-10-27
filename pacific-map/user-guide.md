@@ -4,16 +4,6 @@ For an introduction on how to use Pacific map see this video:
 
 {% embed url="https://youtu.be/drsCpfCF27M" %}
 
-### Introduction
-
-[**PacificMap** ](https://map.pacificdata.org)is typically accessing the data directly from the [**Pacific Data Hub**](https://pacificdata.org/data) catalogue or the organizations who are the custodians of that data.
-
-The **PacificMap:**
-
-* provides easy access to authoritative and other spatial data to government, business and the public from the Pacific
-* facilitates the opening of data by international and regional development agencies, research and academic institutions, and local government bodies
-* provides an open framework of geospatial data services that supports commercial and community innovation
-
 ### How to get started with PacificMap
 
 * You can access PacificMap either from the Pacific Data Hub main page or by using the URL [https://map.pacificdata.org/](https://map.pacificdata.org/).
