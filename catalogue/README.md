@@ -2,7 +2,7 @@
 description: The "Google" of Pacific Data.
 ---
 
-# Pacific Data Catalogue
+# Data Catalogue
 
 ### What is the Pacific Data Catalogue?
 

@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Pacific Data Hub](README.md)
-* [Pacific Data Catalogue](catalogue/README.md)
+* [Data Catalogue](catalogue/README.md)
   * [User Guide](catalogue/user-guide.md)
 * [PacificMap](pacific-map/README.md)
   * [User Guide](pacific-map/user-guide.md)
