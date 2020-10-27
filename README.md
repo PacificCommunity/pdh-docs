@@ -4,13 +4,11 @@ description: Harnessing the power of data and knowledge for sustainable developm
 
 # Pacific Data Hub
 
-## Introduction
+The **Pacific Data Hub \(PDH**\), is the most comprehensive collection of data and information **about the Pacific** and **from the Pacific,** across key areas including population statistics, fisheries science, climate change adaptation, disaster risk reduction and resilience, public health surveillance, conservation of plant genetic resources for food security, and human rights.
 
-The **Pacific Data Hub \(PDH**\), is a central repository of data **about the Pacific** and **from the Pacific**. The platform serves as a gateway to the most comprehensive collection of data and information about the Pacific across key areas including population statistics, fisheries science, climate change adaptation, disaster risk reduction and resilience, public health surveillance, conservation of plant genetic resources for food security and human rights.
+## Tools and Data Services
 
-## Platforms
-
-![Core components of the Pacific Data Hub tehcnology components](.gitbook/assets/pdh-platforms-core-technology-stack%20%281%29.jpg)
+![Core components of the Pacific Data Hub](.gitbook/assets/pdh-platforms-core-technology-stack%20%281%29.jpg)
 
 The Pacific Data Hub is an innovative programme of work, led by the [Pacific Community \(SPC\)](https://spc.int/) and supported by the [New Zealand Ministry of Foreign Affairs and Trade](http://www.mfat.govt.nz/). The PDH serves as **a regional public good** that provides a single authoritative point of entry for data about the Pacific and serves as a vehicle for investment in **a sustainable data infrastructure for the Pacific region**.
 
