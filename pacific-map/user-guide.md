@@ -46,7 +46,7 @@ The **PacificMap:**
 
 * You cannot find out further information about the features which are part of the base maps.
 
-### How to configure map settings
+## How to configure map settings
 
 * On the top right corner click on **Map Settings.**
 
