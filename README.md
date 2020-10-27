@@ -10,7 +10,7 @@ The **Pacific Data Hub \(PDH**\), is a central repository of data **about the Pa
 
 ## Platforms
 
-![Core components of the Pacific Data Hub technology stack](.gitbook/assets/pdh-platforms-core-technology-stack%20%281%29.jpg)
+![Core components of the Pacific Data Hub tehcnology components](.gitbook/assets/pdh-platforms-core-technology-stack%20%281%29.jpg)
 
 The Pacific Data Hub is an innovative programme of work, led by the [Pacific Community \(SPC\)](https://spc.int/) and supported by the [New Zealand Ministry of Foreign Affairs and Trade](http://www.mfat.govt.nz/). The PDH serves as **a regional public good** that provides a single authoritative point of entry for data about the Pacific and serves as a vehicle for investment in **a sustainable data infrastructure for the Pacific region**.
 
