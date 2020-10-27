@@ -8,7 +8,7 @@ For an introduction on how to use the Data Explorer see this video :
 
 {% embed url="https://youtu.be/mbY7nAJvQ8c" %}
 
-## Access the Data Explorer
+## Access the PDH.stat Data Explorer
 
 ### Using directly PDH.stat URL
 

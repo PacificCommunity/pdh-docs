@@ -6,7 +6,7 @@ For an introduction on how to use Pacific map see this video:
 
 ### Introduction
 
-The [**PacificMap** ](https://map.pacificdata.org)is based on [**TerriaJS** ](https://terria.io)and other open source software. When you access data through it, you are typically accessing the data directly from the [**Pacific Data Hub**](https://pacificdata.org/data) catalogue or the organizations who are the custodians of that data.
+[**PacificMap** ](https://map.pacificdata.org)is typically accessing the data directly from the [**Pacific Data Hub**](https://pacificdata.org/data) catalogue or the organizations who are the custodians of that data.
 
 The **PacificMap:**
 
@@ -46,7 +46,7 @@ The **PacificMap:**
 
 * You cannot find out further information about the features which are part of the base maps.
 
-## How to configure map settings
+### How to configure map settings
 
 * On the top right corner click on **Map Settings.**
 
