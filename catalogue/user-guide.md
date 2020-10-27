@@ -4,8 +4,6 @@ For an introduction on how to use the Pacific Data Catalogue see this video:
 
 {% embed url="https://youtu.be/H1KBLkZUR2s" %}
 
-### 
-
 ### How to get started with the Pacific Data Catalogue
 
 Go to the Pacific Data Hub home page [https://pacificdata.org/](https://pacificdata.org/)
