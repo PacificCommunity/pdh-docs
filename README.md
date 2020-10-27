@@ -6,7 +6,7 @@ description: Harnessing the power of data and knowledge for sustainable developm
 
 The **Pacific Data Hub \(PDH**\), is the most comprehensive collection of data and information **about the Pacific** and **from the Pacific,** across key areas including population statistics, fisheries science, climate change adaptation, disaster risk reduction and resilience, public health surveillance, conservation of plant genetic resources for food security, and human rights.
 
-### The Pacific Data Hub is made up of four key components:
+The Pacific Data Hub is made up of four key components:
 
 <table>
   <thead>
