@@ -29,8 +29,8 @@ The Pacific Data Hub platform is made up of four key components - 1\) Data Catal
           <img src=".gitbook/assets/pdh-catalogue-thumb-250x163 (1).png" alt/>
         </p>
       </td>
-      <td style="text-align:left">&lt;b&gt;&lt;/b&gt;<a href="https://pacificdata.org/"><b>Data Catalogue</b></a> -
-        an open data repository which manages and publishes all data in the Pacific
+      <td style="text-align:left">&lt;b&gt;&lt;/b&gt;<a href="catalogue/"><b>Data Catalogue</b></a> - an
+        open data repository which manages and publishes all data in the Pacific
         Data Hub. It is the central component which links to <b>PDH.stat </b>and
         the <b>Microdata Library</b>; Most spatial datasets in the Data Catalogue
         can be visualised with <b>PacificMap</b>
@@ -40,29 +40,25 @@ The Pacific Data Hub platform is made up of four key components - 1\) Data Catal
       <td style="text-align:left">
         <img src=".gitbook/assets/pacificmap-thumb-250x163.png" alt/>
       </td>
-      <td style="text-align:left"> <a href="https://map.pacificdata.org/"><b>PacificMap</b></a> - a geospatial
-        data exploration tool providing easy-to-use map-based visualisation of
-        spatial data;</td>
+      <td style="text-align:left"><a href="pacific-map/"> <b>PacificMap</b></a> - a geospatial data exploration
+        tool providing easy-to-use map-based visualisation of spatial data;</td>
     </tr>
     <tr>
       <td style="text-align:left">
         <img src=".gitbook/assets/dotstat-thumb-250x163.png" alt/>
       </td>
-      <td style="text-align:left"> <a href="https://stats.pacificdata.org/"><b>PDH.stat</b></a> - indicator
-        database explorer which contains the 132 Pacific Sustainable Development
-        Indicators (SDGs) as well as a range of economic, health, demographic and
-        environmental datasets (replaces National Minimum Development Indicator
-        Database - NMDI)</td>
+      <td style="text-align:left"> <a href="dotstat/"><b>PDH.stat</b> </a>- indicator database explorer which
+        contains the 132 Pacific Sustainable Development Indicators (SDGs) as well
+        as a range of economic, health, demographic and environmental datasets
+        (replaces National Minimum Development Indicator Database - NMDI)</td>
     </tr>
     <tr>
       <td style="text-align:left">
         <img src=".gitbook/assets/microdata-library-thumb-250x163.png" alt/>
       </td>
-      <td style="text-align:left"> <a href="https://microdata.pacificdata.org/"><b>Microdata Library</b></a>
-        <a
-        href="https://stats.pacificdata.org/"><b> </b>
-          </a>- online census and survey documentation and archiving application which
-          also provides access to microdata for some collections.</td>
+      <td style="text-align:left"> <a href="ml/"><b>Microdata Library </b></a>- online census and survey
+        documentation and archiving application which also provides access to microdata
+        for some collections.</td>
     </tr>
   </tbody>
 </table>
