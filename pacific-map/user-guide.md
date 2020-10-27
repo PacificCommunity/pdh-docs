@@ -14,7 +14,7 @@ For an introduction on how to use Pacific map see this video:
 
 ![](../.gitbook/assets/image%20%2874%29.png)
 
-* Browse through the Data Catalogue to find a data set of interest. Click on the title of your preferred data set to get a preview of that data, along with a description and other relevant metadata. To view your selected data set on a larger map, click the **Add to the Map** button. The spatial data will be immediately displayed in the map view, and a visual legend for that data will appear in the Data Workbench, located on the left-hand side of the page.
+* Browse through the Data Catalogue to find a data set of interest. Click on the title of your preferred data set to get a preview of that data, along with a description and other relevant metadata. To view your selected data set on the main map, click the **Add to the Map** button. The spatial data will be immediately displayed in the map view, and a visual legend for that data will appear in the Data Workbench, located on the left-hand side of the page.
 
 ![](../.gitbook/assets/image%20%2868%29.png)
 
@@ -22,35 +22,35 @@ For an introduction on how to use Pacific map see this video:
 
 ![](../.gitbook/assets/image%20%2865%29.png)
 
-* To add additional data sets to the map, simply click **Explare map data** again in the left-hand panel to relaunch the Data Catalogue.
+* To add additional datasets to the map, simply click **Explore map data** again in the left-hand panel to relaunch the Data Catalogue.
 * Zoom manually by moving your mouse pointer over the map and using your mouse wheel to zoom in or out further.
 * Click and drag the map to further show the region in which you are interested.
 * Click on a feature \(that is, directly on a point or line, or within a region\) to show data about the individual feature.
 
 ### How to find out about a displayed feature
 
-* Click on the feature which is displayed on the map. You can click on Points, on Lines or within Regions to see a display of the information available from the spatial data provider for that particular feature.
-* For Points and Lines, you need to click quite accurately to identify the feature. For Regions, clicking on the boundary will give ambiguous results. Click within the region.
+* Click on the feature which is displayed on the map. You can click on points, lines or within regions to see a display of the information available from the spatial data provider for that particular feature.
+* For points and lines, you need to click quite accurately to identify the feature. For Regions, clicking on the boundary will give ambiguous results. Click within the region.
 
 ![](../.gitbook/assets/image%20%2857%29.png)
 
-* You cannot find out further information about the features which are part of the base maps.
+Note: You cannot find out further information about the features which are part of the base maps.
 
 ### How to configure map settings
 
-* On the top right corner click on **Map Settings.**
+* In the top-right corner click on **Map Settings.**
 
 ![](../.gitbook/assets/image%20%2856%29.png)
 
-* In **Map View** section you can select the way to display data among **3D Terrain**, **3D Smooth** or **2D options.**
+* In the **Map View** section you can select whether to display data using **3D Terrain**, **3D Smooth** or **2D.**
 
 ![](../.gitbook/assets/image%20%2859%29.png)
 
-* In **Base Map** section you can select the most appropriate option for the type of dataset you are working with.
+* In the **Base Map** section you can select the most appropriate option for the type of dataset you are working with.
 
 ![](../.gitbook/assets/image%20%2863%29.png)
 
-* The Image Optimisation slide control will help you to prioritize between quality or performance. In cases where the computer is not powerful enough or the bandwidth is limited, you should move the control to the right in order to make the app faster and more reactive.  
+* The **Image Optimisation** slide control will help you to prioritize between quality or performance. In cases where yourcomputer is not powerful enough or the bandwidth is limited, you should move the control to the right in order to make the app faster and more reactive.  
 
 ### How to display my own spreadsheet or spatial data
 
@@ -70,11 +70,11 @@ There are two ways to load your data:
 
 ![](../.gitbook/assets/image%20%2862%29.png)
 
-As for PacificMap data sets, you can click on the regions or points to see the data available for that location. If the file is a CSV file, the data from all columns will be shown in the feature information dialogue when you click.
+As with datasets which are already part of the Pacific Data Hub, you can click on regions or points to see the available data for a given feature. If the file is a CSV, data from all columns will be shown in the feature information dialogue when you click.
 
-You can also use all of the features of the [Data Workbench](https://map.pacificdata.org/help/data-workbench.html) on the data you have loaded as well.
+You can also use all of the features of the [Data Workbench](https://map.pacificdata.org/help/data-workbench.html) on your dataset.
 
-To share a view of your data with others, you must first publish it to the web somewhere with a URL, and then load it from there.
+To share a view of your data with others, you must first upload the dataset to the Pacific Data Hub Catalogue. 
 
 ### How to share my PacificMap view with others
 
@@ -86,20 +86,20 @@ There are three ways of sharing your map view:
 
 * **Share URL.** Copy the given URL \(shown in the first text box\) to the clipboard and paste it into an email which you send to the recipient. They can click on it in the email or paste it into their browser to see the same view as you.
 * **Print Map.** Generates a static map that can be shared using different formats. Note that this option is the only one that will show data loaded from a local file or URL.
-* **Advanced Options.** Creates a code to embed the map into an HTML document.
+* **Advanced Options.** Create a code to embed the map into a web page.
 
 ![](../.gitbook/assets/image%20%2873%29.png)
 
 ### How to contribute Data Sets to PacificMap
 
-The PacificMap encourages data providers to publish their spatial data using this platform. There are two routes you can take to publishing.
+PacificMap encourages data providers to publish their spatial data using this platform. There are two routes you can take to publishing.
 
 * Any spatial data which is added to [Pacific Data Hub](https://pacificdata.org/) using a protocol or format supported by the PacificMap \(such as WMS\) will automatically appear in the **PacificDataHub** section of the **Data Catalogue** tab for the PacificMap.
-* If you require your data set to appear under a separate category of the PacificMap Data Catalogue, you will need to contact the support for PacificMap by emailing to [datahub@spc.int](mailto:datahub@spc.int) for more information. You will need to provide an internet accessible service in a standard protocol to access your data set on the internet and appropriate references must be added to the PacificMap configuration.
+* If you require your data set to appear under a separate category of the PacificMap Data Catalogue, you will need to contact  [datahub@spc.int](mailto:datahub@spc.int) for more information. 
 
 ### How to visualize Geographic data stored in the Pacific Data Hub Catalogue 
 
-Datasets in the Pacific Data Hub containing geographic data come tagged with the **Geographic data** label
+Datasets in the Pacific Data Hub containing geographic data will be tagged with the **Geographic data** label
 
 ![](../.gitbook/assets/image%20%2866%29.png)
 

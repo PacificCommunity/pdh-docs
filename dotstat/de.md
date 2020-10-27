@@ -10,9 +10,9 @@ For an introduction on how to use the Data Explorer see this video :
 
 ## Access the PDH.stat Data Explorer
 
-### Using directly PDH.stat URL
+### Via PDH.stat URL
 
-PDH.stat Data Explorer is accessible direclty using the following URL:
+PDH.stat Data Explorer is directly accessible via the following URL:
 
 [https://stats.pacificdata.org/](https://stats.pacificdata.org/)
 
