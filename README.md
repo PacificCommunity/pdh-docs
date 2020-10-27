@@ -6,6 +6,40 @@ description: Harnessing the power of data and knowledge for sustainable developm
 
 The **Pacific Data Hub \(PDH**\), is the most comprehensive collection of data and information **about the Pacific** and **from the Pacific,** across key areas including population statistics, fisheries science, climate change adaptation, disaster risk reduction and resilience, public health surveillance, conservation of plant genetic resources for food security, and human rights.
 
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">
+        <img src=".gitbook/assets/pdh-catalogue-thumb-250x163.png" alt/>
+      </th>
+      <th style="text-align:left"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">
+        <p></p>
+        <p>
+          <img src=".gitbook/assets/pdh-catalogue-thumb-250x163.png" alt/>
+        </p>
+      </td>
+      <td style="text-align:left">fsfsdsfdsfsdfdsfsdfsdfdsfdsfsdfsdfsdfsfsdfdsfsdfsdfssdfdsf</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <img src=".gitbook/assets/pdh-catalogue-thumb-250x163.png" alt/>
+      </td>
+      <td style="text-align:left">fdsafsdafdsafdsfasdfdsafdsfsaf</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <img src=".gitbook/assets/pdh-catalogue-thumb-250x163.png" alt/>
+      </td>
+      <td style="text-align:left">fdsafsdafdsfadfsafsdf</td>
+    </tr>
+  </tbody>
+</table>
+
 ## Tools and Data Services
 
 ![Core components of the Pacific Data Hub](.gitbook/assets/pdh-platforms-core-technology-stack%20%281%29.jpg)
