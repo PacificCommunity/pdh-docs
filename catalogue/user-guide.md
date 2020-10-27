@@ -4,25 +4,9 @@ For an introduction on how to use the PDH Data Catalogue see this video:
 
 {% embed url="https://youtu.be/H1KBLkZUR2s" %}
 
-### What is the Pacific Data Catalogue?
+### 
 
-Pacific Data Catalogue is an open data repository created to help to manage and publish data related to the Pacific Region. Once the dataset is published users can use the different search features available to explore and find the data they need. 
-
-The Pacific Data Catalogue publishes data in units called "datasets". Each dataset contains two main elements:
-
-* Information or "metadata" about the data. For example, the title and publisher, date, what formats it is available in, what license it is released under, etc.
-* A number of "resources", which hold the data itself. A resource can be a CSV or Excel spreadsheet, XML file, PDF document, image file, KML, GeoJSON, etc. A dataset can contain any number of resources. For example, different resources might contain the data for different years, or they might contain the same data in different formats. 
-
-### Datasets and resources
-
-For CKAN purposes, data is published in units called "datasets". A dataset is a parcel of data - for example, it could be the crime statistics for a region, the spending figures for a government department, or temperature readings from various weather stations. When users search for data, the search results they see will be individual datasets.
-
-A dataset contains two things:
-
-* Information or "metadata" about the data. For example, the title and publisher, date, what formats it is available in, what license it is released under, etc.
-* A number of "resources", which hold the data itself. CKAN does not mind what format the data is in. A resource can be a CSV or Excel spreadsheet, XML file, PDF document, image file, linked data in RDF format, etc. CKAN can store the resource internally, or store it simply as a link, the resource itself being elsewhere on the web. A dataset can contain any number of resources. For example, different resources might contain the data for different years, or they might contain the same data in different formats.
-
-### How to get started with Pacific Data Catalogue
+### How to get started with the Pacific Data Catalogue
 
 Go to the Pacific Data Hub home page [https://pacificdata.org/](https://pacificdata.org/)
 
