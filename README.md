@@ -9,9 +9,7 @@ The **Pacific Data Hub \(PDH**\), is the most comprehensive collection of data a
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">
-        <img src=".gitbook/assets/pdh-catalogue-thumb-250x163.png" alt/>
-      </th>
+      <th style="text-align:left"></th>
       <th style="text-align:left"></th>
     </tr>
   </thead>
