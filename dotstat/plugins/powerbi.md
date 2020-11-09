@@ -27,6 +27,7 @@ let
 
     // Change API_URI to the desired API query
     // Here are some examples
+    //API_URI = "https://stats-nsi-stable.pacificdata.org/rest/data/SPC,DF_ECOLEAD,1.0/Q...?startPeriod=2020-Q1&dimensionAtObservation=AllDimensions",
     API_URI = "https://stats-nsi-stable.pacificdata.org/rest/data/SPC,DF_POCKET,3.0/A..?startPeriod=2018&endPeriod=2020&dimensionAtObservation=AllDimensions",
     //API_URI = "https://stats-nsi-stable.pacificdata.org/rest/data/SPC,DF_CPI,3.0/A.KI+FJ+PF+CK.INF.?startPeriod=2010&endPeriod=2019&dimensionAtObservation=AllDimensions",
     //API_URI = "https://stats-nsi-stable.pacificdata.org/rest/data/SPC,DF_NMDI_EDU,1.0/A.AS.._T._T._T..?startPeriod=2010&endPeriod=2018&dimensionAtObservation=AllDimensions",
@@ -113,7 +114,7 @@ let
     MERGE4 = Table.RemoveColumns(MERGE3,{"Codelists.RealName", "Key"}),
 
     // Pivot to wide-format with a column for each type of Attribute
-    
+
     // To preserve both codes and labels, CODEDATA will take only CODES while LABELDATA will take real labels
     CODEDATA00 = Table.RemoveColumns(MERGE4,{"Cleaned"}),
     CODEDATA01 = Table.Pivot(CODEDATA00, List.Distinct(CODEDATA00[#"ObsKey.Value.Attribute:id"]), "ObsKey.Value.Attribute:id", "Code"),
@@ -145,8 +146,22 @@ let
     DIMOBSATT03 = Table.ExpandTableColumn(DIMOBSATT02, "ATT", List.Union(List.Transform(DIMOBSATT02[ATT], each Table.ColumnNames(_)))),
     DIMOBSATT04 = Table.RemoveColumns(DIMOBSATT03,{"Index"}),
     DIMOBSATT05 =Table.TransformColumnTypes(DIMOBSATT04,{{"OBS_VALUE", type number}}, "us-EN"),
-    DIMOBSATT06 = Table.TransformColumnTypes(DIMOBSATT05,{{"TIME_PERIOD", type date}}),
-    DIMOBSATT07 = Table.AddIndexColumn(DIMOBSATT06, "Index", 1, 1),
+
+    // If TIME_PERIOD is YYYY-Q1 format, then need to change to date
+    DIMOBSATT06 = Table.AddColumn(DIMOBSATT05, "TIME_PERIOD_NEW",
+                             each if Text.Contains([TIME_PERIOD], "Q")
+                             then (
+                                 if Text.End([TIME_PERIOD], 2) = "Q1" then Text.Combine({Text.Start([TIME_PERIOD], 4), "-09-01"})
+                                 else if Text.End([TIME_PERIOD], 2) = "Q2" then Text.Combine({Text.Start([TIME_PERIOD], 4), "-12-01"})
+                                 else if Text.End([TIME_PERIOD], 2) = "Q3" then Text.Combine({Text.Start([TIME_PERIOD], 4), "-03-01"})
+                                 else Text.Combine({Text.Start([TIME_PERIOD], 4), "-06-01"})
+                             )
+                             else [TIME_PERIOD]),
+
+    DIMOBSATT07 = Table.RemoveColumns(DIMOBSATT06, {"TIME_PERIOD"}),
+    DIMOBSATT08 = Table.RenameColumns(DIMOBSATT07, {"TIME_PERIOD_NEW", "TIME_PERIOD"}),
+    DIMOBSATT09 = Table.TransformColumnTypes(DIMOBSATT08,{{"TIME_PERIOD", type date}}),
+    DIMOBSATT10 = Table.AddIndexColumn(DIMOBSATT09, "Index", 1, 1),
 
     // Merge labels with data
     DIMLABELS00 = Table.NestedJoin(LABELDATA03, {"Index"}, OBS, {"Index"}, "OBS", JoinKind.Inner),
@@ -156,12 +171,12 @@ let
     DIMLABELS04 = Table.RemoveColumns(DIMLABELS03, {"OBS_VALUE_EN", "TIME_PERIOD_EN"}),
 
     // Join label columns and code columns
-    FINAL0 = Table.Join(DIMOBSATT07, "Index", DIMLABELS04, "Index", JoinKind.Inner),
+    FINAL0 = Table.Join(DIMOBSATT10, "Index", DIMLABELS04, "Index", JoinKind.Inner),
     FINAL1 = Table.RemoveColumns(FINAL0, {"Index"}),
-    // Reorder columns to have each set of codes and labels side by side
-    FINAL = Table.ReorderColumns(FINAL1, List.Sort(Table.ColumnNames(FINAL1), Order.Ascending))
+    FINAL = Table.ReorderColumns(FINAL1, List.Combine({{"TIME_PERIOD"}, List.RemoveMatchingItems(Table.ColumnNames(FINAL1), {"TIME_PERIOD"})}))
 in
     FINAL
+
 ```
 
 An example of the output in Power BI is shown below:
