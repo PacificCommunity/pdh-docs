@@ -8,11 +8,20 @@ The **Pacific Data Hub \(PDH**\), is the most comprehensive collection of data a
 
 The Pacific Data Hub is an innovative programme of work, led by the [Pacific Community \(SPC\)](https://spc.int/) and supported by the [New Zealand Ministry of Foreign Affairs and Trade](http://www.mfat.govt.nz/) and the [Australian Department of Foreign Affairs and Trade](https://www.dfat.gov.au/). It is a regional public good that provides a single authoritative point of entry for data about the Pacific and serves as a vehicle for investment in a sustainable regional data infrastructure.
 
-We have built the Pacific Data Hub platform on our intimate understanding of the Pacific region and the enduring relationships we have forged with our members. We understand the policy and development challenges that matter to our members and we work in coordination with our development partners to not only provide quality data and evidence but also develop tools and capabilities that can inspire new insights, inform good decision-making and deliver improved development outcomes.
+We have built the Pacific Data Hub platform on our intimate understanding of the Pacific region and the enduring relationships we have forged with our members. We understand the policy and development challenges that matter to our members and we work in coordination with our development partners to not only provide quality data and evidence but also develop tools and capabilities that can inspire new insights and inform good decision-making to deliver better development outcomes.
 
-The Pacific Data Hub is part of an emerging Pacific Data Ecosystem, a partnership between Pacific Island Countries and Territories, SPC and the [Secretariat of the Pacific Regional Environment Programme \(SPREP\)](https://www.sprep.org/) to promote greater coordination in data management, dissemination and uptake initiatives. We work closely with our members and our development partners to strengthen data management capabilities, develop capability and improve data literacy within the Pacific region, ensuring that the data resources of our members and partners are well-managed, shared responsibly and used ethically.
+## A Pacific Data Ecosystem
 
-The Pacific Data Hub platform is made up of four key components - 1\) Data Catalogue; 2\) PacificMap; 3\) PDH.stat; and 4\) Microdata Library.
+The Pacific Data Hub is part of an emerging Pacific Data Ecosystem, a partnership between Pacific Island Countries and Territories, [SPC](https://www.spc.int/) and the [Secretariat of the Pacific Regional Environment Programme \(SPREP\)](https://www.sprep.org/) to promote greater coordination in data management, dissemination and uptake initiatives. Check out the [Pacific Environment Portal](https://pacific-data.sprep.org/) for more data.
+
+## Key Components
+
+The Pacific Data Hub platform is made up of four key components:
+
+1. Data Catalogue
+2. PacificMap
+3. PDH.stat
+4. Microdata Library
 
 <table>
   <thead>
