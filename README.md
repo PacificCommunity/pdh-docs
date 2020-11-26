@@ -18,10 +18,10 @@ The Pacific Data Hub is part of an emerging Pacific Data Ecosystem, a partnershi
 
 The Pacific Data Hub platform is made up of four key components:
 
-1. Data Catalogue
-2. PacificMap
-3. PDH.stat
-4. Microdata Library
+1. [Data Catalogue](catalogue/)
+2. [PacificMap](pacific-map/)
+3. [PDH.stat](dotstat/)
+4. [Microdata Library](ml/)
 
 <table>
   <thead>
