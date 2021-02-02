@@ -8,35 +8,26 @@ description: >-
 
 ![](../../.gitbook/assets/image%20%2878%29.png)
 
-### Install pandaSDMX
+### Overview
+
+PDH.stat is part of the `sdmx` Python package developed by Paul Natsuo Kishimoto. More information about the package can be found [here](https://sdmx1.readthedocs.io/en/latest/index.html).
+
+### Install sdmx
 
 These steps have been tested with Python 3.7.4 in an Anaconda environment on Windows 10.
 
-Start by installing pandaSDMX. To learn more about pandaSDMX, see the documentation [here](https://pandasdmx.readthedocs.io/en/v1.0/) or the code [here](https://github.com/dr-leo/pandaSDMX).
+Start by installing sdmx. To learn more about the package, see the code [here](https://github.com/khaeru/sdmx).
 
-To install with pip from the command prompt: `pip install pandasdmx`
+To install with pip from the command prompt \(note: include the '1' at the end of sdmx\): `pip install sdmx1`
 
-To install from an Anaconda environment: `conda install pandasdmx -c conda -forge`
-
-In a Python project, import the package: `import pandasdmx as sdmx`
+In a Python project, import the package: `import sdmx`
 
 ### Connect to PDH.stat
 
-To establish a connection to PDH.stat in a project using pandasdmx, use the code snippet below:
+To see the available sources and find PDH.stat:
 
 ```python
-import pandasdmx as sdmx
-sdmx.add_source({
-                "id": "SPC", 
-                "documentation":"https://stats.pacificdata.org/?locale=en", 
-                "url":"https://stats-nsi-stable.pacificdata.org/rest", 
-                "name":"Pacific Data Hub DotStat"
-                })
-```
-
-To see the available sources and check for PDH.stat:
-
-```python
+import sdmx
 sdmx.list_sources()
 ```
 
@@ -47,7 +38,7 @@ The source abbreviation for PDH.stat is "SPC" \(Pacific Community\), as shown be
 To connect to PDH.stat and then view its available data flows:
 
 ```python
-spc = sdmx.Request('SPC')
+spc = sdmx.Client('SPC')
 datasets = sdmx.to_pandas(spc.dataflow().dataflow)
 datasets
 ```
