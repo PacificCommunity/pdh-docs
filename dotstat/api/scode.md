@@ -81,21 +81,15 @@ print(dict)
 
 ![](../../.gitbook/assets/population_snippet.png)
 
-This Python script demonstrates how the API can be accessed with the [Python pandasdmx plugin](../plugins/python.md). It makes a request for a filtered dataset of population projections for a specified number of countries. It then plots the results as a time series chart. It could be adapted to handle different countries, different time frames and other time series data too.
+This Python script demonstrates how the API can be accessed with the [Python sdmx plugin](../plugins/python.md). It makes a request for a filtered dataset of population projections for a specified number of countries. It then plots the results as a time series chart. It could be adapted to handle different countries, different time frames and other time series data too.
 
 ```python
 import pandas as pd
 import matplotlib.pyplot as plt
-import pandasdmx as sdmx
+import sdmx
 
-# SPC PDH .Stat as a source for pandasdmx
-sdmx.add_source({
-                "id": "SPC",
-                "documentation":"https://stats.pacificdata.org/?locale=en",
-                "url":"https://stats-nsi-stable.pacificdata.org/rest",
-                "name":"Pacific Data Hub DotStat"
-                })
-spc = sdmx.Request('SPC')
+# Set SPC as the Client 
+spc = sdmx.Client('SPC')
 
 # Design key to fetch mid-year population estimates for New Caledonia, Fiji and American Samoa
 # Sex and Age are set to _T which represents total/all
