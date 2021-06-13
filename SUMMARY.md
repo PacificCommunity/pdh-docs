@@ -4,7 +4,7 @@
 * [Data Catalogue](catalogue/README.md)
   * [User Guide](catalogue/user-guide.md)
   * [Advanced Search](catalogue/advanced-search/README.md)
-    * [Solr Search](catalogue/advanced-search/solr-search.md)
+    * [Solr Search Queries](catalogue/advanced-search/solr-search.md)
 * [PacificMap](pacific-map/README.md)
   * [User Guide](pacific-map/user-guide.md)
 * [PDH.stat](dotstat/README.md)
