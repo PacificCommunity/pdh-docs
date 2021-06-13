@@ -7,7 +7,7 @@ description: Searching for data using Solr search syntax
 By enabling the advanced search feature, you can take advantage of Solr's flexible search syntax to analyze your data. For example, you can search for data that contains the terms 'Climate' and 'Financing' in close proximity to each other, or search for data or dates that fall within a specific range.
 
 {% hint style="info" %}
-You can add SOLR search queries by enabling 'Advanced search' under the search bar, then checking the 'Add query syntax to search' check box.
+You can add Solr search queries by enabling 'Advanced search' under the search bar, then checking the 'Add query syntax to search' check box.
 {% endhint %}
 
 ![Enbaling advanced search](../../.gitbook/assets/image%20%2889%29.png)
