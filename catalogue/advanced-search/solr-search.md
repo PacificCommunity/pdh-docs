@@ -10,9 +10,9 @@ By enabling the advanced search feature, you can take advantage of Solr's flexib
 You can add SOLR search syntax search enabling 'Advanced search' under the search bar, then checking the 'Add query syntax to search' check box.
 {% endhint %}
 
-![Enbaling advanced search](../../.gitbook/assets/image%20%2888%29.png)
+![Enbaling advanced search](../../.gitbook/assets/image%20%2889%29.png)
 
-![Enabling SOLR search](../../.gitbook/assets/image%20%2887%29.png)
+![Enabling SOLR search](../../.gitbook/assets/image%20%2888%29.png)
 
 ### Searching for keywords and search phrases
 
