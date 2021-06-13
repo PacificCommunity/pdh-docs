@@ -1,10 +1,8 @@
 ---
-description: Using Solr search queries
+description: Searching for data using Solr search syntax
 ---
 
 # Solr Search
-
-## Searching for data using Solr search syntax
 
 By enabling the advanced search feature, you can take advantage of Solr's flexible search syntax to analyze your data. For example, you can search for data that contains the terms 'Climate' and 'Financing' in close proximity to each other, or search for data or dates that fall within a specific range.
 
