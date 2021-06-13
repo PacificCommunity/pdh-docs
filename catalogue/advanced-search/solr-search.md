@@ -12,7 +12,7 @@ You can add SOLR search queries by enabling 'Advanced search' under the search b
 
 ![Enbaling advanced search](../../.gitbook/assets/image%20%2889%29.png)
 
-![Enabling SOLR search](../../.gitbook/assets/image%20%2888%29.png)
+![Enabling Solr search](../../.gitbook/assets/image%20%2888%29.png)
 
 ### Searching for keywords and search phrases
 
