@@ -1,6 +1,6 @@
 # API
 
-The PDH Data Catalogue is built on CKAN, the world's leading open source data management system. CKAN’s **Action API** is a powerful, RPC-style API that exposes all of CKAN’s core features to API clients.
+The PDH Data Catalogue is built on [CKAN](https://ckan.org/), the world's leading open source data management system. CKAN’s **Action API** is a powerful, RPC-style API that exposes all of CKAN’s core features to API clients.
 
 {% hint style="info" %}
 Follow the link below to interact with the PDH Data Catalogue API
