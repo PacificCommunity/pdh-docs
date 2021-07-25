@@ -5,6 +5,7 @@
   * [User Guide](catalogue/user-guide.md)
   * [Advanced Search](catalogue/advanced-search/README.md)
     * [Solr Search Queries](catalogue/advanced-search/solr-search.md)
+  * [API](catalogue/api.md)
 * [PacificMap](pacific-map/README.md)
   * [User Guide](pacific-map/user-guide.md)
 * [PDH.stat](dotstat/README.md)
