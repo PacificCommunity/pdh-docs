@@ -10,9 +10,13 @@ If you are an SPC staff member, please sign in using [Okta link](https://pacific
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | Click on the [**Create account**](https://pacificdata/org/user/register)** **tab                                                                                                                                                                                                                                                         | ![](<../../.gitbook/assets/image (99) (1).png>)  |
 | <p>Enter your name, email address and password.</p><p></p><p>Then click on the 'I'm not a robot' check box. You may be asked to complete the verification process.</p><p></p><p>Follow the verification steps then click on the <mark style="color:blue;background-color:blue;"><strong>'Create new account'</strong> </mark>button.</p> | ![](<../../.gitbook/assets/image (103).png>)     |
-| <p>Once you have successfully registered, you will be redirected to the Home page where you will see a notification message:</p><p><mark style="color:green;"><strong></strong></mark></p><p><mark style="color:green;"><strong>'Registration successful You are now logged in.'</strong></mark></p>                                     | ![](<../../.gitbook/assets/image (98).png>)      |
-| Click on the [**Data Catalogue **](https://pacificdata.org/data)link from the top navigation menu.                                                                                                                                                                                                                                       | ![](<../../.gitbook/assets/image (99).png>)      |
+| <p>Once you have successfully registered, you will be redirected to the Home page where you will see a notification message:</p><p><mark style="color:green;"><strong></strong></mark></p><p><mark style="color:green;"><strong>'Registration successful. You are now logged in.'</strong></mark></p>                                    | ![](<../../.gitbook/assets/image (98).png>)      |
+| <p>Click on the <a href="https://pacificdata.org/data"><strong>Data Catalogue </strong></a>link from the top navigation menu.</p><p></p><p>Please note, this last step must be completed for your account to be successfully created.</p>                                                                                                | ![](<../../.gitbook/assets/image (99).png>)      |
+
+
 
 {% hint style="info" %}
-Please note, the last step must be completed for your account to be successfully created.
+If you wish to upload or modify datasets within the [Data Catalogue](https://pacificdata.org/data), please contact the owner of the [organisation ](https://pacificdata.org/data/organization)you wish to contribute to. The organisation owner can grant you permissions to publish to the organisation.
+
+You can also contact the PDH administrators on the live chat widget if you cannot reach an organisation administrator.
 {% endhint %}
