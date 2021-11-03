@@ -1,9 +1,9 @@
 # Creating a new account
 
-If you would like to contribute and publish content in the PDH Catalogue, you will need to create a PDH user account.  Follow the steps below to register for a new account.
+If you would like to contribute and publish content in the PDH Catalogue, you must create a PDH user account.  Follow the steps below to register for a new account.
 
 {% hint style="info" %}
-If you are an SPC staff member, please sign in using [Okta link](https://pacificdata.org/saml/drupal\_login/spc\_okta).
+If you are an SPC staff member, please sign in using the [Okta link](https://pacificdata.org/saml/drupal\_login/spc\_okta).
 {% endhint %}
 
 | From the Home page, click on the [**Login **](https://pacificdata.org/user/login)link                                                                                                                                                                                                                                                    | ![](<../../.gitbook/assets/image (101) (1).png>) |
@@ -16,7 +16,7 @@ If you are an SPC staff member, please sign in using [Okta link](https://pacific
 
 
 {% hint style="info" %}
-If you wish to upload or modify datasets within the [Data Catalogue](https://pacificdata.org/data), please contact the owner of the [organisation ](https://pacificdata.org/data/organization)you wish to contribute to. The organisation owner can grant you permissions to publish to the organisation.
+If you wish to upload or modify datasets within the [Data Catalogue](https://pacificdata.org/data), you will need to be granted permissions to an [organisation](https://pacificdata.org/data/organization) within the catalogue. Please get in touch with the owner of the [organisation ](https://pacificdata.org/data/organization)you wish to contribute to.
 
-You can also contact the PDH administrators on the live chat widget if you cannot reach an organisation administrator.
+You can also contact the PDH administrators on live chat if you cannot reach an organisation administrator.
 {% endhint %}
