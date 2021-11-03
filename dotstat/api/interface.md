@@ -8,118 +8,424 @@ description: >-
 
 ## Data queries
 
-{% api-method method="get" host="https://stats-nsi-stable.pacificdata.org/rest" path="/data/{flow}/{key}/{provider}\[?startPeriod\]\[&endPeriod\]\[&dimensionAtObservation\]\[&detail\]\[&format\]" %}
-{% api-method-summary %}
-Get data
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://stats-nsi-stable.pacificdata.org/rest" path="/data/{flow}/{key}/{provider}[?startPeriod][&endPeriod][&dimensionAtObservation][&detail][&format]" method="get" summary="Get data" %}
+{% swagger-description %}
 This method retrieves the data observations for a dataflow, based on various filters.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="flow" type="string" required=true %}
-The **statistical domain** \(dataflow\) of the data to be returned.  
-Examples:  
-`DF_SDG`: The ID for Sustainable Development Goals dataflow  
-`DF_CPI`: The ID for Consumer Price Index dataflow  
-`DF_POCKET`: The ID for Pocket Summary dataflow  
-`DF_POP_SUM`: The ID for Population dataflow  
-`DF_IMTS`: The ID for International Merchandise Trade Statistics dataflow
-{% endapi-method-parameter %}
+{% swagger-parameter in="path" name="flow" type="string" %}
+The 
 
-{% api-method-parameter name="key" type="string" required=true %}
-The \(possibly partial\) **key identifying the data to be returned**.  
-The keyword `all` can be used to indicate that all data belonging to the specified dataflow and provided by the specified provider must be returned. The allowable values for key will change depending on the selected dataflow. In general, it is a series of parameters separated by the `.` sign. Where there are 2 points in a row, it indicates a "wildcard" for that parameter. To select several values as a parameter, separate them with a `+` sign.
-{% endapi-method-parameter %}
+**statistical domain**
 
-{% api-method-parameter name="provider" type="string" required=true %}
-The agency maintaining the artefact to be returned \(i.e. `SPC`\).   
-It is possible to set more than one agency, using `+` as separator \(e.g. `SPC+ECB`\).  
-The keyword `all` can be used to indicate that artefacts maintained by any maintenance agency should be returned.
-{% endapi-method-parameter %}
+ (dataflow) of the data to be returned.
 
-{% api-method-parameter name="startPeriod" type="string" required=false %}
-The start of the period for which results should be supplied \(inclusive\). Can be expressed using 8601 dates or SDMX reporting periods.  
-Examples:  
-`2000`: Year \(ISO 8601\)  
-`2000-01`: Month \(ISO 8601\)  
-`2000-01-01`: Date \(ISO 8601\)  
-`2000-Q1`: Quarter \(SDMX\)  
-`2000-W01`: Week\(SDMX\)
-{% endapi-method-parameter %}
+\
 
-{% api-method-parameter name="endPeriod" type="string" required=false %}
-The end of the period for which results should be supplied \(inclusive\). Can be expressed using 8601 dates or SDMX reporting periods.  
-Examples:  
-`2000`: Year \(ISO 8601\)  
-`2000-01`: Month \(ISO 8601\)  
-`2000-01-01`: Date \(ISO 8601\)  
-`2000-Q1`: Quarter \(SDMX\)  
-`2000-W001`: Week \(SDMX\)
-{% endapi-method-parameter %}
 
-{% api-method-parameter name="dimensionAtObservation" type="string" required=false %}
-Indicates **how the data should be packaged**.  
-The options are:  
-`TIME_PERIOD`: A timeseries view  
-The ID of any other dimension: A cross-sectional view of the data  
-`AllDimensions`: A flat view of the data
-{% endapi-method-parameter %}
+Examples:
 
-{% api-method-parameter name="detail" type="string" required=false %}
-The **amount of information** to be returned.  
-Possible options are:  
-`full`: All data and documentation  
-`dataonly`: Everything except attributes  
-`serieskeysonly`: The series keys. This is useful to return the series that match a certain query, without returning the actual data \(e.g. overview page\)  
-`nodata`: The series, including attributes and annotations, without observations
-{% endapi-method-parameter %}
+\
 
-{% api-method-parameter name="format" type="string" required=false %}
-The **data format** to be returned.  
-Possible options are:  
-`jsondata`  
-`csv`  
-`genericdata`  
-`structure`  
+
+
+
+`DF_SDG`
+
+: The ID for Sustainable Development Goals dataflow
+
+\
+
+
+
+
+`DF_CPI`
+
+: The ID for Consumer Price Index dataflow
+
+\
+
+
+
+
+`DF_POCKET`
+
+: The ID for Pocket Summary dataflow
+
+\
+
+
+
+
+`DF_POP_SUM`
+
+: The ID for Population dataflow
+
+\
+
+
+
+
+`DF_IMTS`
+
+: The ID for International Merchandise Trade Statistics dataflow
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="key" type="string" %}
+The (possibly partial) 
+
+**key identifying the data to be returned**
+
+.
+
+\
+
+
+The keyword 
+
+`all`
+
+ can be used to indicate that all data belonging to the specified dataflow and provided by the specified provider must be returned. The allowable values for key will change depending on the selected dataflow. In general, it is a series of parameters separated by the 
+
+`.`
+
+ sign. Where there are 2 points in a row, it indicates a "wildcard" for that parameter. To select several values as a parameter, separate them with a 
+
+`+`
+
+ sign.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="provider" type="string" %}
+The agency maintaining the artefact to be returned (i.e. 
+
+`SPC`
+
+). 
+
+\
+
+
+It is possible to set more than one agency, using 
+
+`+`
+
+ as separator (e.g. 
+
+`SPC+ECB`
+
+).
+
+\
+
+
+The keyword 
+
+`all`
+
+ can be used to indicate that artefacts maintained by any maintenance agency should be returned.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="startPeriod" type="string" %}
+The start of the period for which results should be supplied (inclusive). Can be expressed using 8601 dates or SDMX reporting periods.
+
+\
+
+
+Examples:
+
+\
+
+
+
+
+`2000`
+
+: Year (ISO 8601)
+
+\
+
+
+
+
+`2000-01`
+
+: Month (ISO 8601)
+
+\
+
+
+
+
+`2000-01-01`
+
+: Date (ISO 8601)
+
+\
+
+
+
+
+`2000-Q1`
+
+: Quarter (SDMX)
+
+\
+
+
+
+
+`2000-W01`
+
+: Week(SDMX)
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="endPeriod" type="string" %}
+The end of the period for which results should be supplied (inclusive). Can be expressed using 8601 dates or SDMX reporting periods.
+
+\
+
+
+Examples:
+
+\
+
+
+
+
+`2000`
+
+: Year (ISO 8601)
+
+\
+
+
+
+
+`2000-01`
+
+: Month (ISO 8601)
+
+\
+
+
+
+
+`2000-01-01`
+
+: Date (ISO 8601)
+
+\
+
+
+
+
+`2000-Q1`
+
+: Quarter (SDMX)
+
+\
+
+
+
+
+`2000-W001`
+
+: Week (SDMX)
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="dimensionAtObservation" type="string" %}
+Indicates 
+
+**how the data should be packaged**
+
+.
+
+\
+
+
+The options are:
+
+\
+
+
+
+
+`TIME_PERIOD`
+
+: A timeseries view
+
+\
+
+
+The ID of any other dimension: A cross-sectional view of the data
+
+\
+
+
+
+
+`AllDimensions`
+
+: A flat view of the data
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="detail" type="string" %}
+The 
+
+**amount of information**
+
+ to be returned.
+
+\
+
+
+Possible options are:
+
+\
+
+
+
+
+`full`
+
+: All data and documentation
+
+\
+
+
+
+
+`dataonly`
+
+: Everything except attributes
+
+\
+
+
+
+
+`serieskeysonly`
+
+: The series keys. This is useful to return the series that match a certain query, without returning the actual data (e.g. overview page)
+
+\
+
+
+
+
+`nodata`
+
+: The series, including attributes and annotations, without observations
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="format" type="string" %}
+The 
+
+**data format**
+
+ to be returned.
+
+\
+
+
+Possible options are:
+
+\
+
+
+
+
+`jsondata`
+
+\
+
+
+
+
+`csv`
+
+\
+
+
+
+
+`genericdata`
+
+\
+
+
+
+
+`structure`
+
+\
+
+
+
+
 `structurespecificdata`
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-headers %}
-{% api-method-parameter name="Accept-Language" type="string" required=false %}
+{% swagger-parameter in="header" name="Accept-Language" type="string" %}
 Specifies the client's preferred language.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="If-Modified-Since" type="string" required=false %}
-Takes a date-time \(RFC3339 format\) as input and returns the content matching the query only if it has changed since the supplied timestamp.
-{% endapi-method-parameter %}
+{% swagger-parameter in="header" name="If-Modified-Since" type="string" %}
+Takes a date-time (RFC3339 format) as input and returns the content matching the query only if it has changed since the supplied timestamp.
+{% endswagger-parameter %}
 
-{% api-method-parameter name="Accept" type="string" required=false %}
-Specifies the format of the API response.  
-Possible options are:  
-`application/vnd.sdmx.genericdata+xml;version=2.1`: returns SDMX-XML format  
-`application/vnd.sdmx.data+json;version=2.1`: returns SDMX-JSON format  
-`application/vnd.sdmx.data+csv;version=2.1`: returns SDMX-CSV format
-{% endapi-method-parameter %}
+{% swagger-parameter in="header" name="Accept" type="string" %}
+Specifies the format of the API response.
 
-{% api-method-parameter name="Accept-Encoding" type="string" required=false %}
-Specifies whether the response should be compressed and how.  
-`identity` \(the default\) indicates that no compression will be performed.
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-{% endapi-method-request %}
+\
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-An example API request for data on Fiji's population projection \(DF\_POP\_PROJ\) from 2015 to 2020 \(returned as XML\): `curl -v -X GET   
-"https://stats-nsi-stable.pacificdata.org/rest/data/SPC,DF_POP_PROJ,3.0/A.FJ._T._T.MIDYEARPOPEST?startPeriod=2015&endPeriod=2020&dimensionAtObservation=AllDimensions"`
-{% endapi-method-response-example-description %}
 
+Possible options are:
+
+\
+
+
+
+
+`application/vnd.sdmx.genericdata+xml;version=2.1`
+
+: returns SDMX-XML format
+
+\
+
+
+
+
+`application/vnd.sdmx.data+json;version=2.1`
+
+: returns SDMX-JSON format
+
+\
+
+
+
+
+`application/vnd.sdmx.data+csv;version=2.1`
+
+: returns SDMX-CSV format
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Accept-Encoding" type="string" %}
+Specifies whether the response should be compressed and how.
+
+\
+
+
+
+
+`identity`
+
+ (the default) indicates that no compression will be performed.
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="An example API request for data on Fiji's population projection (DF_POP_PROJ) from 2015 to 2020 (returned as XML): curl -v -X GET 
+"https://stats-nsi-stable.pacificdata.org/rest/data/SPC,DF_POP_PROJ,3.0/A.FJ._T._T.MIDYEARPOPEST?startPeriod=2015&endPeriod=2020&dimensionAtObservation=AllDimensions"" %}
 ```markup
 Date: Fri, 16 Oct 2020 05:36:49 GMT
 Content-Type: application/vnd.sdmx.genericdata+xml; version=2.1; charset=utf-8
@@ -213,13 +519,9 @@ Server: cloudflare
 </message:DataSet>
 </message:GenericData>* Connection #0 to host stats-nsi-stable.pacificdata.org left intact
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=404 %}
-{% api-method-response-example-description %}
-An example response for when the request seeks a dataflow which doesn't exist.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="404" description="An example response for when the request seeks a dataflow which doesn't exist." %}
 ```markup
 Date: Fri, 16 Oct 2020 05:48:01 GMT
 Content-Type: text/plain
@@ -237,10 +539,8 @@ Server: cloudflare
 
 Could not find Dataflow and/or DSD related with this data request* Connection #0 to host stats-nsi-stable.pacificdata.org left intact
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 #### Code samples
 
@@ -259,7 +559,7 @@ curl -v -X GET "https://stats-nsi-stable.pacificdata.org/rest/data/{flow}/{key}/
 ```
 {% endtab %}
 
-{% tab title="C\#" %}
+{% tab title="C#" %}
 ```csharp
 using System;
 using System.Net.Http.Headers;
@@ -666,68 +966,247 @@ puts response.body
 
 ## Structure queries
 
-{% api-method method="get" host="https://stats-nsi-stable.pacificdata.org/rest" path="/dataflow/{agencyID}/{resourceID}/{version}\[?references\]\[&detail\]" %}
-{% api-method-summary %}
-Get dataflow
-{% endapi-method-summary %}
+{% swagger baseUrl="https://stats-nsi-stable.pacificdata.org/rest" path="/dataflow/{agencyID}/{resourceID}/{version}[?references][&detail]" method="get" summary="Get dataflow" %}
+{% swagger-description %}
+This method retrieves a dataflow (or many dataflows), and the associated metadata, including the name, description, and metadata dictionary.
+{% endswagger-description %}
 
-{% api-method-description %}
-This method retrieves a dataflow \(or many dataflows\), and the associated metadata, including the name, description, and metadata dictionary.
-{% endapi-method-description %}
+{% swagger-parameter in="path" name="agencyID" type="string" %}
+The agency maintaining the artefact to be returned (i.e. SPC).
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="agencyID" type="string" required=false %}
-The agency maintaining the artefact to be returned \(i.e. SPC\).  
-It is possible to set more than one agency, using `+` as separator \(e.g. `SPC+ECB`\).  
-The keyword `all` can be used to indicate that artefacts maintained by any maintenance agency should be returned.
-{% endapi-method-parameter %}
+\
 
-{% api-method-parameter name="resourceID" type="string" required=false %}
-The ID of the artefact to be returned.  
-It is possible to set more than one ID, using `+` as separator \(e.g. `CL_FREQ+CL_CONF_STATUS`\).  
-The keyword `all` can be used to indicate that any artefact of the specified resource type should be returned.
-{% endapi-method-parameter %}
 
-{% api-method-parameter name="version" type="string" required=false %}
-The version of the artefact to be returned.  
-It is possible to set more than one version, using `+` as separator \(e.g. `1.0+2.1`\).  
-The keyword `all` can be used to return all version of the matching resource.  
-The keyword `latest` can be used to return the latest production version of the matching resource.
-{% endapi-method-parameter %}
+It is possible to set more than one agency, using 
 
-{% api-method-parameter name="references" type="string" required=false %}
-Instructs the web service to return \(or not return\) the artefacts referenced by the artefact to be returned.  
-Possible values are:  
-`none`: No references will be returned  
-parents: Returns the artefacts that use the artefact matching the query  
-`parentsandsiblings`: Returns the artefacts that use the artefact matching the query, as well as the artefacts referenced by these artefacts  
-`children`: Returns the artefacts referenced by the artefact to be returned  
-`descendants`: References of references, up to any level, will be returned  
-`all`: The combination of `parentsandsiblings` and `descendants`  
-In addition, a concrete type of resource may also be used \(e.g. `codelist`\)
-{% endapi-method-parameter %}
+`+`
 
-{% api-method-parameter name="detail" type="string" required=false %}
-The amount of information to be returned. `referencepartial` is a common value.  
-Possible values are:  
-`allstubs`: All artefacts should be returned as stubs, containing only identification information, as well as the artefacts' name  
-`referencestubs`: Referenced artefacts should be returned as stubs, containing only identification information, as well as the artefacts' name  
-`referencepartial`: Referenced item schemes should only include items used by the artefact to be returned. For example, a concept scheme would only contain the concepts used in a DSD, and its isPartial flag would be set to `true`  
-`allcompletestubs`: All artefacts should be returned as complete stubs, containing identification information, the artefacts' names, descriptions, annotations and isFinal information  
-`referencecompletestubs`: Referenced artefacts should be returned as complete stubs, containing identification information, the artefacts' name, description, annotations and isFinal information  
-`full`: All available information for all artefacts should be returned  
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-{% endapi-method-request %}
+ as separator (e.g. 
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-An example request for the Consumer Price Index dataflow \(DF\_CPI\), specifying `allstubs` as the detail parameter to return a simplified view of the dataflow: `curl -v -X GET "https://stats-nsi-stable.pacificdata.org/rest/dataflow/SPC/DF_CPI/3.0?references=all&detail=allstubs"`
-{% endapi-method-response-example-description %}
+`SPC+ECB`
 
+).
+
+\
+
+
+The keyword 
+
+`all`
+
+ can be used to indicate that artefacts maintained by any maintenance agency should be returned.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="resourceID" type="string" %}
+The ID of the artefact to be returned.
+
+\
+
+
+It is possible to set more than one ID, using 
+
+`+`
+
+ as separator (e.g. 
+
+`CL_FREQ+CL_CONF_STATUS`
+
+).
+
+\
+
+
+The keyword 
+
+`all`
+
+ can be used to indicate that any artefact of the specified resource type should be returned.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="version" type="string" %}
+The version of the artefact to be returned.
+
+\
+
+
+It is possible to set more than one version, using 
+
+`+`
+
+ as separator (e.g. 
+
+`1.0+2.1`
+
+).
+
+\
+
+
+The keyword 
+
+`all`
+
+ can be used to return all version of the matching resource.
+
+\
+
+
+The keyword 
+
+`latest`
+
+ can be used to return the latest production version of the matching resource.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="references" type="string" %}
+Instructs the web service to return (or not return) the artefacts referenced by the artefact to be returned.
+
+\
+
+
+Possible values are:
+
+\
+
+
+
+
+`none`
+
+: No references will be returned
+
+\
+
+
+parents: Returns the artefacts that use the artefact matching the query
+
+\
+
+
+
+
+`parentsandsiblings`
+
+: Returns the artefacts that use the artefact matching the query, as well as the artefacts referenced by these artefacts
+
+\
+
+
+
+
+`children`
+
+: Returns the artefacts referenced by the artefact to be returned
+
+\
+
+
+
+
+`descendants`
+
+: References of references, up to any level, will be returned
+
+\
+
+
+
+
+`all`
+
+: The combination of 
+
+`parentsandsiblings`
+
+ and 
+
+`descendants`
+
+\
+
+
+In addition, a concrete type of resource may also be used (e.g. 
+
+`codelist`
+
+)
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="detail" type="string" %}
+The amount of information to be returned. 
+
+`referencepartial`
+
+ is a common value.
+
+\
+
+
+Possible values are:
+
+\
+
+
+
+
+`allstubs`
+
+: All artefacts should be returned as stubs, containing only identification information, as well as the artefacts' name
+
+\
+
+
+
+
+`referencestubs`
+
+: Referenced artefacts should be returned as stubs, containing only identification information, as well as the artefacts' name
+
+\
+
+
+
+
+`referencepartial`
+
+: Referenced item schemes should only include items used by the artefact to be returned. For example, a concept scheme would only contain the concepts used in a DSD, and its isPartial flag would be set to 
+
+`true`
+
+\
+
+
+
+
+`allcompletestubs`
+
+: All artefacts should be returned as complete stubs, containing identification information, the artefacts' names, descriptions, annotations and isFinal information
+
+\
+
+
+
+
+`referencecompletestubs`
+
+: Referenced artefacts should be returned as complete stubs, containing identification information, the artefacts' name, description, annotations and isFinal information
+
+\
+
+
+
+
+`full`
+
+: All available information for all artefacts should be returned
+
+\
+
+
+
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="An example request for the Consumer Price Index dataflow (DF_CPI), specifying allstubs as the detail parameter to return a simplified view of the dataflow: curl -v -X GET "https://stats-nsi-stable.pacificdata.org/rest/dataflow/SPC/DF_CPI/3.0?references=all&detail=allstubs"" %}
 ```markup
 Date: Fri, 16 Oct 2020 06:35:59 GMT
 Content-Type: application/vnd.sdmx.structure+xml; version=2.1; charset=utf-8
@@ -831,71 +1310,229 @@ Server: cloudflare
   </message:Structures>
 </message:Structure>* Connection #0 to host stats-nsi-stable.pacificdata.org left intact
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host="https://stats-nsi-stable.pacificdata.org/rest" path="/agencyscheme/{agencyID}/{resourceID}/{version}\[?references\]\[&detail\]" %}
-{% api-method-summary %}
-Get agency schemes
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://stats-nsi-stable.pacificdata.org/rest" path="/agencyscheme/{agencyID}/{resourceID}/{version}[?references][&detail]" method="get" summary="Get agency schemes" %}
+{% swagger-description %}
 This method retrieves information about agencies associated with the .Stat instance. 
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="agencyID" type="string" required=false %}
-The agency maintaining the artefact to be returned \(i.e. SPC\).  
-It is possible to set more than one agency, using `+` as separator \(e.g. `SPC+ECB`\).  
-The keyword `all` can be used to indicate that artefacts maintained by any maintenance agency should be returned.
-{% endapi-method-parameter %}
+{% swagger-parameter in="path" name="agencyID" type="string" %}
+The agency maintaining the artefact to be returned (i.e. SPC).
 
-{% api-method-parameter name="resourceID" type="string" required=false %}
-The ID of the artefact to be returned.   
-It is possible to set more than one ID, using `+` as separator \(e.g. `CL_FREQ+CL_CONF_STATUS`\).   
-The keyword `all` can be used to indicate that any artefact of the specified resource type should be returned.
-{% endapi-method-parameter %}
+\
 
-{% api-method-parameter name="version" type="string" required=false %}
-The version of the artefact to be returned.  
-It is possible to set more than one version, using `+` as separator \(e.g. `1.0+2.1`\).   
-The keyword `all` can be used to return all version of the matching resource.   
-The keyword `latest` can be used to return the latest production version of the matching resource.
-{% endapi-method-parameter %}
 
-{% api-method-parameter name="references" type="string" required=false %}
-Instructs the web service to return \(or not return\) the artefacts referenced by the artefact to be returned. Possible values are:  
-`none`: No references will be returned   
-`parents`: Returns the artefacts that use the artefact matching the query  
-`parentsandsiblings`: Returns the artefacts that use the artefact matching the query, as well as the artefacts referenced by these artefacts  
-`children`: Returns the artefacts referenced by the artefact to be returned  
-`descendants`: References of references, up to any level, will be returned  
-`all`: The combination of parentsandsiblings and descendants In addition, a concrete type of resource may also be used \(e.g. codelist\)
-{% endapi-method-parameter %}
+It is possible to set more than one agency, using 
 
-{% api-method-parameter name="detail" type="string" required=false %}
-The amount of information to be returned. `referencepartial` is a common value.   
-Possible values are:   
-`allstubs`: All artefacts should be returned as stubs, containing only identification information, as well as the artefacts' name  
-`referencestubs`: Referenced artefacts should be returned as stubs, containing only identification information, as well as the artefacts' name   
-`referencepartial`: Referenced item schemes should only include items used by the artefact to be returned. For example, a concept scheme would only contain the concepts used in a DSD, and its isPartial flag would be set to `true`   
-`allcompletestubs`: All artefacts should be returned as complete stubs, containing identification information, the artefacts' names, descriptions, annotations and isFinal information   
-`referencecompletestubs`: Referenced artefacts should be returned as complete stubs, containing identification information, the artefacts' name, description, annotations and isFinal information   
-`full`: All available information for all artefacts should be returned
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-{% endapi-method-request %}
+`+`
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-An example API request for all of the agency schemes \(returned as XML\): `curl -v -X GET "https://stats-nsi-stable.pacificdata.org/rest/agencyscheme"`
-{% endapi-method-response-example-description %}
+ as separator (e.g. 
 
+`SPC+ECB`
+
+).
+
+\
+
+
+The keyword 
+
+`all`
+
+ can be used to indicate that artefacts maintained by any maintenance agency should be returned.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="resourceID" type="string" %}
+The ID of the artefact to be returned. 
+
+\
+
+
+It is possible to set more than one ID, using 
+
+`+`
+
+ as separator (e.g. 
+
+`CL_FREQ+CL_CONF_STATUS`
+
+). 
+
+\
+
+
+The keyword 
+
+`all`
+
+ can be used to indicate that any artefact of the specified resource type should be returned.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="version" type="string" %}
+The version of the artefact to be returned.
+
+\
+
+
+It is possible to set more than one version, using 
+
+`+`
+
+ as separator (e.g. 
+
+`1.0+2.1`
+
+). 
+
+\
+
+
+The keyword 
+
+`all`
+
+ can be used to return all version of the matching resource. 
+
+\
+
+
+The keyword 
+
+`latest`
+
+ can be used to return the latest production version of the matching resource.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="references" type="string" %}
+Instructs the web service to return (or not return) the artefacts referenced by the artefact to be returned. Possible values are:
+
+\
+
+
+
+
+`none`
+
+: No references will be returned 
+
+\
+
+
+
+
+`parents`
+
+: Returns the artefacts that use the artefact matching the query
+
+\
+
+
+
+
+`parentsandsiblings`
+
+: Returns the artefacts that use the artefact matching the query, as well as the artefacts referenced by these artefacts
+
+\
+
+
+
+
+`children`
+
+: Returns the artefacts referenced by the artefact to be returned
+
+\
+
+
+
+
+`descendants`
+
+: References of references, up to any level, will be returned
+
+\
+
+
+
+
+`all`
+
+: The combination of parentsandsiblings and descendants In addition, a concrete type of resource may also be used (e.g. codelist)
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="detail" type="string" %}
+The amount of information to be returned. 
+
+`referencepartial`
+
+ is a common value. 
+
+\
+
+
+Possible values are: 
+
+\
+
+
+
+
+`allstubs`
+
+: All artefacts should be returned as stubs, containing only identification information, as well as the artefacts' name
+
+\
+
+
+
+
+`referencestubs`
+
+: Referenced artefacts should be returned as stubs, containing only identification information, as well as the artefacts' name 
+
+\
+
+
+
+
+`referencepartial`
+
+: Referenced item schemes should only include items used by the artefact to be returned. For example, a concept scheme would only contain the concepts used in a DSD, and its isPartial flag would be set to 
+
+`true `
+
+\
+
+
+
+
+`allcompletestubs`
+
+: All artefacts should be returned as complete stubs, containing identification information, the artefacts' names, descriptions, annotations and isFinal information 
+
+\
+
+
+
+
+`referencecompletestubs`
+
+: Referenced artefacts should be returned as complete stubs, containing identification information, the artefacts' name, description, annotations and isFinal information 
+
+\
+
+
+
+
+`full`
+
+: All available information for all artefacts should be returned
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="An example API request for all of the agency schemes (returned as XML): curl -v -X GET "https://stats-nsi-stable.pacificdata.org/rest/agencyscheme"" %}
 ```markup
 Date: Fri, 16 Oct 2020 10:29:21 GMT
 Content-Type: application/vnd.sdmx.structure+xml; version=2.1; charset=utf-8
@@ -935,70 +1572,218 @@ Server: cloudflare
   </message:Structures>
 </message:Structure>* Connection #0 to host stats-nsi-stable.pacificdata.org left intact
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host="https://stats-nsi-stable.pacificdata.org/rest" path="/categorisation/{agencyID}/{resourceID}/{version}\[?references\]\[&detail\]" %}
-{% api-method-summary %}
-Get categorisations
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://stats-nsi-stable.pacificdata.org/rest" path="/categorisation/{agencyID}/{resourceID}/{version}[?references][&detail]" method="get" summary="Get categorisations" %}
+{% swagger-description %}
 This method retrieves information about categories used by dataflows.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="agencyID" type="string" required=false %}
-The agency maintaining the artefact to be returned \(i.e. SPC\).  
-It is possible to set more than one agency, using `+` as separator \(e.g. `SPC+ECB`\).  
-The keyword `all` can be used to indicate that artefacts maintained by any maintenance agency should be returned.
-{% endapi-method-parameter %}
+{% swagger-parameter in="path" name="agencyID" type="string" %}
+The agency maintaining the artefact to be returned (i.e. SPC).
 
-{% api-method-parameter name="resourceID" type="string" required=false %}
-The ID of the artefact to be returned.   
-It is possible to set more than one ID, using `+` as separator \(e.g. `CL_FREQ+CL_CONF_STATUS`\).   
-The keyword `all` can be used to indicate that any artefact of the specified resource type should be returned.
-{% endapi-method-parameter %}
+\
 
-{% api-method-parameter name="version" type="string" required=false %}
-The version of the artefact to be returned.   
-It is possible to set more than one version, using `+` as separator \(e.g. `1.0+2.1`\).   
-The keyword `all` can be used to return all version of the matching resource.  
-The keyword `latest` can be used to return the latest production version of the matching resource.
-{% endapi-method-parameter %}
 
-{% api-method-parameter name="references" type="string" required=false %}
-Instructs the web service to return \(or not return\) the artefacts referenced by the artefact to be returned. Possible values are:  
-`none`: No references will be returned parents: Returns the artefacts that use the artefact matching the query   
-`parentsandsiblings`: Returns the artefacts that use the artefact matching the query, as well as the artefacts referenced by these artefacts  
-`children`: Returns the artefacts referenced by the artefact to be returned   
-`descendants`: References of references, up to any level, will be returned   
-`all`: The combination of parentsandsiblings and descendants In addition, a concrete type of resource may also be used \(e.g. codelist\)
-{% endapi-method-parameter %}
+It is possible to set more than one agency, using 
 
-{% api-method-parameter name="detail" type="string" required=false %}
-The amount of information to be returned. `referencepartial` is a common value.   
-Possible values are:   
-`allstubs`: All artefacts should be returned as stubs, containing only identification information, as well as the artefacts' name   
-`referencestubs`: Referenced artefacts should be returned as stubs, containing only identification information, as well as the artefacts' name   
-`referencepartial`: Referenced item schemes should only include items used by the artefact to be returned. For example, a concept scheme would only contain the concepts used in a DSD, and its isPartial flag would be set to true   
-`allcompletestubs`: All artefacts should be returned as complete stubs, containing identification information, the artefacts' names, descriptions, annotations and isFinal information   
-`referencecompletestubs`: Referenced artefacts should be returned as complete stubs, containing identification information, the artefacts' name, description, annotations and isFinal information   
-`full`: All available information for all artefacts should be returned
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-{% endapi-method-request %}
+`+`
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-An example API request for the currencies category \(CAT\_CURRENCIES\) used by dataflows \(returned as XML\): `curl -v -X GET "https://stats-nsi-stable.pacificdata.org/rest/categorisation/SPC/CAT_CURRENCIES"`
-{% endapi-method-response-example-description %}
+ as separator (e.g. 
 
+`SPC+ECB`
+
+).
+
+\
+
+
+The keyword 
+
+`all`
+
+ can be used to indicate that artefacts maintained by any maintenance agency should be returned.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="resourceID" type="string" %}
+The ID of the artefact to be returned. 
+
+\
+
+
+It is possible to set more than one ID, using 
+
+`+`
+
+ as separator (e.g. 
+
+`CL_FREQ+CL_CONF_STATUS`
+
+). 
+
+\
+
+
+The keyword 
+
+`all`
+
+ can be used to indicate that any artefact of the specified resource type should be returned.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="version" type="string" %}
+The version of the artefact to be returned. 
+
+\
+
+
+It is possible to set more than one version, using 
+
+`+`
+
+ as separator (e.g. 
+
+`1.0+2.1`
+
+). 
+
+\
+
+
+The keyword 
+
+`all`
+
+ can be used to return all version of the matching resource.
+
+\
+
+
+The keyword 
+
+`latest`
+
+ can be used to return the latest production version of the matching resource.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="references" type="string" %}
+Instructs the web service to return (or not return) the artefacts referenced by the artefact to be returned. Possible values are:
+
+\
+
+
+
+
+`none`
+
+: No references will be returned parents: Returns the artefacts that use the artefact matching the query 
+
+\
+
+
+
+
+`parentsandsiblings`
+
+: Returns the artefacts that use the artefact matching the query, as well as the artefacts referenced by these artefacts
+
+\
+
+
+
+
+`children`
+
+: Returns the artefacts referenced by the artefact to be returned 
+
+\
+
+
+
+
+`descendants`
+
+: References of references, up to any level, will be returned 
+
+\
+
+
+
+
+`all`
+
+: The combination of parentsandsiblings and descendants In addition, a concrete type of resource may also be used (e.g. codelist)
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="detail" type="string" %}
+The amount of information to be returned. 
+
+`referencepartial`
+
+ is a common value. 
+
+\
+
+
+Possible values are: 
+
+\
+
+
+
+
+`allstubs`
+
+: All artefacts should be returned as stubs, containing only identification information, as well as the artefacts' name 
+
+\
+
+
+
+
+`referencestubs`
+
+: Referenced artefacts should be returned as stubs, containing only identification information, as well as the artefacts' name 
+
+\
+
+
+
+
+`referencepartial`
+
+: Referenced item schemes should only include items used by the artefact to be returned. For example, a concept scheme would only contain the concepts used in a DSD, and its isPartial flag would be set to true 
+
+\
+
+
+
+
+`allcompletestubs`
+
+: All artefacts should be returned as complete stubs, containing identification information, the artefacts' names, descriptions, annotations and isFinal information 
+
+\
+
+
+
+
+`referencecompletestubs`
+
+: Referenced artefacts should be returned as complete stubs, containing identification information, the artefacts' name, description, annotations and isFinal information 
+
+\
+
+
+
+
+`full`
+
+: All available information for all artefacts should be returned
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="An example API request for the currencies category (CAT_CURRENCIES) used by dataflows (returned as XML): curl -v -X GET "https://stats-nsi-stable.pacificdata.org/rest/categorisation/SPC/CAT_CURRENCIES"" %}
 ```markup
 Date: Fri, 16 Oct 2020 10:35:42 GMT
 Content-Type: application/vnd.sdmx.structure+xml; version=2.1; charset=utf-8
@@ -1040,70 +1825,218 @@ Server: cloudflare
   </message:Structures>
 </message:Structure>* Connection #0 to host stats-nsi-stable.pacificdata.org left intact
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host="https://stats-nsi-stable.pacificdata.org/rest" path="/categoryscheme/{agencyID}/{resourceID}/{version}\[?references\]\[&detail\]" %}
-{% api-method-summary %}
-Get category schemes
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://stats-nsi-stable.pacificdata.org/rest" path="/categoryscheme/{agencyID}/{resourceID}/{version}[?references][&detail]" method="get" summary="Get category schemes" %}
+{% swagger-description %}
 This method retrieves information about category schemes used by dataflows.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="agencyID" type="string" required=false %}
-The agency maintaining the artefact to be returned \(i.e. SPC\).  
-It is possible to set more than one agency, using `+` as separator \(e.g. `SPC+ECB`\).  
-The keyword `all` can be used to indicate that artefacts maintained by any maintenance agency should be returned.
-{% endapi-method-parameter %}
+{% swagger-parameter in="path" name="agencyID" type="string" %}
+The agency maintaining the artefact to be returned (i.e. SPC).
 
-{% api-method-parameter name="resourceID" type="string" required=false %}
-The ID of the artefact to be returned.   
-It is possible to set more than one ID, using `+` as separator \(e.g. `CL_FREQ+CL_CONF_STATUS`\).  
-The keyword `all` can be used to indicate that any artefact of the specified resource type should be returned.
-{% endapi-method-parameter %}
+\
 
-{% api-method-parameter name="version" type="string" required=false %}
-The version of the artefact to be returned.  
-It is possible to set more than one version, using `+` as separator \(e.g. `1.0+2.1`\).  
-The keyword `all` can be used to return all version of the matching resource.  
-The keyword `latest` can be used to return the latest production version of the matching resource.
-{% endapi-method-parameter %}
 
-{% api-method-parameter name="references" type="string" required=false %}
-Instructs the web service to return \(or not return\) the artefacts referenced by the artefact to be returned. Possible values are:  
-`none`: No references will be returned parents: Returns the artefacts that use the artefact matching the query   
-`parentsandsiblings`: Returns the artefacts that use the artefact matching the query, as well as the artefacts referenced by these artefacts   
-`children`: Returns the artefacts referenced by the artefact to be returned   
-`descendants`: References of references, up to any level, will be returned   
-`all`: The combination of parentsandsiblings and descendants In addition, a concrete type of resource may also be used \(e.g. codelist\)
-{% endapi-method-parameter %}
+It is possible to set more than one agency, using 
 
-{% api-method-parameter name="detail" type="string" required=false %}
-The amount of information to be returned. `referencepartial` is a common value.   
-Possible values are:   
-`allstubs`: All artefacts should be returned as stubs, containing only identification information, as well as the artefacts' name   
-`referencestubs`: Referenced artefacts should be returned as stubs, containing only identification information, as well as the artefacts' name   
-`referencepartial`: Referenced item schemes should only include items used by the artefact to be returned. For example, a concept scheme would only contain the concepts used in a DSD, and its isPartial flag would be set to true   
-`allcompletestubs`: All artefacts should be returned as complete stubs, containing identification information, the artefacts' names, descriptions, annotations and isFinal information  
-`referencecompletestubs`: Referenced artefacts should be returned as complete stubs, containing identification information, the artefacts' name, description, annotations and isFinal information   
-`full`: All available information for all artefacts should be returned
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-{% endapi-method-request %}
+`+`
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-An example API request for all category schemes \(returned as XML\): `curl -v -X GET "https://stats-nsi-stable.pacificdata.org/rest/categoryscheme"`
-{% endapi-method-response-example-description %}
+ as separator (e.g. 
 
+`SPC+ECB`
+
+).
+
+\
+
+
+The keyword 
+
+`all`
+
+ can be used to indicate that artefacts maintained by any maintenance agency should be returned.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="resourceID" type="string" %}
+The ID of the artefact to be returned. 
+
+\
+
+
+It is possible to set more than one ID, using 
+
+`+`
+
+ as separator (e.g. 
+
+`CL_FREQ+CL_CONF_STATUS`
+
+).
+
+\
+
+
+The keyword 
+
+`all`
+
+ can be used to indicate that any artefact of the specified resource type should be returned.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="version" type="string" %}
+The version of the artefact to be returned.
+
+\
+
+
+It is possible to set more than one version, using 
+
+`+`
+
+ as separator (e.g. 
+
+`1.0+2.1`
+
+).
+
+\
+
+
+The keyword 
+
+`all`
+
+ can be used to return all version of the matching resource.
+
+\
+
+
+The keyword 
+
+`latest`
+
+ can be used to return the latest production version of the matching resource.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="references" type="string" %}
+Instructs the web service to return (or not return) the artefacts referenced by the artefact to be returned. Possible values are:
+
+\
+
+
+
+
+`none`
+
+: No references will be returned parents: Returns the artefacts that use the artefact matching the query 
+
+\
+
+
+
+
+`parentsandsiblings`
+
+: Returns the artefacts that use the artefact matching the query, as well as the artefacts referenced by these artefacts 
+
+\
+
+
+
+
+`children`
+
+: Returns the artefacts referenced by the artefact to be returned 
+
+\
+
+
+
+
+`descendants`
+
+: References of references, up to any level, will be returned 
+
+\
+
+
+
+
+`all`
+
+: The combination of parentsandsiblings and descendants In addition, a concrete type of resource may also be used (e.g. codelist)
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="detail" type="string" %}
+The amount of information to be returned. 
+
+`referencepartial`
+
+ is a common value. 
+
+\
+
+
+Possible values are: 
+
+\
+
+
+
+
+`allstubs`
+
+: All artefacts should be returned as stubs, containing only identification information, as well as the artefacts' name 
+
+\
+
+
+
+
+`referencestubs`
+
+: Referenced artefacts should be returned as stubs, containing only identification information, as well as the artefacts' name 
+
+\
+
+
+
+
+`referencepartial`
+
+: Referenced item schemes should only include items used by the artefact to be returned. For example, a concept scheme would only contain the concepts used in a DSD, and its isPartial flag would be set to true 
+
+\
+
+
+
+
+`allcompletestubs`
+
+: All artefacts should be returned as complete stubs, containing identification information, the artefacts' names, descriptions, annotations and isFinal information
+
+\
+
+
+
+
+`referencecompletestubs`
+
+: Referenced artefacts should be returned as complete stubs, containing identification information, the artefacts' name, description, annotations and isFinal information 
+
+\
+
+
+
+
+`full`
+
+: All available information for all artefacts should be returned
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="An example API request for all category schemes (returned as XML): curl -v -X GET "https://stats-nsi-stable.pacificdata.org/rest/categoryscheme"" %}
 ```markup
 Date: Fri, 16 Oct 2020 10:38:25 GMT
 Content-Type: application/vnd.sdmx.structure+xml; version=2.1; charset=utf-8
@@ -1243,70 +2176,222 @@ Server: cloudflare
   </message:Structures>
 </message:Structure>* Connection #0 to host stats-nsi-stable.pacificdata.org left intact
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host="https://stats-nsi-stable.pacificdata.org/rest" path="/codelist/{agencyID}/{resourceID}/{version}\[?references\]\[&detail\]" %}
-{% api-method-summary %}
-Get codelists
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://stats-nsi-stable.pacificdata.org/rest" path="/codelist/{agencyID}/{resourceID}/{version}[?references][&detail]" method="get" summary="Get codelists" %}
+{% swagger-description %}
 This method retrieves the codelists associated with a dataflow.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="agencyID" type="string" required=false %}
-The agency maintaining the artefact to be returned \(i.e. `SPC`\).  
-It is possible to set more than one agency, using `+` as separator \(e.g. `SPC+ECB`\).  
-The keyword `all` can be used to indicate that artefacts maintained by any maintenance agency should be returned.
-{% endapi-method-parameter %}
+{% swagger-parameter in="path" name="agencyID" type="string" %}
+The agency maintaining the artefact to be returned (i.e. 
 
-{% api-method-parameter name="resourceID" type="string" required=false %}
-The ID of the artefact to be returned.  
-It is possible to set more than one ID, using `+` as separator \(e.g. `CL_FREQ+CL_CONF_STATUS`\).  
-The keyword `all` can be used to indicate that any artefact of the specified resource type should be returned.
-{% endapi-method-parameter %}
+`SPC`
 
-{% api-method-parameter name="version" type="string" required=false %}
-The version of the artefact to be returned.  
-It is possible to set more than one version, using `+` as separator \(e.g. `1.0+2.1`\).  
-The keyword `all` can be used to return all version of the matching resource.  
-The keyword `latest` can be used to return the latest production version of the matching resource.
-{% endapi-method-parameter %}
+).
 
-{% api-method-parameter name="references" type="string" required=false %}
-Instructs the web service to return \(or not return\) the artefacts referenced by the artefact to be returned. Possible values are:   
-`none`: No references will be returned parents: Returns the artefacts that use the artefact matching the query   
-`parentsandsiblings`: Returns the artefacts that use the artefact matching the query, as well as the artefacts referenced by these artefacts  
-`children`: Returns the artefacts referenced by the artefact to be returned  
-`descendants`: References of references, up to any level, will be returned  
-`all`: The combination of parentsandsiblings and descendants In addition, a concrete type of resource may also be used \(e.g. codelist\)
-{% endapi-method-parameter %}
+\
 
-{% api-method-parameter name="detail" type="string" required=false %}
-The amount of information to be returned. `referencepartial` is a common value.  
-Possible values are:  
-`allstubs`: All artefacts should be returned as stubs, containing only identification information, as well as the artefacts' name  
-`referencestubs`: Referenced artefacts should be returned as stubs, containing only identification information, as well as the artefacts' name  
-`referencepartial`: Referenced item schemes should only include items used by the artefact to be returned. For example, a concept scheme would only contain the concepts used in a DSD, and its isPartial flag would be set to true  
-`allcompletestubs`: All artefacts should be returned as complete stubs, containing identification information, the artefacts' names, descriptions, annotations and isFinal information  
-`referencecompletestubs`: Referenced artefacts should be returned as complete stubs, containing identification information, the artefacts' name, description, annotations and isFinal information  
-`full`: All available information for all artefacts should be returned
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-{% endapi-method-request %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-An example API request for the codelist for units of measure \(CL\_COM\_UNIT\_MEASURE\) \(returned as XML\): `curl -v -X GET "https://stats-nsi-stable.pacificdata.org/rest/codelist/SPC/CL_COM_UNIT_MEASURE"`
-{% endapi-method-response-example-description %}
+It is possible to set more than one agency, using 
 
+`+`
+
+ as separator (e.g. 
+
+`SPC+ECB`
+
+).
+
+\
+
+
+The keyword 
+
+`all`
+
+ can be used to indicate that artefacts maintained by any maintenance agency should be returned.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="resourceID" type="string" %}
+The ID of the artefact to be returned.
+
+\
+
+
+It is possible to set more than one ID, using 
+
+`+`
+
+ as separator (e.g. 
+
+`CL_FREQ+CL_CONF_STATUS`
+
+).
+
+\
+
+
+The keyword 
+
+`all`
+
+ can be used to indicate that any artefact of the specified resource type should be returned.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="version" type="string" %}
+The version of the artefact to be returned.
+
+\
+
+
+It is possible to set more than one version, using 
+
+`+`
+
+ as separator (e.g. 
+
+`1.0+2.1`
+
+).
+
+\
+
+
+The keyword 
+
+`all`
+
+ can be used to return all version of the matching resource.
+
+\
+
+
+The keyword 
+
+`latest`
+
+ can be used to return the latest production version of the matching resource.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="references" type="string" %}
+Instructs the web service to return (or not return) the artefacts referenced by the artefact to be returned. Possible values are: 
+
+\
+
+
+
+
+`none`
+
+: No references will be returned parents: Returns the artefacts that use the artefact matching the query 
+
+\
+
+
+
+
+`parentsandsiblings`
+
+: Returns the artefacts that use the artefact matching the query, as well as the artefacts referenced by these artefacts
+
+\
+
+
+
+
+`children`
+
+: Returns the artefacts referenced by the artefact to be returned
+
+\
+
+
+
+
+`descendants`
+
+: References of references, up to any level, will be returned
+
+\
+
+
+
+
+`all`
+
+: The combination of parentsandsiblings and descendants In addition, a concrete type of resource may also be used (e.g. codelist)
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="detail" type="string" %}
+The amount of information to be returned. 
+
+`referencepartial`
+
+ is a common value.
+
+\
+
+
+Possible values are:
+
+\
+
+
+
+
+`allstubs`
+
+: All artefacts should be returned as stubs, containing only identification information, as well as the artefacts' name
+
+\
+
+
+
+
+`referencestubs`
+
+: Referenced artefacts should be returned as stubs, containing only identification information, as well as the artefacts' name
+
+\
+
+
+
+
+`referencepartial`
+
+: Referenced item schemes should only include items used by the artefact to be returned. For example, a concept scheme would only contain the concepts used in a DSD, and its isPartial flag would be set to true
+
+\
+
+
+
+
+`allcompletestubs`
+
+: All artefacts should be returned as complete stubs, containing identification information, the artefacts' names, descriptions, annotations and isFinal information
+
+\
+
+
+
+
+`referencecompletestubs`
+
+: Referenced artefacts should be returned as complete stubs, containing identification information, the artefacts' name, description, annotations and isFinal information
+
+\
+
+
+
+
+`full`
+
+: All available information for all artefacts should be returned
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="An example API request for the codelist for units of measure (CL_COM_UNIT_MEASURE) (returned as XML): curl -v -X GET "https://stats-nsi-stable.pacificdata.org/rest/codelist/SPC/CL_COM_UNIT_MEASURE"" %}
 ```markup
 Date: Fri, 16 Oct 2020 10:46:51 GMT
 Content-Type: application/vnd.sdmx.structure+xml; version=2.1; charset=utf-8
@@ -1587,72 +2672,236 @@ Server: cloudflare
   </message:Structures>
 </message:Structure>* Connection #0 to host stats-nsi-stable.pacificdata.org left intact
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host="https://stats-nsi-stable.pacificdata.org/rest" path="/conceptscheme/{agencyID}/{resourceID}/{version}\[?references\]\[&detail\]" %}
-{% api-method-summary %}
-Get concept schemes
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://stats-nsi-stable.pacificdata.org/rest" path="/conceptscheme/{agencyID}/{resourceID}/{version}[?references][&detail]" method="get" summary="Get concept schemes" %}
+{% swagger-description %}
 This method retrieves information about concept schemes used by dataflows.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="agencyID" type="string" required=false %}
-The agency maintaining the artefact to be returned \(i.e. `SPC`\).  
-It is possible to set more than one agency, using `+` as separator \(e.g. `SPC+ECB`\).  
-The keyword `all` can be used to indicate that artefacts maintained by any maintenance agency should be returned.
-{% endapi-method-parameter %}
+{% swagger-parameter in="path" name="agencyID" type="string" %}
+The agency maintaining the artefact to be returned (i.e. 
 
-{% api-method-parameter name="resourceID" type="string" required=false %}
-The ID of the artefact to be returned.  
-It is possible to set more than one ID, using `+` as separator \(e.g. `CL_FREQ+CL_CONF_STATUS`\).  
-The keyword `all` can be used to indicate that any artefact of the specified resource type should be returned.
-{% endapi-method-parameter %}
+`SPC`
 
-{% api-method-parameter name="version" type="string" required=false %}
-The version of the artefact to be returned.  
-It is possible to set more than one version, using `+` as separator \(e.g. `1.0+2.1`\).  
-The keyword `all` can be used to return all version of the matching resource.  
-The keyword `latest` can be used to return the latest production version of the matching resource.
-{% endapi-method-parameter %}
+).
 
-{% api-method-parameter name="references" type="string" required=false %}
-Instructs the web service to return \(or not return\) the artefacts referenced by the artefact to be returned.   
-Possible values are:  
-`none`: No references will be returned  
-`parents`: Returns the artefacts that use the artefact matching the query  
-`parentsandsiblings`: Returns the artefacts that use the artefact matching the query, as well as the artefacts referenced by these artefacts  
-`children`: Returns the artefacts referenced by the artefact to be returned  
-`descendants`: References of references, up to any level, will be returned  
-`all`: The combination of parentsandsiblings and descendants In addition, a concrete type of resource may also be used \(e.g. codelist\)
-{% endapi-method-parameter %}
+\
 
-{% api-method-parameter name="detail" type="string" required=false %}
-The amount of information to be returned. `referencepartial` is a common value.  
-Possible values are:  
-`allstubs`: All artefacts should be returned as stubs, containing only identification information, as well as the artefacts' name  
-`referencestubs`: Referenced artefacts should be returned as stubs, containing only identification information, as well as the artefacts' name  
-`referencepartial`: Referenced item schemes should only include items used by the artefact to be returned. For example, a concept scheme would only contain the concepts used in a DSD, and its isPartial flag would be set to true  
-`allcompletestubs`: All artefacts should be returned as complete stubs, containing identification information, the artefacts' names, descriptions, annotations and isFinal information  
-`referencecompletestubs`: Referenced artefacts should be returned as complete stubs, containing identification information, the artefacts' name, description, annotations and isFinal information  
-`full`: All available information for all artefacts should be returned
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-{% endapi-method-request %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-An example API request for common SPC concepts \(CS\_COMMON\) \(returned as XML\): `curl -v -X GET "https://stats-nsi-stable.pacificdata.org/rest/conceptscheme/SPC/CS_COMMON"`
-{% endapi-method-response-example-description %}
+It is possible to set more than one agency, using 
 
+`+`
+
+ as separator (e.g. 
+
+`SPC+ECB`
+
+).
+
+\
+
+
+The keyword 
+
+`all`
+
+ can be used to indicate that artefacts maintained by any maintenance agency should be returned.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="resourceID" type="string" %}
+The ID of the artefact to be returned.
+
+\
+
+
+It is possible to set more than one ID, using 
+
+`+`
+
+ as separator (e.g. 
+
+`CL_FREQ+CL_CONF_STATUS`
+
+).
+
+\
+
+
+The keyword 
+
+`all`
+
+ can be used to indicate that any artefact of the specified resource type should be returned.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="version" type="string" %}
+The version of the artefact to be returned.
+
+\
+
+
+It is possible to set more than one version, using 
+
+`+`
+
+ as separator (e.g. 
+
+`1.0+2.1`
+
+).
+
+\
+
+
+The keyword 
+
+`all`
+
+ can be used to return all version of the matching resource.
+
+\
+
+
+The keyword 
+
+`latest`
+
+ can be used to return the latest production version of the matching resource.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="references" type="string" %}
+Instructs the web service to return (or not return) the artefacts referenced by the artefact to be returned. 
+
+\
+
+
+Possible values are:
+
+\
+
+
+
+
+`none`
+
+: No references will be returned
+
+\
+
+
+
+
+`parents`
+
+: Returns the artefacts that use the artefact matching the query
+
+\
+
+
+
+
+`parentsandsiblings`
+
+: Returns the artefacts that use the artefact matching the query, as well as the artefacts referenced by these artefacts
+
+\
+
+
+
+
+`children`
+
+: Returns the artefacts referenced by the artefact to be returned
+
+\
+
+
+
+
+`descendants`
+
+: References of references, up to any level, will be returned
+
+\
+
+
+
+
+`all`
+
+: The combination of parentsandsiblings and descendants In addition, a concrete type of resource may also be used (e.g. codelist)
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="detail" type="string" %}
+The amount of information to be returned. 
+
+`referencepartial`
+
+ is a common value.
+
+\
+
+
+Possible values are:
+
+\
+
+
+
+
+`allstubs`
+
+: All artefacts should be returned as stubs, containing only identification information, as well as the artefacts' name
+
+\
+
+
+
+
+`referencestubs`
+
+: Referenced artefacts should be returned as stubs, containing only identification information, as well as the artefacts' name
+
+\
+
+
+
+
+`referencepartial`
+
+: Referenced item schemes should only include items used by the artefact to be returned. For example, a concept scheme would only contain the concepts used in a DSD, and its isPartial flag would be set to true
+
+\
+
+
+
+
+`allcompletestubs`
+
+: All artefacts should be returned as complete stubs, containing identification information, the artefacts' names, descriptions, annotations and isFinal information
+
+\
+
+
+
+
+`referencecompletestubs`
+
+: Referenced artefacts should be returned as complete stubs, containing identification information, the artefacts' name, description, annotations and isFinal information
+
+\
+
+
+
+
+`full`
+
+: All available information for all artefacts should be returned
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="An example API request for common SPC concepts (CS_COMMON) (returned as XML): curl -v -X GET "https://stats-nsi-stable.pacificdata.org/rest/conceptscheme/SPC/CS_COMMON"" %}
 ```markup
 Date: Fri, 16 Oct 2020 10:50:17 GMT
 Content-Type: application/vnd.sdmx.structure+xml; version=2.1; charset=utf-8
@@ -1809,71 +3058,227 @@ Server: cloudflare
   </message:Structures>
 </message:Structure>* Connection #0 to host stats-nsi-stable.pacificdata.org left intact
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host="https://stats-nsi-stable.pacificdata.org/rest" path="/contentconstraint/{agencyID}/{resourceID}/{version}\[?references\]\[&detail\]" %}
-{% api-method-summary %}
-Get content constraints
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://stats-nsi-stable.pacificdata.org/rest" path="/contentconstraint/{agencyID}/{resourceID}/{version}[?references][&detail]" method="get" summary="Get content constraints" %}
+{% swagger-description %}
 This method retrieves content constraints for a dataflow.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="agencyID" type="string" required=false %}
-The agency maintaining the artefact to be returned \(i.e. `SPC`\).  
-It is possible to set more than one agency, using `+` as separator \(e.g. `SPC+ECB`\).  
-The keyword `all` can be used to indicate that artefacts maintained by any maintenance agency should be returned.
-{% endapi-method-parameter %}
+{% swagger-parameter in="path" name="agencyID" type="string" %}
+The agency maintaining the artefact to be returned (i.e. 
 
-{% api-method-parameter name="resourceID" type="string" required=false %}
-The ID of the artefact to be returned.  
-It is possible to set more than one ID, using `+` as separator \(e.g. `CL_FREQ+CL_CONF_STATUS`\).  
-The keyword `all` can be used to indicate that any artefact of the specified resource type should be returned.
-{% endapi-method-parameter %}
+`SPC`
 
-{% api-method-parameter name="version" type="string" required=false %}
-The version of the artefact to be returned.  
-It is possible to set more than one version, using `+` as separator \(e.g. `1.0+2.1`\).  
-The keyword `all` can be used to return all version of the matching resource.  
-The keyword `latest` can be used to return the latest production version of the matching resource.
-{% endapi-method-parameter %}
+).
 
-{% api-method-parameter name="references" type="string" required=false %}
-Instructs the web service to return \(or not return\) the artefacts referenced by the artefact to be returned.   
-Possible values are:  
-`none`: No references will be returned parents: Returns the artefacts that use the artefact matching the query   
-`parentsandsiblings`: Returns the artefacts that use the artefact matching the query, as well as the artefacts referenced by these artefacts  
-`children`: Returns the artefacts referenced by the artefact to be returned  
-`descendants`: References of references, up to any level, will be returned  
-`all`: The combination of parentsandsiblings and descendants In addition, a concrete type of resource may also be used \(e.g. codelist\)
-{% endapi-method-parameter %}
+\
 
-{% api-method-parameter name="detail" type="string" required=false %}
-The amount of information to be returned. `referencepartial` is a common value.  
-Possible values are:  
-`allstubs`: All artefacts should be returned as stubs, containing only identification information, as well as the artefacts' name  
-`referencestubs`: Referenced artefacts should be returned as stubs, containing only identification information, as well as the artefacts' name  
-`referencepartial`: Referenced item schemes should only include items used by the artefact to be returned. For example, a concept scheme would only contain the concepts used in a DSD, and its isPartial flag would be set to true  
-`allcompletestubs`: All artefacts should be returned as complete stubs, containing identification information, the artefacts' names, descriptions, annotations and isFinal information  
-`referencecompletestubs`: Referenced artefacts should be returned as complete stubs, containing identification information, the artefacts' name, description, annotations and isFinal information  
-`full`: All available information for all artefacts should be returned
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-{% endapi-method-request %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-An example API request for the list of constraints for the NMDI dataflow \(CON\_NMDI\) \(returned as XML\): `curl -v -X GET "https://stats-nsi-stable.pacificdata.org/rest/contentconstraint/SPC/CON_NMDI"`
-{% endapi-method-response-example-description %}
+It is possible to set more than one agency, using 
 
+`+`
+
+ as separator (e.g. 
+
+`SPC+ECB`
+
+).
+
+\
+
+
+The keyword 
+
+`all`
+
+ can be used to indicate that artefacts maintained by any maintenance agency should be returned.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="resourceID" type="string" %}
+The ID of the artefact to be returned.
+
+\
+
+
+It is possible to set more than one ID, using 
+
+`+`
+
+ as separator (e.g. 
+
+`CL_FREQ+CL_CONF_STATUS`
+
+).
+
+\
+
+
+The keyword 
+
+`all`
+
+ can be used to indicate that any artefact of the specified resource type should be returned.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="version" type="string" %}
+The version of the artefact to be returned.
+
+\
+
+
+It is possible to set more than one version, using 
+
+`+`
+
+ as separator (e.g. 
+
+`1.0+2.1`
+
+).
+
+\
+
+
+The keyword 
+
+`all`
+
+ can be used to return all version of the matching resource.
+
+\
+
+
+The keyword 
+
+`latest`
+
+ can be used to return the latest production version of the matching resource.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="references" type="string" %}
+Instructs the web service to return (or not return) the artefacts referenced by the artefact to be returned. 
+
+\
+
+
+Possible values are:
+
+\
+
+
+
+
+`none`
+
+: No references will be returned parents: Returns the artefacts that use the artefact matching the query 
+
+\
+
+
+
+
+`parentsandsiblings`
+
+: Returns the artefacts that use the artefact matching the query, as well as the artefacts referenced by these artefacts
+
+\
+
+
+
+
+`children`
+
+: Returns the artefacts referenced by the artefact to be returned
+
+\
+
+
+
+
+`descendants`
+
+: References of references, up to any level, will be returned
+
+\
+
+
+
+
+`all`
+
+: The combination of parentsandsiblings and descendants In addition, a concrete type of resource may also be used (e.g. codelist)
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="detail" type="string" %}
+The amount of information to be returned. 
+
+`referencepartial`
+
+ is a common value.
+
+\
+
+
+Possible values are:
+
+\
+
+
+
+
+`allstubs`
+
+: All artefacts should be returned as stubs, containing only identification information, as well as the artefacts' name
+
+\
+
+
+
+
+`referencestubs`
+
+: Referenced artefacts should be returned as stubs, containing only identification information, as well as the artefacts' name
+
+\
+
+
+
+
+`referencepartial`
+
+: Referenced item schemes should only include items used by the artefact to be returned. For example, a concept scheme would only contain the concepts used in a DSD, and its isPartial flag would be set to true
+
+\
+
+
+
+
+`allcompletestubs`
+
+: All artefacts should be returned as complete stubs, containing identification information, the artefacts' names, descriptions, annotations and isFinal information
+
+\
+
+
+
+
+`referencecompletestubs`
+
+: Referenced artefacts should be returned as complete stubs, containing identification information, the artefacts' name, description, annotations and isFinal information
+
+\
+
+
+
+
+`full`
+
+: All available information for all artefacts should be returned
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="An example API request for the list of constraints for the NMDI dataflow (CON_NMDI) (returned as XML): curl -v -X GET "https://stats-nsi-stable.pacificdata.org/rest/contentconstraint/SPC/CON_NMDI"" %}
 ```markup
 Date: Fri, 16 Oct 2020 10:54:45 GMT
 Content-Type: application/vnd.sdmx.structure+xml; version=2.1; charset=utf-8
@@ -2143,72 +3548,232 @@ Server: cloudflare
   </message:Structures>
 </message:Structure>* Connection #0 to host stats-nsi-stable.pacificdata.org left intact
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host="https://stats-nsi-stable.pacificdata.org/rest" path="/datastructure/{agencyID}/{resourceID}/{version}\[?references\]\[&detail\]" %}
-{% api-method-summary %}
-Get data structures
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://stats-nsi-stable.pacificdata.org/rest" path="/datastructure/{agencyID}/{resourceID}/{version}[?references][&detail]" method="get" summary="Get data structures" %}
+{% swagger-description %}
 This method retrieves a data structure definition.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="agencyID" type="string" required=false %}
-The agency maintaining the artefact to be returned \(i.e. `SPC`\).  
-It is possible to set more than one agency, using + as separator \(e.g. `SPC+ECB`\).  
-The keyword `all` can be used to indicate that artefacts maintained by any maintenance agency should be returned.
-{% endapi-method-parameter %}
+{% swagger-parameter in="path" name="agencyID" type="string" %}
+The agency maintaining the artefact to be returned (i.e. 
 
-{% api-method-parameter name="resourceID" type="string" required=false %}
-The ID of the artefact to be returned.  
-It is possible to set more than one ID, using `+` as separator \(e.g. `CL_FREQ+CL_CONF_STATUS`\).  
-The keyword `all` can be used to indicate that any artefact of the specified resource type should be returned.
-{% endapi-method-parameter %}
+`SPC`
 
-{% api-method-parameter name="version" type="string" required=false %}
-The version of the artefact to be returned.  
-It is possible to set more than one version, using `+` as separator \(e.g. `1.0+2.1`\).  
-The keyword `all` can be used to return all version of the matching resource.  
-The keyword `latest` can be used to return the latest production version of the matching resource.
-{% endapi-method-parameter %}
+).
 
-{% api-method-parameter name="references" type="string" required=false %}
-Instructs the web service to return \(or not return\) the artefacts referenced by the artefact to be returned.   
-Possible values are:   
-`none`: No references will be returned  
-`parents`: Returns the artefacts that use the artefact matching the query  
-`parentsandsiblings`: Returns the artefacts that use the artefact matching the query, as well as the artefacts referenced by these artefacts  
-`children`: Returns the artefacts referenced by the artefact to be returned  
-`descendants`: References of references, up to any level, will be returned  
-`all`: The combination of parentsandsiblings and descendants In addition, a concrete type of resource may also be used \(e.g. codelist\)
-{% endapi-method-parameter %}
+\
 
-{% api-method-parameter name="detail" type="string" required=false %}
-The amount of information to be returned. `referencepartial` is a common value.  
-Possible values are:  
-`allstubs`: All artefacts should be returned as stubs, containing only identification information, as well as the artefacts' name  
-`referencestubs`: Referenced artefacts should be returned as stubs, containing only identification information, as well as the artefacts' name  
-`referencepartial`: Referenced item schemes should only include items used by the artefact to be returned. For example, a concept scheme would only contain the concepts used in a DSD, and its isPartial flag would be set to true  
-`allcompletestubs`: All artefacts should be returned as complete stubs, containing identification information, the artefacts' names, descriptions, annotations and isFinal information  
-`referencecompletestubs`: Referenced artefacts should be returned as complete stubs, containing identification information, the artefacts' name, description, annotations and isFinal information  
-`full`: All available information for all artefacts should be returned
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-{% endapi-method-request %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-An example API request for the data structure definition of Commodity Prices \(DSD\_COMMODITY\_PRICES\) \(returned as XML\): `curl -v -X GET "https://stats-nsi-stable.pacificdata.org/rest/datastructure/SPC/DSD_COMMODITY_PRICES"`
-{% endapi-method-response-example-description %}
+It is possible to set more than one agency, using + as separator (e.g. 
 
+`SPC+ECB`
+
+).
+
+\
+
+
+The keyword 
+
+`all`
+
+ can be used to indicate that artefacts maintained by any maintenance agency should be returned.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="resourceID" type="string" %}
+The ID of the artefact to be returned.
+
+\
+
+
+It is possible to set more than one ID, using 
+
+`+`
+
+ as separator (e.g. 
+
+`CL_FREQ+CL_CONF_STATUS`
+
+).
+
+\
+
+
+The keyword 
+
+`all`
+
+ can be used to indicate that any artefact of the specified resource type should be returned.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="version" type="string" %}
+The version of the artefact to be returned.
+
+\
+
+
+It is possible to set more than one version, using 
+
+`+`
+
+ as separator (e.g. 
+
+`1.0+2.1`
+
+).
+
+\
+
+
+The keyword 
+
+`all`
+
+ can be used to return all version of the matching resource.
+
+\
+
+
+The keyword 
+
+`latest`
+
+ can be used to return the latest production version of the matching resource.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="references" type="string" %}
+Instructs the web service to return (or not return) the artefacts referenced by the artefact to be returned. 
+
+\
+
+
+Possible values are: 
+
+\
+
+
+
+
+`none`
+
+: No references will be returned
+
+\
+
+
+
+
+`parents`
+
+: Returns the artefacts that use the artefact matching the query
+
+\
+
+
+
+
+`parentsandsiblings`
+
+: Returns the artefacts that use the artefact matching the query, as well as the artefacts referenced by these artefacts
+
+\
+
+
+
+
+`children`
+
+: Returns the artefacts referenced by the artefact to be returned
+
+\
+
+
+
+
+`descendants`
+
+: References of references, up to any level, will be returned
+
+\
+
+
+
+
+`all`
+
+: The combination of parentsandsiblings and descendants In addition, a concrete type of resource may also be used (e.g. codelist)
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="detail" type="string" %}
+The amount of information to be returned. 
+
+`referencepartial`
+
+ is a common value.
+
+\
+
+
+Possible values are:
+
+\
+
+
+
+
+`allstubs`
+
+: All artefacts should be returned as stubs, containing only identification information, as well as the artefacts' name
+
+\
+
+
+
+
+`referencestubs`
+
+: Referenced artefacts should be returned as stubs, containing only identification information, as well as the artefacts' name
+
+\
+
+
+
+
+`referencepartial`
+
+: Referenced item schemes should only include items used by the artefact to be returned. For example, a concept scheme would only contain the concepts used in a DSD, and its isPartial flag would be set to true
+
+\
+
+
+
+
+`allcompletestubs`
+
+: All artefacts should be returned as complete stubs, containing identification information, the artefacts' names, descriptions, annotations and isFinal information
+
+\
+
+
+
+
+`referencecompletestubs`
+
+: Referenced artefacts should be returned as complete stubs, containing identification information, the artefacts' name, description, annotations and isFinal information
+
+\
+
+
+
+
+`full`
+
+: All available information for all artefacts should be returned
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="An example API request for the data structure definition of Commodity Prices (DSD_COMMODITY_PRICES) (returned as XML): curl -v -X GET "https://stats-nsi-stable.pacificdata.org/rest/datastructure/SPC/DSD_COMMODITY_PRICES"" %}
 ```markup
 Date: Fri, 16 Oct 2020 11:01:34 GMT
 Content-Type: application/vnd.sdmx.structure+xml; version=2.1; charset=utf-8
@@ -2345,10 +3910,10 @@ Server: cloudflare
   </message:Structures>
 </message:Structure>* Connection #0 to host stats-nsi-stable.pacificdata.org left intact
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}
 

@@ -2,7 +2,8 @@
 
 * [Pacific Data Hub](README.md)
 * [Data Catalogue](catalogue/README.md)
-  * [User Guide](catalogue/user-guide.md)
+  * [User Guide](catalogue/user-guide/README.md)
+    * [Creating a new account](catalogue/user-guide/creating-a-new-account.md)
   * [Advanced Search](catalogue/advanced-search/README.md)
     * [Solr Search Queries](catalogue/advanced-search/solr-search.md)
   * [API](catalogue/api.md)
@@ -22,4 +23,3 @@
     * [Sample code](dotstat/api/scode.md)
 * [Microdata Library](ml/README.md)
   * [User Guide](ml/user-guide.md)
-
