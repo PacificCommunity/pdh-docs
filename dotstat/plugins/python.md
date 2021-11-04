@@ -6,7 +6,7 @@ description: >-
 
 # Python
 
-![](../../.gitbook/assets/image%20%2878%29.png)
+![](<../../.gitbook/assets/image (52).png>)
 
 ### Overview
 
@@ -18,7 +18,7 @@ These steps have been tested with Python 3.7.4 in an Anaconda environment on Win
 
 Start by installing sdmx. To learn more about the package, see the code [here](https://github.com/khaeru/sdmx).
 
-To install with pip from the command prompt \(note: include the '1' at the end of sdmx\): `pip install sdmx1`
+To install with pip from the command prompt (note: include the '1' at the end of sdmx): `pip install sdmx1`
 
 In a Python project, import the package: `import sdmx`
 
@@ -31,7 +31,7 @@ import sdmx
 sdmx.list_sources()
 ```
 
-The source abbreviation for PDH.stat is "SPC" \(Pacific Community\), as shown below. 
+The source abbreviation for PDH.stat is "SPC" (Pacific Community), as shown below.&#x20;
 
 ![](../../.gitbook/assets/sources.png)
 
@@ -62,7 +62,6 @@ df = df.reset_index()
 df
 ```
 
-![](../../.gitbook/assets/screenshot-2020-10-24-154653.png)
+![](<../../.gitbook/assets/Screenshot 2020-10-24 154653.png>)
 
 For an example of how to use the plugin in combination with the API key and parameter settings, see the [time series plot example](../api/scode.md#plot-time-series-population-data-using-the-python-plugin-with-pdh-stat-api).
-

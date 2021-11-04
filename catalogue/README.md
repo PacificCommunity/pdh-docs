@@ -6,13 +6,13 @@ description: The "Google" of Pacific Data.
 
 ### What is the Data Catalogue?
 
-![](../.gitbook/assets/pdh-catalogue-main-search.png)
+![](<../.gitbook/assets/PDH catalogue main search.png>)
 
 The Data Catalogue is at the centre of the Pacific Data Hub. It is an open data repository which manages and publishes all data in the Pacific Data Hub. Data comes from a range of sources, though is always related to the Pacific Region, and is accessible via a powerful search engine (above).
 
 The Data Catalogue publishes data in units called "datasets". A dataset is a parcel of data - for example, it could be the education statistics for a country, the Exclusive Economic Zones (EEZ's) for the Pacific, or temperature readings from various weather stations. When users search for data, the search results they see will be individual datasets:&#x20;
 
-![](../.gitbook/assets/pdh-catalogue-main-search2.png)
+![](<../.gitbook/assets/PDH catalogue main search2.png>)
 
 Each dataset contains two main elements:
 

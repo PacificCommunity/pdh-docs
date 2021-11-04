@@ -4,17 +4,17 @@ description: Connect STATA to PDH.stat with sdmxpdh
 
 # STATA
 
-![](../../.gitbook/assets/image%20%2852%29.png)
+![](<../../.gitbook/assets/image (58).png>)
 
 ## STATA
 
 ### sdmxpdh
 
-SDMXPDH is a version of the SDMXUSE Stata module, with the changes allowing users to connect to Pacific Data Hub .Stat API \(PDH.stat\). See the code [here](https://github.com/PacificCommunity/statasdmx).
+SDMXPDH is a version of the SDMXUSE Stata module, with the changes allowing users to connect to Pacific Data Hub .Stat API (PDH.stat). See the code [here](https://github.com/PacificCommunity/statasdmx).
 
 Full credit goes to Sebastien Fontenay, Robert Picard, Nicholas Cox.
 
-This module is a simple adaptation of the SDMXUSE module \(Fontenay\), which itself uses the MOSS module \(Picard & Cox\).
+This module is a simple adaptation of the SDMXUSE module (Fontenay), which itself uses the MOSS module (Picard & Cox).
 
 Sebastien Fontenay, 2016. "SDMXUSE: Stata module to import data from statistical agencies using the SDMX standard," Statistical Software Components S458231, Boston College Department of Economics, revised 30 Sep 2018.
 
@@ -38,7 +38,7 @@ Check the install worked by bringing up the SDMXPDH help document: `help sdmxpdh
 
 ### Quick start
 
-PDH.stat resources are maintained by SPC \(Pacific Community\), so SPC is the provider for resources.
+PDH.stat resources are maintained by SPC (Pacific Community), so SPC is the provider for resources.
 
 General command structure is: `sdmxpdh <resource> <provider>, <filters>`
 
@@ -51,7 +51,7 @@ list
 
 #### Get all data for a dataflow
 
-For example, use dataflow `DF_CPI` \(Consumer Price Index\)
+For example, use dataflow `DF_CPI` (Consumer Price Index)
 
 ```r
 sdmxpdh data SPC, clear dataset(DF_CPI)
@@ -77,4 +77,3 @@ Again, let's use `DF_CPI`.
 sdmxpdh datastructure SPC, clear dataset(DF_CPI)
 list
 ```
-
