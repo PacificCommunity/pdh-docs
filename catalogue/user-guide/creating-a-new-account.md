@@ -1,9 +1,9 @@
 # Creating a new account
 
-If you would like to contribute and publish content in the PDH Catalogue, you must create a PDH user account.  Follow the steps below to register for a new account.
+If you would like to contribute and publish content in the PDH Catalogue, you will need to sign in with a PDH user account.  Follow the steps below to register for a new account.
 
 {% hint style="info" %}
-If you are an SPC staff member, please sign in using the [Okta link](https://pacificdata.org/saml/drupal\_login/spc\_okta).
+For SPC staff, please sign in using the [Okta link](https://pacificdata.org/saml/drupal\_login/spc\_okta).
 {% endhint %}
 
 | From the Home page, click on the [**Login **](https://pacificdata.org/user/login)link                                                                                                                                                                                                                                                    | ![](<../../.gitbook/assets/image (101) (1).png>) |
