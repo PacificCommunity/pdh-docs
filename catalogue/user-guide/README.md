@@ -18,7 +18,7 @@ In this example we have typed "cyclone" in the search bar and redirected to the 
 
 ![](<../../.gitbook/assets/image (82).png>)
 
-We can order our results by relevance, popularity, name or last modification using the **Order by **button
+We can order our results by relevance, popularity, name or last modification using the **Order by** button
 
 To narrow down the data search we can use the filtering tools located on the left. The filters available are **Topic, Member countries, Organisations, Tags, Formats, Dataset type and Licenses.**
 
@@ -29,7 +29,7 @@ To narrow down the data search we can use the filtering tools located on the lef
 Once you have found the dataset you are looking for, click on it to open the Dataset screen.
 
 * On top of the screen you will find the dataset's title and description.&#x20;
-* You can export the metadata by clicking on the **Export Metadata ** button located below the description.
+* You can export the metadata by clicking on the **Export Metadata** button located below the description.
 * Metadata can be accessed on the bottom of the page.
 * A number of different data resources with various formats can be linked to the dataset.&#x20;
 * Click on the resources to access the resource page where you will find the description, a preview pane and a download link.

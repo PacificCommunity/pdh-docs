@@ -94,7 +94,7 @@ With a data set already loaded, the add-in provides extra features.
 
 ![](../../.gitbook/assets/excel7.png)
 
-**Edit the data connection: **Select “Change Selection” to adjust the settings of the current data connection and reload the data in the same location. NOTE: this will remove the existing data in that location.
+**Edit the data connection:** Select “Change Selection” to adjust the settings of the current data connection and reload the data in the same location. NOTE: this will remove the existing data in that location.
 
 **Refresh the data connection:** Select “Current Sheet” to refresh the data in the current Sheet. Select “All Sheets” to refresh the data in all Sheets with data connections.
 

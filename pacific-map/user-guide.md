@@ -84,9 +84,9 @@ To share a view of your data with others, you must first upload the dataset to t
 
 There are three ways of sharing your map view:
 
-* **Share URL. **Copy the given URL (shown in the first text box) to the clipboard and paste it into an email which you send to the recipient. They can click on it in the email or paste it into their browser to see the same view as you.
-* **Print Map. **Generates a static map that can be shared using different formats. Note that this option is the only one that will show data loaded from a local file or URL.
-* **Advanced Options. **Create a code to embed the map into a web page.
+* **Share URL.** Copy the given URL (shown in the first text box) to the clipboard and paste it into an email which you send to the recipient. They can click on it in the email or paste it into their browser to see the same view as you.
+* **Print Map.** Generates a static map that can be shared using different formats. Note that this option is the only one that will show data loaded from a local file or URL.
+* **Advanced Options.** Create a code to embed the map into a web page.
 
 ![](<../.gitbook/assets/image (72).png>)
 
@@ -111,7 +111,7 @@ The resources within the dataset containing geographic data come with the **Paci
 
 ![](<../.gitbook/assets/image (75).png>)
 
-* Select **PacificMap **option and the geospatial dataset will be displayed on an embed frame.
-* Click on **Open in PacificMap **if you want to open your the dataset on a PacificMap instance independent from the Pacific Data Hub Catalogue
+* Select **PacificMap** option and the geospatial dataset will be displayed on an embed frame.
+* Click on **Open in PacificMap** if you want to open your the dataset on a PacificMap instance independent from the Pacific Data Hub Catalogue
 
 ![](<../.gitbook/assets/image (79).png>)

@@ -6,7 +6,9 @@ description: Produce reports and dashboards with Power BI using a PowerQuery tem
 
 ![](<../../.gitbook/assets/image (50).png>)
 
-The OECD has developed a plugin to connect an SDMX data source directly to Power BI, you can find the [documentation to install it here](https://sis-cc.gitlab.io/sdmx-tools/documentation/using-sdmx-powerbi-connector/installation-instructions/). Because this plugin is free and open source, its code is publicly available in its [repository](https://gitlab.com/sis-cc/sdmx-tools/sdmx-power-bi).
+The OECD has developed a plugin to connect an SDMX data source directly to Power BI. It can be loaded when adding "an alternate data source" in PowerBI.
+
+![SDMX Plugin](<../../.gitbook/assets/SDMX powerbi.png>)
 
 To import a dataset you will need the API query corresponding to the data to be imported using the Data Explorer as [explained here](https://docs.pacificdata.org/dotstat/de#get-api-queries-corresponding-to-the-data-selection).
 
@@ -25,3 +27,5 @@ The next screenshot shows a Power Query with the previously imported data, trans
 Finally, your data is now imported and transformed, you can use it to do some visualisations.
 
 ![Visualisation Example](<../../.gitbook/assets/image (97).png>)
+
+NOTE: Because this plugin is free and open source, its code is publicly available in this [repository](https://gitlab.com/sis-cc/sdmx-tools/sdmx-power-bi).
