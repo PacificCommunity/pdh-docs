@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Pacific Data Hub](README.md)
+  * [Change Log](master/change-log.md)
 * [Data Catalogue](catalogue/README.md)
   * [User Guide](catalogue/user-guide/README.md)
     * [Creating a new account](catalogue/user-guide/creating-a-new-account.md)
