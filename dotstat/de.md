@@ -14,7 +14,7 @@ For an introduction on how to use the Data Explorer see this video :
 
 PDH.stat Data Explorer is directly accessible via the following URL:
 
-[https://stats.pacificdata.org/](https://stats.pacificdata.org)
+[https://stats.pacificdata.org/](https://stats.pacificdata.org/)
 
 ### From the Data Catalogue
 

@@ -14,11 +14,11 @@ For an introduction on how to use the Microdata Library see this video :
 
 The Microdata Library is accessible using the following URL:
 
-[https://microdata.pacificdata.org/](https://microdata.pacificdata.org)
+[https://microdata.pacificdata.org/](https://microdata.pacificdata.org/)
 
 ### From the Data Catalogue
 
-The application is also accessible in several ways from the [Data Catalogue](https://pacificdata.org):
+The application is also accessible in several ways from the [Data Catalogue](https://pacificdata.org/):
 
 A link is available from the "Tools" menu:
 

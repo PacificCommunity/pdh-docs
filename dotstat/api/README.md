@@ -16,7 +16,7 @@ Sample API calls corresponding to particular data views can be produced from the
 
 For more information on SDMX web services see the following references:
 
-* [SDMX official website](https://sdmx.org)
+* [SDMX official website](https://sdmx.org/)
 * [SDMX information model](https://sdmx.org/wp-content/uploads/SDMX\_2-1\_SECTION\_2\_InformationModel\_2020-07.pdf)
 * [SDMX REST web services guidelines](https://github.com/sdmx-twg/sdmx-rest/) and its [SDMX 2.1 RESTful web services cheat sheet](https://github.com/sdmx-twg/sdmx-rest/blob/master/v2\_1/ws/rest/docs/rest\_cheat\_sheet.pdf?raw=true)
 

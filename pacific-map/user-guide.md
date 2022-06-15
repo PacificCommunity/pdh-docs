@@ -6,7 +6,7 @@ For an introduction on how to use Pacific map see this video:
 
 ### How to get started with PacificMap
 
-* You can access PacificMap either from the Pacific Data Hub main page or by using the URL [https://map.pacificdata.org/](https://map.pacificdata.org).
+* You can access PacificMap either from the Pacific Data Hub main page or by using the URL [https://map.pacificdata.org/](https://map.pacificdata.org/).
 
 ![](<../.gitbook/assets/image (60).png>)
 
@@ -94,7 +94,7 @@ There are three ways of sharing your map view:
 
 PacificMap encourages data providers to publish their spatial data using this platform. There are two routes you can take to publishing.
 
-* Any spatial data which is added to [Pacific Data Hub](https://pacificdata.org) using a protocol or format supported by the PacificMap (such as WMS) will automatically appear in the **PacificDataHub** section of the **Data Catalogue** tab for the PacificMap.
+* Any spatial data which is added to [Pacific Data Hub](https://pacificdata.org/) using a protocol or format supported by the PacificMap (such as WMS) will automatically appear in the **PacificDataHub** section of the **Data Catalogue** tab for the PacificMap.
 * If you require your data set to appear under a separate category of the PacificMap Data Catalogue, you will need to contact  [datahub@spc.int](mailto:datahub@spc.int) for more information.&#x20;
 
 ### How to visualize Geographic data stored in the Pacific Data Hub Catalogue&#x20;

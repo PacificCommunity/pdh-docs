@@ -6,7 +6,7 @@ For an introduction on how to use the Data Catalogue see this video:
 
 ### How to get started with the Data Catalogue
 
-Go to the Pacific Data Hub home page [https://pacificdata.org/](https://pacificdata.org)
+Go to the Pacific Data Hub home page [https://pacificdata.org/](https://pacificdata.org/)
 
 You will be redirected to the Data Catalogue when you make your data search either using the **Search bar** or the **Shortcuts** located below.
 
