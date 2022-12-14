@@ -6,9 +6,9 @@ description: Harnessing the power of data and knowledge for sustainable developm
 
 The **Pacific Data Hub (PDH**) aims to deliver the most comprehensive collection of data and information about the Pacific and for the Pacific, including key areas such as population statistics, fisheries science, climate change adaptation, disaster risk reduction and resilience, public health surveillance, conservation of plant genetic resources for food security, and human rights.
 
-The Pacific Data Hub is an innovative programme of work, led by the [Pacific Community (SPC)](https://spc.int/) and supported by the [New Zealand Ministry of Foreign Affairs and Trade](http://www.mfat.govt.nz/) and the [Australian Department of Foreign Affairs and Trade](https://www.dfat.gov.au/). It is a regional public good that provides a single authoritative point of entry for data about the Pacific and serves as a vehicle for investment in a sustainable regional data infrastructure.
+The Pacific Data Hub is an innovative programme of work, led by the [Pacific Community (SPC)](https://spc.int/) and supported by the [New Zealand Ministry of Foreign Affairs and Trade](http://www.mfat.govt.nz/). It is a regional public good that provides a single authoritative point of entry for data about the Pacific and serves as a vehicle for investment in a sustainable regional data infrastructure.
 
-We have built the Pacific Data Hub platform on our intimate understanding of the Pacific region and the enduring relationships we have forged with our members. We understand the policy and development challenges that matter to our members and we work in coordination with our development partners to not only provide quality data and evidence but also develop tools and capabilities that can inspire new insights and inform good decision-making to deliver better development outcomes.
+We have built the Pacific Data Hub platform on our intimate understanding of the Pacific region and the enduring relationships we have forged with our members. We understand the policy and development challenges that matter to our members, and we work in coordination with our development partners to provide access to timely and reliable data to inform better policy development and decision-making to help deliver better development outcomes for the Pacific region.
 
 ## A Pacific Data Ecosystem
 
