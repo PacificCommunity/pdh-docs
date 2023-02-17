@@ -8,7 +8,7 @@ description: Create a live connection between your Excel Workbooks and PDH.stat
 
 ### Installation
 
-1: Download the zipped folder "PDH.Stat\_Excel\_Addin\_v\_3\_0\_0\_13" from [here](https://sdd.spc.int/support/PDH.Stat\_Excel\_Addin\_v\_3\_0\_0\_13.zip).&#x20;
+1: Download the addin [here](https://gitlab.com/sis-cc/.stat-suite/dotstatsuite-excel-addin).&#x20;
 
 2: Right-click the zipped folder, choose "Extract All...", choose where you would like to extract the files (optional), then click "Extract".
 
