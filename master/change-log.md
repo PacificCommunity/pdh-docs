@@ -2,6 +2,25 @@
 
 
 
+### Version 3.4 - Released on 2023-02-23
+
+#### PDH Portal
+
+* Added more dashboards (powerBI based)
+* Improved Maritime Boundaries dashboard
+* Improved stories and news section
+* Better topic pages
+* Sitemaps
+
+#### PDH CKAN Catalogue
+
+* CKAN version 2.9.7
+* Better support for geospatial data files
+* New "video" dataset type
+* Added JSON-LD support
+* Fixed organization and group lists
+* Miscellaneous fixes
+
 ### Version 3.0 - Released on 2022-02-15
 
 #### PDH Portal
