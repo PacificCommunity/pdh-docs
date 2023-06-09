@@ -2,7 +2,18 @@
 
 
 
-### Version 3.4 - Released on 2023-02-23
+### Version 3.4.2 - Released on 2023-06-09
+
+#### PDH Portal
+
+* New dashboards added
+* Linking to PCCOS catalogue
+
+#### Microdata Library ([link](https://microdata.pacificdata.org))
+
+* Updated NADA to version 5.2.1
+
+### Version 3.4.1 - Released on 2023-02-23
 
 #### PDH Portal
 
