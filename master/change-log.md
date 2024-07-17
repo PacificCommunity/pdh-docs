@@ -2,6 +2,14 @@
 
 
 
+### Version 3.5.0 - Released on 2024-07-17
+
+#### PDH CKAN Catalogue
+
+* New topics (thematic areas) for datasets
+* Unique dataset metadata schema
+* Data migration
+
 ### Version 3.4.2 - Released on 2023-06-09
 
 #### PDH Portal
