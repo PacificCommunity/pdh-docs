@@ -1,5 +1,5 @@
 ---
-description: The "Google" of Pacific Data.
+description: Data from the Pacific, for the Pacific, all in a single place.
 ---
 
 # Data Catalogue
@@ -19,7 +19,7 @@ Each dataset contains two main elements:
 * Information or "metadata" about the data. For example, the title and publisher, date, what formats it is available in, what license it is released under, etc.
 * A number of "resources", which hold the data itself. A resource can be a CSV or Excel spreadsheet, XML file, PDF document, image file, KML, GeoJSON, etc. A dataset can contain any number of resources. For example, different resources might contain the data for different years, or they might contain the same data in different formats.&#x20;
 
-****
+
 
 
 
